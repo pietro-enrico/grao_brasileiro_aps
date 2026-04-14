@@ -4,6 +4,6 @@ module com.example.graobrasileiroaps {
 
     requires org.kordamp.bootstrapfx.core;
 
-    opens com.example.graobrasileiroaps to javafx.fxml;
-    exports com.example.graobrasileiroaps;
+    opens app to javafx.fxml;
+    exports app;
 }
