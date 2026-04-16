@@ -1,6 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="720.0" maxWidth="1280.0" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #FFE1BF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" />
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: FFE1BF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="200.0" layoutY="84.0" text="Grão Brasileiro" textFill="#1a3a23">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="97.0" fitWidth="77.0" layoutX="121.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/coffee-beans.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="674.0" layoutY="98.0" text="Doação" textFill="#1a3a23">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="809.0" layoutY="98.0" text="Sobre" textFill="#1a3a23">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="924.0" layoutY="98.0" text="Colaboradores" textFill="#1a3a23">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="1132.0" layoutY="98.0" text="Login" textFill="#1a3a23">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="121.0" layoutY="219.0" prefHeight="135.0" prefWidth="477.0" text="Cultivando Diginidade, Colhendo Frutos" textFill="#1a3a23" wrapText="true">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="340.0" fitWidth="507.0" layoutX="700.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Volunteers.jpg" />
+         </image></ImageView>
+      <Label layoutX="121.0" layoutY="330.0" prefHeight="209.0" prefWidth="500.0" text="Na Grão Brasileiro, trabalhamos diariamente para transformar a realidade de pessoas com necessidades básicas. Junte-se a nós e faça parte desta mudança." textAlignment="JUSTIFY" wrapText="true">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="121.0" layoutY="539.0" mnemonicParsing="false" style="-fx-background-radius: 10; -fx-background-color: #DBEADE;" text="Quero Ajudar" textAlignment="JUSTIFY">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
