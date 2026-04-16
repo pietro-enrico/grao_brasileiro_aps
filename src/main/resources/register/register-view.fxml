@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ButtonBar?>
@@ -10,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #FFE1BF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #FFE1BF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="register.RegisterController">
    <Text fill="#1a3a23" layoutX="528.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grão Brasileiro" textOrigin="CENTER" wrappingWidth="224.2734375">
       <font>
          <Font name="Cambria Bold" size="30.0" />
@@ -21,56 +23,68 @@
          <Font name="Cambria" size="15.0" />
       </font>
    </Text>
-   <TextField id="full_name" layoutX="321.0" layoutY="256.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" promptText="Ex: João da Silva" style="-fx-background-color: #ffffff; -fx-border-radius: 8; -fx-border-color: none;">
+   <TextField id="full_name" fx:id="full_name" layoutX="321.0" layoutY="256.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" promptText="Ex: João da Silva" style="-fx-background-color: #ffffff; -fx-border-radius: 8; -fx-border-color: none;">
       <font>
          <Font name="Cambria" size="13.0" />
       </font>
    </TextField>
-   <Text fill="#1a3a23" layoutX="321.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Completo" textOrigin="CENTER" wrappingWidth="118.2734375">
+   <Text fill="#1a3a23" layoutX="321.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Completo*" textOrigin="CENTER" wrappingWidth="118.2734375">
       <font>
          <Font name="Cambria" size="15.0" />
       </font>
    </Text>
-   <TextField id="email" layoutX="654.0" layoutY="256.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" promptText="seu@email.com" style="-fx-background-color: #ffffff; -fx-border-radius: 8; -fx-border-color: none;">
+   <TextField id="email" fx:id="email" layoutX="654.0" layoutY="256.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" promptText="seu@email.com" style="-fx-background-color: #ffffff; -fx-border-radius: 8; -fx-border-color: none;">
       <font>
          <Font name="Cambria" size="13.0" />
       </font>
    </TextField>
-   <Text fill="#1a3a23" layoutX="654.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" textOrigin="CENTER" wrappingWidth="51.2734375">
+   <Text fill="#1a3a23" layoutX="654.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email*" textOrigin="CENTER" wrappingWidth="51.2734375">
       <font>
          <Font name="Cambria" size="15.0" />
       </font>
    </Text>
-   <TextField id="cpf" layoutX="321.0" layoutY="352.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" promptText="EX: 000.000.000-00" style="-fx-background-color: #ffffff; -fx-border-radius: 8; -fx-border-color: none;">
+   <TextField id="cpf" fx:id="cpf" layoutX="321.0" layoutY="352.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" promptText="EX: 000.000.000-00" style="-fx-background-color: #ffffff; -fx-border-radius: 8; -fx-border-color: none;">
       <font>
          <Font name="Cambria" size="13.0" />
       </font>
    </TextField>
-   <Text fill="#1a3a23" layoutX="321.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF" textOrigin="CENTER" wrappingWidth="118.2734375">
+   <Text fill="#1a3a23" layoutX="323.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF*" textOrigin="CENTER" wrappingWidth="45.2734375">
       <font>
          <Font name="Cambria" size="15.0" />
       </font>
    </Text>
-   <Text fill="#1a3a23" layoutX="653.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seja voluntário" textOrigin="CENTER" wrappingWidth="103.2734375">
+   <Text fill="#1a3a23" layoutX="654.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seja voluntário*" textOrigin="CENTER" wrappingWidth="103.2734375">
       <font>
          <Font name="Cambria" size="15.0" />
       </font>
    </Text>
-   <ComboBox id="is_voluntary" fx:id="combo_box_is_voluntary" layoutX="653.0" layoutY="352.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" prefHeight="38.0" prefWidth="304.0" promptText="Quero mudar o mundo!" style="-fx-background-color: #ffffff; -fx-border-radius: 8; -fx-border-color: none;" />
-   <Text fill="#1a3a23" layoutX="322.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" textOrigin="CENTER" wrappingWidth="118.2734375">
+   <ComboBox id="is_voluntary" fx:id="is_voluntary" layoutX="653.0" layoutY="352.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" prefHeight="38.0" prefWidth="304.0" promptText="Quero mudar o mundo!" style="-fx-background-color: #ffffff; -fx-border-radius: 8; -fx-border-color: none;">
+      <items>
+         <FXCollections fx:factory="observableArrayList">
+            <String fx:value="Quero mudar o mundo!">
+            </String>
+            <String fx:value="Dessa vez não =/">
+            </String>
+         </FXCollections>
+      </items>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </ComboBox>
+   <Text fill="#1a3a23" layoutX="322.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha*" textOrigin="CENTER" wrappingWidth="118.2734375">
       <font>
          <Font name="Cambria" size="15.0" />
       </font>
    </Text>
-   <Text fill="#1a3a23" layoutX="654.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmar Senha" textOrigin="CENTER" wrappingWidth="118.2734375">
+   <Text fill="#1a3a23" layoutX="654.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmar Senha*" textOrigin="CENTER" wrappingWidth="118.2734375">
       <font>
          <Font name="Cambria" size="15.0" />
       </font>
    </Text>
-   <PasswordField id="password" layoutX="322.0" layoutY="453.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" prefHeight="38.0" prefWidth="304.0" promptText="********" style="-fx-background-color: #ffffff; -fx-border-radius: 8; -fx-border-color: none;" />
-   <PasswordField id="confirm_password" layoutX="654.0" layoutY="453.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" prefHeight="38.0" prefWidth="304.0" promptText="********" style="-fx-background-color: #ffffff; -fx-border-radius: 8; -fx-border-color: none;" />
+   <PasswordField id="password" fx:id="password" layoutX="322.0" layoutY="453.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" prefHeight="38.0" prefWidth="304.0" promptText="********" style="-fx-background-color: #ffffff; -fx-border-radius: 8; -fx-border-color: none;" />
+   <PasswordField id="confirm_password" fx:id="confirm_password" layoutX="654.0" layoutY="453.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" prefHeight="38.0" prefWidth="304.0" promptText="********" style="-fx-background-color: #ffffff; -fx-border-radius: 8; -fx-border-color: none;" />
    <ButtonBar layoutX="73.0" layoutY="423.0" prefHeight="40.0" prefWidth="200.0" />
-   <Button layoutX="323.0" layoutY="526.0" maxHeight="38.0" maxWidth="634.0" minHeight="38.0" minWidth="634.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="634.0" style="-fx-background-color: #3A2A1A; -fx-border-color: none; -fx-border-radius: 8;" text="Cadastrar" textFill="#ffe1bf">
+   <Button layoutX="323.0" layoutY="526.0" maxHeight="38.0" maxWidth="634.0" minHeight="38.0" minWidth="634.0" mnemonicParsing="false" onAction="#OnRegister" prefHeight="38.0" prefWidth="634.0" style="-fx-background-color: #3A2A1A; -fx-border-color: none; -fx-border-radius: 8;" text="Cadastrar" textFill="#ffe1bf">
       <font>
          <Font name="Cambria Bold" size="14.0" />
       </font>
