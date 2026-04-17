@@ -7,14 +7,14 @@ module app.graobrasileiroaps {
     requires java.sql;
 
     opens app to javafx.fxml;
+    opens login to javafx.fxml;
     opens register to javafx.fxml;
     opens collaborators to javafx.fxml;
     opens about to javafx.fxml;
-    opens login to javafx.fxml;
 
-    exports collaborators;
     exports app;
     exports login;
     exports register;
+    exports collaborators;
     exports about;
 }
