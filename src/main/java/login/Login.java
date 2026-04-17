@@ -1,19 +1,18 @@
-package register;
+package login;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
-public class Register extends Application {
+public class Login extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Register.class.getResource("register-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("login-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
-        stage.setTitle("Cadastro de Usuário - Grão Brasileiro");
+        stage.setTitle("Grão Brasileiro - APS Unip");
         stage.setScene(scene);
         stage.show();
     }
