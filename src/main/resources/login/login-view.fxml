@@ -6,10 +6,120 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #F7E7C5;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="register.RegisterController">
+
+   <!-- ===== QUINAS ===== -->
+   <Pane layoutX="0.0" layoutY="0.0" prefHeight="110.0" prefWidth="110.0" style="-fx-background-color: #4A7C5A; -fx-background-radius: 0 0 110 0; -fx-opacity: 0.5;" />
+   <Pane layoutX="0.0" layoutY="0.0" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: #2C5031; -fx-background-radius: 0 0 70 0; -fx-opacity: 0.4;" />
+   <Pane layoutX="1170.0" layoutY="0.0" prefHeight="110.0" prefWidth="110.0" style="-fx-background-color: #4A7C5A; -fx-background-radius: 0 0 0 110; -fx-opacity: 0.5;" />
+   <Pane layoutX="1210.0" layoutY="0.0" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: #2C5031; -fx-background-radius: 0 0 0 70; -fx-opacity: 0.4;" />
+   <Pane layoutX="0.0" layoutY="524.0" prefHeight="110.0" prefWidth="110.0" style="-fx-background-color: #4A7C5A; -fx-background-radius: 0 110 0 0; -fx-opacity: 0.5;" />
+   <Pane layoutX="0.0" layoutY="564.0" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: #2C5031; -fx-background-radius: 0 70 0 0; -fx-opacity: 0.4;" />
+   <Pane layoutX="1170.0" layoutY="524.0" prefHeight="110.0" prefWidth="110.0" style="-fx-background-color: #4A7C5A; -fx-background-radius: 110 0 0 0; -fx-opacity: 0.5;" />
+   <Pane layoutX="1210.0" layoutY="564.0" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: #2C5031; -fx-background-radius: 70 0 0 0; -fx-opacity: 0.4;" />
+
+   <!-- ===== PLANTAS DE ARROZ - ESQUERDA ===== -->
+
+   <!-- Planta 1 -->
+   <Line startX="220.0" startY="604.0" endX="220.0" endY="530.0" stroke="#3A6B3A" strokeWidth="3.0" />
+   <Ellipse centerX="207.0" centerY="575.0" radiusX="16.0" radiusY="7.0" fill="#4A7C4A" rotate="-40.0" />
+   <Ellipse centerX="233.0" centerY="560.0" radiusX="16.0" radiusY="7.0" fill="#4A7C4A" rotate="40.0" />
+   <Ellipse centerX="205.0" centerY="548.0" radiusX="14.0" radiusY="6.0" fill="#3A6B3A" rotate="-35.0" />
+   <Ellipse centerX="220.0" centerY="524.0" radiusX="5.0" radiusY="12.0" fill="#8B7355" />
+   <Ellipse centerX="215.0" centerY="527.0" radiusX="4.0" radiusY="9.0" fill="#7A6245" />
+   <Ellipse centerX="225.0" centerY="527.0" radiusX="4.0" radiusY="9.0" fill="#7A6245" />
+
+   <!-- Planta 2 -->
+   <Line startX="265.0" startY="604.0" endX="258.0" endY="525.0" stroke="#3A6B3A" strokeWidth="3.0" />
+   <Ellipse centerX="246.0" centerY="572.0" radiusX="16.0" radiusY="7.0" fill="#4A7C4A" rotate="-38.0" />
+   <Ellipse centerX="272.0" centerY="555.0" radiusX="16.0" radiusY="7.0" fill="#4A7C4A" rotate="42.0" />
+   <Ellipse centerX="244.0" centerY="543.0" radiusX="13.0" radiusY="6.0" fill="#3A6B3A" rotate="-30.0" />
+   <Ellipse centerX="258.0" centerY="519.0" radiusX="5.0" radiusY="12.0" fill="#9B8365" />
+   <Ellipse centerX="253.0" centerY="522.0" radiusX="4.0" radiusY="9.0" fill="#8B7255" />
+   <Ellipse centerX="263.0" centerY="522.0" radiusX="4.0" radiusY="9.0" fill="#8B7255" />
+
+   <!-- Planta 3 - mais alta -->
+   <Line startX="310.0" startY="604.0" endX="306.0" endY="510.0" stroke="#3A6B3A" strokeWidth="3.0" />
+   <Ellipse centerX="294.0" centerY="570.0" radiusX="17.0" radiusY="7.0" fill="#5A8C5A" rotate="-40.0" />
+   <Ellipse centerX="320.0" centerY="550.0" radiusX="17.0" radiusY="7.0" fill="#5A8C5A" rotate="40.0" />
+   <Ellipse centerX="293.0" centerY="535.0" radiusX="14.0" radiusY="6.0" fill="#4A7C4A" rotate="-35.0" />
+   <Ellipse centerX="320.0" centerY="525.0" radiusX="13.0" radiusY="6.0" fill="#4A7C4A" rotate="38.0" />
+   <Ellipse centerX="306.0" centerY="505.0" radiusX="5.0" radiusY="13.0" fill="#8B7355" />
+   <Ellipse centerX="301.0" centerY="508.0" radiusX="4.0" radiusY="10.0" fill="#7A6245" />
+   <Ellipse centerX="311.0" centerY="508.0" radiusX="4.0" radiusY="10.0" fill="#7A6245" />
+
+   <!-- Planta 4 -->
+   <Line startX="355.0" startY="604.0" endX="352.0" endY="528.0" stroke="#3A6B3A" strokeWidth="3.0" />
+   <Ellipse centerX="340.0" centerY="574.0" radiusX="15.0" radiusY="6.0" fill="#4A7C4A" rotate="-38.0" />
+   <Ellipse centerX="366.0" centerY="558.0" radiusX="15.0" radiusY="6.0" fill="#4A7C4A" rotate="40.0" />
+   <Ellipse centerX="339.0" centerY="545.0" radiusX="13.0" radiusY="5.0" fill="#3A6B3A" rotate="-33.0" />
+   <Ellipse centerX="352.0" centerY="523.0" radiusX="5.0" radiusY="11.0" fill="#9B8365" />
+   <Ellipse centerX="347.0" centerY="526.0" radiusX="4.0" radiusY="8.0" fill="#8B7255" />
+   <Ellipse centerX="357.0" centerY="526.0" radiusX="4.0" radiusY="8.0" fill="#8B7255" />
+
+   <!-- Planta 5 -->
+   <Line startX="400.0" startY="604.0" endX="397.0" endY="522.0" stroke="#2C5A2C" strokeWidth="3.0" />
+   <Ellipse centerX="384.0" centerY="570.0" radiusX="16.0" radiusY="7.0" fill="#4A7C4A" rotate="-40.0" />
+   <Ellipse centerX="411.0" centerY="554.0" radiusX="16.0" radiusY="7.0" fill="#4A7C4A" rotate="42.0" />
+   <Ellipse centerX="383.0" centerY="540.0" radiusX="13.0" radiusY="6.0" fill="#3A6B3A" rotate="-36.0" />
+   <Ellipse centerX="397.0" centerY="517.0" radiusX="5.0" radiusY="12.0" fill="#8B7355" />
+   <Ellipse centerX="392.0" centerY="520.0" radiusX="4.0" radiusY="9.0" fill="#7A6245" />
+   <Ellipse centerX="402.0" centerY="520.0" radiusX="4.0" radiusY="9.0" fill="#7A6245" />
+
+   <!-- ===== PLANTAS DE ARROZ - DIREITA ===== -->
+
+   <!-- Planta 6 -->
+   <Line startX="880.0" startY="604.0" endX="880.0" endY="530.0" stroke="#3A6B3A" strokeWidth="3.0" />
+   <Ellipse centerX="867.0" centerY="575.0" radiusX="16.0" radiusY="7.0" fill="#4A7C4A" rotate="-40.0" />
+   <Ellipse centerX="893.0" centerY="560.0" radiusX="16.0" radiusY="7.0" fill="#4A7C4A" rotate="40.0" />
+   <Ellipse centerX="866.0" centerY="548.0" radiusX="14.0" radiusY="6.0" fill="#3A6B3A" rotate="-35.0" />
+   <Ellipse centerX="880.0" centerY="524.0" radiusX="5.0" radiusY="12.0" fill="#8B7355" />
+   <Ellipse centerX="875.0" centerY="527.0" radiusX="4.0" radiusY="9.0" fill="#7A6245" />
+   <Ellipse centerX="885.0" centerY="527.0" radiusX="4.0" radiusY="9.0" fill="#7A6245" />
+
+   <!-- Planta 7 -->
+   <Line startX="925.0" startY="604.0" endX="922.0" endY="525.0" stroke="#3A6B3A" strokeWidth="3.0" />
+   <Ellipse centerX="910.0" centerY="572.0" radiusX="16.0" radiusY="7.0" fill="#5A8C5A" rotate="-38.0" />
+   <Ellipse centerX="936.0" centerY="555.0" radiusX="16.0" radiusY="7.0" fill="#5A8C5A" rotate="42.0" />
+   <Ellipse centerX="909.0" centerY="543.0" radiusX="13.0" radiusY="6.0" fill="#3A6B3A" rotate="-30.0" />
+   <Ellipse centerX="922.0" centerY="519.0" radiusX="5.0" radiusY="12.0" fill="#9B8365" />
+   <Ellipse centerX="917.0" centerY="522.0" radiusX="4.0" radiusY="9.0" fill="#8B7255" />
+   <Ellipse centerX="927.0" centerY="522.0" radiusX="4.0" radiusY="9.0" fill="#8B7255" />
+
+   <!-- Planta 8 - mais alta -->
+   <Line startX="970.0" startY="604.0" endX="966.0" endY="510.0" stroke="#3A6B3A" strokeWidth="3.0" />
+   <Ellipse centerX="954.0" centerY="570.0" radiusX="17.0" radiusY="7.0" fill="#4A7C4A" rotate="-40.0" />
+   <Ellipse centerX="980.0" centerY="550.0" radiusX="17.0" radiusY="7.0" fill="#4A7C4A" rotate="40.0" />
+   <Ellipse centerX="953.0" centerY="535.0" radiusX="14.0" radiusY="6.0" fill="#4A7C4A" rotate="-35.0" />
+   <Ellipse centerX="980.0" centerY="525.0" radiusX="13.0" radiusY="6.0" fill="#4A7C4A" rotate="38.0" />
+   <Ellipse centerX="966.0" centerY="505.0" radiusX="5.0" radiusY="13.0" fill="#8B7355" />
+   <Ellipse centerX="961.0" centerY="508.0" radiusX="4.0" radiusY="10.0" fill="#7A6245" />
+   <Ellipse centerX="971.0" centerY="508.0" radiusX="4.0" radiusY="10.0" fill="#7A6245" />
+
+   <!-- Planta 9 -->
+   <Line startX="1015.0" startY="604.0" endX="1012.0" endY="528.0" stroke="#3A6B3A" strokeWidth="3.0" />
+   <Ellipse centerX="1000.0" centerY="574.0" radiusX="15.0" radiusY="6.0" fill="#4A7C4A" rotate="-38.0" />
+   <Ellipse centerX="1026.0" centerY="558.0" radiusX="15.0" radiusY="6.0" fill="#4A7C4A" rotate="40.0" />
+   <Ellipse centerX="999.0" centerY="545.0" radiusX="13.0" radiusY="5.0" fill="#3A6B3A" rotate="-33.0" />
+   <Ellipse centerX="1012.0" centerY="523.0" radiusX="5.0" radiusY="11.0" fill="#9B8365" />
+   <Ellipse centerX="1007.0" centerY="526.0" radiusX="4.0" radiusY="8.0" fill="#8B7255" />
+   <Ellipse centerX="1017.0" centerY="526.0" radiusX="4.0" radiusY="8.0" fill="#8B7255" />
+
+   <!-- Planta 10 -->
+   <Line startX="1060.0" startY="604.0" endX="1057.0" endY="522.0" stroke="#2C5A2C" strokeWidth="3.0" />
+   <Ellipse centerX="1044.0" centerY="570.0" radiusX="16.0" radiusY="7.0" fill="#5A8C5A" rotate="-40.0" />
+   <Ellipse centerX="1071.0" centerY="554.0" radiusX="16.0" radiusY="7.0" fill="#5A8C5A" rotate="42.0" />
+   <Ellipse centerX="1043.0" centerY="540.0" radiusX="13.0" radiusY="6.0" fill="#3A6B3A" rotate="-36.0" />
+   <Ellipse centerX="1057.0" centerY="517.0" radiusX="5.0" radiusY="12.0" fill="#8B7355" />
+   <Ellipse centerX="1052.0" centerY="520.0" radiusX="4.0" radiusY="9.0" fill="#7A6245" />
+   <Ellipse centerX="1062.0" centerY="520.0" radiusX="4.0" radiusY="9.0" fill="#7A6245" />
+
+   <!-- ===== CONTEÚDO ORIGINAL ===== -->
    <Text fill="#1a3a23" layoutX="543.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grão Brasileiro" textOrigin="CENTER" wrappingWidth="224.2734375">
       <font>
          <Font name="Cambria Bold" size="30.0" />
@@ -58,7 +168,12 @@
          <Cursor fx:constant="HAND" />
       </cursor>
    </Text>
-   <Pane layoutX="-15.0" layoutY="604.0" prefHeight="117.0" prefWidth="1296.0" style="-fx-background-color: #3A2A1A;">
+   <Pane layoutX="-15.0" layoutY="604.0" prefHeight="117.0" prefWidth="1296.0"
+         style="
+        -fx-background-color: #3A2A1A;
+        -fx-background-image: url('/img/Textura.png');
+        -fx-background-repeat: repeat;
+      ">
       <children>
          <Text fill="WHITE" layoutX="137.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pagamentos Seguro:" textOrigin="CENTER" wrappingWidth="319.2734375">
             <font>
