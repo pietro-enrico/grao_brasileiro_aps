@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: FFE1BF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label layoutX="189.0" layoutY="84.0" text="Grão Brasileiro" textFill="#1a3a23">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <ImageView fitWidth="77.0" layoutX="110.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../assets/coffee-beans.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="653.0" layoutY="98.0" text="Home" textFill="#1a3a23">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Label layoutX="785.0" layoutY="98.0" text="Doação" textFill="#1a3a23">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Label layoutX="932.0" layoutY="98.0" text="Pagamento" textFill="#1a3a23">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Label layoutX="1119.0" layoutY="98.0" text="Sobre" textFill="#1a3a23">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+      <Label layoutX="111.0" layoutY="211.0" prefHeight="53.0" prefWidth="487.0" text="Nossos Parceiros de Impacto" textFill="#1a3a23" wrapText="true">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="115.0" layoutY="248.0" prefHeight="393.0" prefWidth="480.0" text="Na Grão Brasileiro, acreditamos que ninguém transforma a realidade sozinho. Para que nossos suprimentos cheguem com agilidade e qualidade à mesa de quem mais precisa, contamos com o apoio de parceiros estratégicos:Ambev (Programa VOA): Atua na profissionalização da nossa gestão. Através de mentorias em tecnologia logística, a Ambev nos ajuda a otimizar rotas e organizar estoques, garantindo que cada doação seja entregue com máxima eficiência.Atacadão: É o nosso braço direito na garantia da segurança alimentar. Como o maior atacadista do país, o Atacadão nos oferece condições para converter doações em grandes volumes de mantimentos, assegurando o fluxo constante de alimentos essenciais." textAlignment="JUSTIFY" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="188.0" fitWidth="364.0" layoutX="901.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/atacadao-equipe.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="170.0" fitWidth="282.0" layoutX="674.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/ambev-voa.jpg" />
+         </image>
+      </ImageView>
+    </children>
+</Pane>
