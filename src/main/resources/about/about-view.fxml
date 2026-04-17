@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: FFE1BF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #FFE1BF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="200.0" layoutY="84.0" text="Grão Brasileiro" textFill="#1a3a23">
          <font>
@@ -43,19 +43,58 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <Label layoutX="121.0" layoutY="247.0" prefHeight="103.0" prefWidth="258.0" text="Historia da ONG:" textFill="#1a3a23" wrapText="true">
+      <Label layoutX="121.0" layoutY="190.0" prefHeight="103.0" prefWidth="258.0" text="Historia da ONG:" textFill="#1a3a23" wrapText="true">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <ImageView fitHeight="340.0" fitWidth="507.0" layoutX="700.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../assets/Volunteers.jpg" />
-         </image></ImageView>
-      <Label layoutX="121.0" layoutY="330.0" prefHeight="209.0" prefWidth="500.0" text="Na Grão Brasileiro, trabalhamos diariamente para transformar a realidade de pessoas com necessidades básicas. Junte-se a nós e faça parte desta mudança." textAlignment="JUSTIFY" wrapText="true">
+      <Label graphicTextGap="0.0" layoutX="121.0" layoutY="278.0" prefHeight="209.0" prefWidth="500.0" text="História da ONG" textAlignment="JUSTIFY" wrapText="true">
          <font>
-            <Font size="25.0" />
+            <Font size="20.0" />
          </font>
       </Label>
+      <!-- Imagem 1 -->
+      <Pane layoutX="640.0" layoutY="190.0" prefHeight="200.0" prefWidth="280.0" style="-fx-background-color: #4A7C5A; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 12,0,0,4);">
+         <children>
+            <ImageView fitHeight="180.0" fitWidth="260.0" layoutX="10.0" layoutY="28.0" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/mundo-nas-maos.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+
+      <!-- Imagem 2 -->
+      <Pane layoutX="940.0" layoutY="190.0" prefHeight="200.0" prefWidth="280.0" style="-fx-background-color: #4A7C5A; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 12,0,0,4);">
+         <children>
+            <ImageView fitHeight="180.0" fitWidth="260.0" layoutX="10.0" layoutY="13.0" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/fome-zero.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+
+      <!-- Imagem 3 -->
+      <Pane layoutX="640.0" layoutY="400.0" prefHeight="200.0" prefWidth="280.0" style="-fx-background-color: #4A7C5A; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 12,0,0,4);">
+         <children>
+            <ImageView fitHeight="180.0" fitWidth="260.0" layoutX="10.0" layoutY="22.0" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/pessoas-reunidas.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+
+      <!-- Imagem 4 -->
+      <Pane layoutX="940.0" layoutY="400.0" prefHeight="200.0" prefWidth="280.0" style="-fx-background-color: #4A7C5A; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 12,0,0,4);">
+         <children>
+            <ImageView fitHeight="180.0" fitWidth="260.0" layoutX="10.0" layoutY="13.0" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/soliedariedade.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
    </children>
 </Pane>

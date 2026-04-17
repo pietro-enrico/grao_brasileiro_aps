@@ -20,8 +20,4 @@ public class RegisterController {
     protected void OnRegister() {
         System.out.println(email.getText());
     }
-
-    public void initialize() {
-        System.out.println(DatabaseConnection.connection());
-    }
 }
