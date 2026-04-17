@@ -8,6 +8,8 @@ module app.graobrasileiroaps {
 
     opens app to javafx.fxml;
     opens register to javafx.fxml;
+    opens collaborators to javafx.fxml;
+    exports collaborators;
     exports app;
     exports register;
 }

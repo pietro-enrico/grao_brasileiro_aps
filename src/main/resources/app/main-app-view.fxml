@@ -16,7 +16,7 @@
       </Label>
       <ImageView fitHeight="97.0" fitWidth="77.0" layoutX="121.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/coffee-beans.png" />
+            <Image url="@../assets/coffee-beans.png" />
          </image>
       </ImageView>
       <Label layoutX="674.0" layoutY="98.0" text="Doação" textFill="#1a3a23">
@@ -46,7 +46,7 @@
       </Label>
       <ImageView fitHeight="340.0" fitWidth="507.0" layoutX="700.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/Volunteers.jpg" />
+            <Image url="@../assets/Volunteers.jpg" />
          </image></ImageView>
       <Label layoutX="121.0" layoutY="330.0" prefHeight="209.0" prefWidth="500.0" text="Na Grão Brasileiro, trabalhamos diariamente para transformar a realidade de pessoas com necessidades básicas. Junte-se a nós e faça parte desta mudança." textAlignment="JUSTIFY" wrapText="true">
          <font>

@@ -1,5 +1,6 @@
 package register;
 
+import config.database.DatabaseConnection;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ComboBox;
@@ -18,5 +19,9 @@ public class RegisterController {
     @FXML
     protected void OnRegister() {
         System.out.println(email.getText());
+    }
+
+    public void initialize() {
+        System.out.println(DatabaseConnection.connection());
     }
 }
