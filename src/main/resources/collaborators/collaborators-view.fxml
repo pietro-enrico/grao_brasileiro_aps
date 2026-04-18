@@ -4,59 +4,137 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: FFE1BF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #FFE1BF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <Label layoutX="189.0" layoutY="84.0" text="Grão Brasileiro" textFill="#1a3a23">
-            <font>
-                <Font size="40.0" />
-            </font>
-        </Label>
+
+        <!-- ===== NAVBAR ===== -->
         <ImageView fitWidth="77.0" layoutX="110.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../assets/coffee-beans.png" />
             </image>
         </ImageView>
+        <Label layoutX="189.0" layoutY="84.0" text="Grão Brasileiro" textFill="#1a3a23">
+            <font><Font size="40.0" /></font>
+        </Label>
         <Label layoutX="653.0" layoutY="98.0" text="Home" textFill="#1a3a23">
-            <font>
-                <Font size="25.0" />
-            </font>
+            <font><Font size="25.0" /></font>
         </Label>
         <Label layoutX="785.0" layoutY="98.0" text="Doação" textFill="#1a3a23">
-            <font>
-                <Font size="25.0" />
-            </font>
+            <font><Font size="25.0" /></font>
         </Label>
         <Label layoutX="932.0" layoutY="98.0" text="Pagamento" textFill="#1a3a23">
-            <font>
-                <Font size="25.0" />
-            </font>
+            <font><Font size="25.0" /></font>
         </Label>
-        <Label layoutX="1119.0" layoutY="98.0" text="Sobre" textFill="#1a3a23">
-            <font>
-                <Font size="25.0" />
-            </font>
+
+        <!-- ===== BANNER VERDE ===== -->
+        <Rectangle fill="#2C5031" height="90.0" layoutX="0.0" layoutY="148.0" width="1280.0" />
+        <Label layoutX="110.0" layoutY="158.0" prefHeight="34.0" prefWidth="520.0" text="Nossos Parceiros de Impacto" textFill="#F5DEB8">
+            <font><Font name="System Bold" size="28.0" /></font>
         </Label>
-      <Label layoutX="111.0" layoutY="211.0" prefHeight="53.0" prefWidth="487.0" text="Nossos Parceiros de Impacto" textFill="#1a3a23" wrapText="true">
+        <Label layoutX="110.0" layoutY="192.0" prefWidth="500.0" text="Juntos, chegamos mais longe. Conheça quem torna isso possível." textFill="#A8C8A0">
+            <font><Font size="14.0" /></font>
+        </Label>
+
+        <!-- Stats no banner -->
+        <Label layoutX="820.0" layoutY="163.0" text="2+" textFill="#F5DEB8">
+            <font><Font name="System Bold" size="26.0" /></font>
+        </Label>
+        <Label layoutX="808.0" layoutY="196.0" text="Parceiros" textFill="#A8C8A0">
+            <font><Font size="13.0" /></font>
+        </Label>
+
+        <Label layoutX="950.0" layoutY="163.0" text="10k" textFill="#F5DEB8">
+            <font><Font name="System Bold" size="26.0" /></font>
+        </Label>
+        <Label layoutX="930.0" layoutY="196.0" text="Famílias atendidas" textFill="#A8C8A0">
+            <font><Font size="13.0" /></font>
+        </Label>
+
+        <Label layoutX="1110.0" layoutY="163.0" text="100%" textFill="#F5DEB8">
+            <font><Font name="System Bold" size="26.0" /></font>
+        </Label>
+        <Label layoutX="1098.0" layoutY="196.0" text="Compromisso" textFill="#A8C8A0">
+            <font><Font size="13.0" /></font>
+        </Label>
+
+        <!-- ===== CARD AMBEV ===== -->
+        <!-- fundo do card -->
+        <Rectangle arcHeight="14" arcWidth="14" fill="#FDF6EC" height="178.0" layoutX="90.0" layoutY="262.0" width="1100.0" />
+        <!-- borda do card -->
+        <Rectangle arcHeight="14" arcWidth="14" fill="transparent" height="178.0" layoutX="90.0" layoutY="262.0" stroke="#D4B896" strokeWidth="1.0" width="1100.0" />
+
+        <!-- área da imagem (esquerda) -->
+        <Rectangle arcHeight="14" arcWidth="14" fill="#D4B896" height="178.0" layoutX="90.0" layoutY="262.0" width="220.0" />
+        <!-- corte do lado direito do bloco de imagem (para não arredondar lá) -->
+        <Rectangle fill="#D4B896" height="178.0" layoutX="196.0" layoutY="262.0" width="114.0" />
+
+        <ImageView fitHeight="130.0" fitWidth="190.0" layoutX="105.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
+            <image><Image url="@../assets/ambev-voa.jpg" /></image>
+        </ImageView>
+
+        <!-- badge parceiro -->
+        <Rectangle arcHeight="20" arcWidth="20" fill="#2C5031" height="20.0" layoutX="108.0" layoutY="418.0" width="160.0" />
+        <Label layoutX="120.0" layoutY="419.0" text="Parceiro estratégico" textFill="#A8C8A0">
+            <font><Font size="11.0" /></font>
+        </Label>
+
+        <!-- textos do card Ambev -->
+        <Label layoutX="328.0" layoutY="274.0" text="PROGRAMA VOA" textFill="#7A5030">
+            <font><Font name="System Bold" size="12.0" /></font>
+        </Label>
+        <Label layoutX="326.0" layoutY="294.0" text="Ambev" textFill="#2C1A0E">
+            <font><Font name="System Bold" size="22.0" /></font>
+        </Label>
+        <Label layoutX="326.0" layoutY="324.0" prefHeight="80.0" prefWidth="820.0" text="Atua na profissionalização da nossa gestão. Através de mentorias em tecnologia logística, a Ambev nos ajuda a otimizar rotas e organizar estoques, garantindo que cada doação seja entregue com máxima eficiência." textFill="#4A3020" wrapText="true">
+            <font><Font size="14.0" /></font>
+        </Label>
+        <!-- tag -->
+        <Rectangle arcHeight="20" arcWidth="20" fill="#EAD9C0" height="22.0" layoutX="326.0" layoutY="410.0" width="140.0" />
+        <Label layoutX="338.0" layoutY="412.0" text="Logística &amp; Gestão" textFill="#6B3A2A">
+            <font><Font size="11.0" /></font>
+        </Label>
+
+        <!-- ===== DIVISOR ===== -->
+        <Line endX="1190.0" endY="454.0" startX="90.0" startY="454.0" stroke="#D4B896" strokeWidth="1.0" />
+
+        <!-- ===== CARD ATACADÃO ===== -->
+        <Rectangle arcHeight="14" arcWidth="14" fill="#FDF6EC" height="178.0" layoutX="90.0" layoutY="464.0" width="1100.0" />
+        <Rectangle arcHeight="14" arcWidth="14" fill="transparent" height="178.0" layoutX="90.0" layoutY="464.0" stroke="#D4B896" strokeWidth="1.0" width="1100.0" />
+
+        <Rectangle arcHeight="14" arcWidth="14" fill="#D4B896" height="178.0" layoutX="90.0" layoutY="464.0" width="220.0" />
+        <Rectangle fill="#D4B896" height="178.0" layoutX="196.0" layoutY="464.0" width="114.0" />
+
+        <ImageView fitHeight="130.0" fitWidth="190.0" layoutX="105.0" layoutY="482.0" pickOnBounds="true" preserveRatio="true">
+            <image><Image url="@../assets/atacadao-equipe.jpg" /></image>
+        </ImageView>
+
+        <Rectangle arcHeight="20" arcWidth="20" fill="#2C5031" height="20.0" layoutX="108.0" layoutY="620.0" width="160.0" />
+        <Label layoutX="120.0" layoutY="621.0" text="Parceiro estratégico" textFill="#A8C8A0">
+            <font><Font size="11.0" /></font>
+        </Label>
+
+        <Label layoutX="328.0" layoutY="476.0" text="SEGURANÇA ALIMENTAR" textFill="#7A5030">
+            <font><Font name="System Bold" size="12.0" /></font>
+        </Label>
+        <Label layoutX="326.0" layoutY="496.0" text="Atacadão" textFill="#2C1A0E">
+            <font><Font name="System Bold" size="22.0" /></font>
+        </Label>
+        <Label layoutX="326.0" layoutY="526.0" prefHeight="80.0" prefWidth="820.0" text="É o nosso braço direito na garantia da segurança alimentar. Como o maior atacadista do país, o Atacadão nos oferece condições para converter doações em grandes volumes de mantimentos, assegurando o fluxo constante de alimentos essenciais." textFill="#4A3020" wrapText="true">
+            <font><Font size="14.0" /></font>
+        </Label>
+        <Rectangle arcHeight="20" arcWidth="20" fill="#EAD9C0" height="22.0" layoutX="326.0" layoutY="612.0" width="170.0" />
+        <Label layoutX="338.0" layoutY="614.0" text="Abastecimento &amp; Volume" textFill="#6B3A2A">
+            <font><Font size="11.0" /></font>
+        </Label>
+      <Label layoutX="1102.0" layoutY="98.0" text="Sobre" textFill="#1a3a23">
          <font>
-            <Font name="System Bold" size="36.0" />
+            <Font size="25.0" />
          </font>
       </Label>
-      <Label layoutX="115.0" layoutY="248.0" prefHeight="393.0" prefWidth="480.0" text="Na Grão Brasileiro, acreditamos que ninguém transforma a realidade sozinho. Para que nossos suprimentos cheguem com agilidade e qualidade à mesa de quem mais precisa, contamos com o apoio de parceiros estratégicos:Ambev (Programa VOA): Atua na profissionalização da nossa gestão. Através de mentorias em tecnologia logística, a Ambev nos ajuda a otimizar rotas e organizar estoques, garantindo que cada doação seja entregue com máxima eficiência.Atacadão: É o nosso braço direito na garantia da segurança alimentar. Como o maior atacadista do país, o Atacadão nos oferece condições para converter doações em grandes volumes de mantimentos, assegurando o fluxo constante de alimentos essenciais." textAlignment="JUSTIFY" wrapText="true">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="188.0" fitWidth="364.0" layoutX="901.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../assets/atacadao-equipe.jpg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="170.0" fitWidth="282.0" layoutX="674.0" layoutY="238.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../assets/ambev-voa.jpg" />
-         </image>
-      </ImageView>
+
     </children>
 </Pane>

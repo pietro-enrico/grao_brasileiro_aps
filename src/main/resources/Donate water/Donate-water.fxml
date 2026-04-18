@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="720.0" prefWidth="1280.0"
+      style="-fx-background-color: #FFE1BF;"
+      xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Donate.DoacaoController">
+<children>
+
+    <!-- ===== NAVBAR ===== -->
+    <ImageView fitHeight="70.0" fitWidth="56.0" layoutX="90.0" layoutY="22.0"
+               pickOnBounds="true" preserveRatio="true">
+        <image><Image url="@../assets/coffee-beans.png" /></image>
+    </ImageView>
+    <Label layoutX="152.0" layoutY="42.0" text="Grão Brasileiro" textFill="#1a3a23">
+        <font><Font size="28.0" /></font>
+    </Label>
+    <Label fx:id="navHome" layoutX="700.0" layoutY="52.0" text="Home" textFill="#1a3a23">
+        <font><Font size="20.0" /></font>
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+    <Label fx:id="navColab" layoutX="860.0" layoutY="52.0" text="Colaboradores" textFill="#1a3a23">
+        <font><Font size="20.0" /></font>
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+    <Label fx:id="navSobre" layoutX="1090.0" layoutY="52.0" text="Sobre" textFill="#1a3a23">
+        <font><Font size="20.0" /></font>
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+    <Rectangle layoutX="0.0" layoutY="88.0" width="1280.0" height="1.5" fill="#D4B896" />
+
+    <!-- ===== SLIDE 1 — BEBIDAS ===== -->
+    <Pane fx:id="slide1" layoutX="0.0" layoutY="89.0" prefWidth="1280.0" prefHeight="631.0">
+
+        <!-- tag -->
+        <Rectangle layoutX="90.0" layoutY="60.0" width="140.0" height="26.0"
+                   fill="#2C5031" arcWidth="26" arcHeight="26" />
+        <Label layoutX="104.0" layoutY="64.0" text="Campanha 1 de 3" textFill="#A8C8A0">
+            <font><Font name="System Bold" size="11.0" /></font>
+        </Label>
+
+        <!-- título e texto -->
+        <Label layoutX="90.0" layoutY="100.0" text="Doe Bebidas" textFill="#1a3a23">
+            <font><Font name="System Bold" size="44.0" /></font>
+        </Label>
+        <Label layoutX="90.0" layoutY="158.0" prefWidth="480.0" prefHeight="90.0"
+               text="Ajude a levar hidratação e cuidado para quem precisa. Cada garrafa doada representa dignidade na mesa de uma família."
+               textFill="#4A3020" wrapText="true">
+            <font><Font size="16.0" /></font>
+        </Label>
+
+        <!-- botão DOE -->
+        <Button fx:id="btnDoe1" layoutX="90.0" layoutY="268.0"
+                prefWidth="180.0" prefHeight="50.0" text="DOE AGORA"
+                onAction="#onDoe1"
+                style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: none;">
+            <cursor><Cursor fx:constant="HAND" /></cursor>
+        </Button>
+
+        <!-- label gráfico -->
+        <Label layoutX="680.0" layoutY="60.0" text="UNIDADES ARRECADADAS" textFill="#7A5030">
+            <font><Font name="System Bold" size="11.0" /></font>
+        </Label>
+
+        <!-- BarChart slide 1 -->
+        <BarChart fx:id="chart1" layoutX="640.0" layoutY="80.0"
+                  prefWidth="520.0" prefHeight="340.0"
+                  style="-fx-background-color: transparent; -fx-plot-background-color: transparent; -fx-padding: 0;">
+            <xAxis>
+                <CategoryAxis fx:id="xAxis1" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="yAxis1" lowerBound="0" upperBound="100" tickUnit="20" />
+            </yAxis>
+        </BarChart>
+
+        <!-- barra de progresso -->
+        <Label layoutX="660.0" layoutY="430.0" text="Meta da campanha" textFill="#7A5030">
+            <font><Font name="System Bold" size="12.0" /></font>
+        </Label>
+        <Label layoutX="990.0" layoutY="430.0" text="168 / 250 un." textFill="#7A5030">
+            <font><Font name="System Bold" size="12.0" /></font>
+        </Label>
+        <Rectangle layoutX="660.0" layoutY="452.0" width="500.0" height="12.0"
+                   fill="#EAD9C0" arcWidth="12" arcHeight="12" />
+        <Rectangle fx:id="progress1" layoutX="660.0" layoutY="452.0" width="335.0" height="12.0"
+                   fill="#2C5031" arcWidth="12" arcHeight="12" />
+
+        <!-- indicador slide -->
+        <Label layoutX="90.0" layoutY="500.0" text="1 • 2 • 3" textFill="#7A5030">
+            <font><Font size="18.0" /></font>
+        </Label>
+
+    </Pane>
+
+    <!-- ===== SLIDE 2 — ALIMENTOS ===== -->
+    <Pane fx:id="slide2" layoutX="0.0" layoutY="89.0" prefWidth="1280.0" prefHeight="631.0" visible="false">
+
+        <Rectangle layoutX="90.0" layoutY="60.0" width="140.0" height="26.0"
+                   fill="#2C5031" arcWidth="26" arcHeight="26" />
+        <Label layoutX="104.0" layoutY="64.0" text="Campanha 2 de 3" textFill="#A8C8A0">
+            <font><Font name="System Bold" size="11.0" /></font>
+        </Label>
+
+        <Label layoutX="90.0" layoutY="100.0" text="Doe Alimentos" textFill="#1a3a23">
+            <font><Font name="System Bold" size="44.0" /></font>
+        </Label>
+        <Label layoutX="90.0" layoutY="158.0" prefWidth="480.0" prefHeight="90.0"
+               text="Doe comida e ajude a levar esperança para quem precisa. Arroz, macarrão e feijão são a base de cada refeição."
+               textFill="#4A3020" wrapText="true">
+            <font><Font size="16.0" /></font>
+        </Label>
+
+        <Button fx:id="btnDoe2" layoutX="90.0" layoutY="268.0"
+                prefWidth="180.0" prefHeight="50.0" text="DOE AGORA"
+                onAction="#onDoe2"
+                style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: none;">
+            <cursor><Cursor fx:constant="HAND" /></cursor>
+        </Button>
+
+        <Label layoutX="680.0" layoutY="60.0" text="UNIDADES ARRECADADAS" textFill="#7A5030">
+            <font><Font name="System Bold" size="11.0" /></font>
+        </Label>
+
+        <BarChart fx:id="chart2" layoutX="640.0" layoutY="80.0"
+                  prefWidth="520.0" prefHeight="340.0"
+                  style="-fx-background-color: transparent; -fx-plot-background-color: transparent; -fx-padding: 0;">
+            <xAxis><CategoryAxis fx:id="xAxis2" /></xAxis>
+            <yAxis><NumberAxis fx:id="yAxis2" lowerBound="0" upperBound="100" tickUnit="20" /></yAxis>
+        </BarChart>
+
+        <Label layoutX="660.0" layoutY="430.0" text="Meta da campanha" textFill="#7A5030">
+            <font><Font name="System Bold" size="12.0" /></font>
+        </Label>
+        <Label layoutX="990.0" layoutY="430.0" text="168 / 300 un." textFill="#7A5030">
+            <font><Font name="System Bold" size="12.0" /></font>
+        </Label>
+        <Rectangle layoutX="660.0" layoutY="452.0" width="500.0" height="12.0"
+                   fill="#EAD9C0" arcWidth="12" arcHeight="12" />
+        <Rectangle fx:id="progress2" layoutX="660.0" layoutY="452.0" width="280.0" height="12.0"
+                   fill="#2C5031" arcWidth="12" arcHeight="12" />
+
+        <Label layoutX="90.0" layoutY="500.0" text="1 • 2 • 3" textFill="#7A5030">
+            <font><Font size="18.0" /></font>
+        </Label>
+
+    </Pane>
+
+    <!-- ===== SLIDE 3 — DINHEIRO ===== -->
+    <Pane fx:id="slide3" layoutX="0.0" layoutY="89.0" prefWidth="1280.0" prefHeight="631.0" visible="false">
+
+        <Rectangle layoutX="90.0" layoutY="60.0" width="140.0" height="26.0"
+                   fill="#2C5031" arcWidth="26" arcHeight="26" />
+        <Label layoutX="104.0" layoutY="64.0" text="Campanha 3 de 3" textFill="#A8C8A0">
+            <font><Font name="System Bold" size="11.0" /></font>
+        </Label>
+
+        <Label layoutX="90.0" layoutY="100.0" text="Doe em Dinheiro" textFill="#1a3a23">
+            <font><Font name="System Bold" size="44.0" /></font>
+        </Label>
+        <Label layoutX="90.0" layoutY="158.0" prefWidth="480.0" prefHeight="90.0"
+               text="Contribua com qualquer valor e ajude quem mais precisa. Sua doação nos permite comprar o que está em maior falta."
+               textFill="#4A3020" wrapText="true">
+            <font><Font size="16.0" /></font>
+        </Label>
+
+        <Button fx:id="btnDoe3" layoutX="90.0" layoutY="268.0"
+                prefWidth="180.0" prefHeight="50.0" text="DOE AGORA"
+                onAction="#onDoe3"
+                style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: none;">
+            <cursor><Cursor fx:constant="HAND" /></cursor>
+        </Button>
+
+        <Label layoutX="680.0" layoutY="60.0" text="TOTAL ARRECADADO (R$)" textFill="#7A5030">
+            <font><Font name="System Bold" size="11.0" /></font>
+        </Label>
+
+        <BarChart fx:id="chart3" layoutX="640.0" layoutY="80.0"
+                  prefWidth="520.0" prefHeight="340.0"
+                  style="-fx-background-color: transparent; -fx-plot-background-color: transparent; -fx-padding: 0;">
+            <xAxis><CategoryAxis fx:id="xAxis3" /></xAxis>
+            <yAxis><NumberAxis fx:id="yAxis3" lowerBound="0" upperBound="600" tickUnit="100" /></yAxis>
+        </BarChart>
+
+        <Label layoutX="660.0" layoutY="430.0" text="Meta da campanha" textFill="#7A5030">
+            <font><Font name="System Bold" size="12.0" /></font>
+        </Label>
+        <Label layoutX="970.0" layoutY="430.0" text="R$500 / R$1.000" textFill="#7A5030">
+            <font><Font name="System Bold" size="12.0" /></font>
+        </Label>
+        <Rectangle layoutX="660.0" layoutY="452.0" width="500.0" height="12.0"
+                   fill="#EAD9C0" arcWidth="12" arcHeight="12" />
+        <Rectangle fx:id="progress3" layoutX="660.0" layoutY="452.0" width="250.0" height="12.0"
+                   fill="#2C5031" arcWidth="12" arcHeight="12" />
+
+        <Label layoutX="90.0" layoutY="500.0" text="1 • 2 • 3" textFill="#7A5030">
+            <font><Font size="18.0" /></font>
+        </Label>
+
+    </Pane>
+
+    <!-- ===== SETAS DO CARROSSEL ===== -->
+    <Button fx:id="btnVoltar" layoutX="18.0" layoutY="380.0"
+            prefWidth="50.0" prefHeight="50.0" text="‹"
+            onAction="#voltar"
+            style="-fx-background-color: rgba(44,80,49,0.15); -fx-text-fill: #2C5031; -fx-font-size: 28px; -fx-background-radius: 50; -fx-border-color: #2C5031; -fx-border-radius: 50; -fx-border-width: 1.5;">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Button>
+    <Button fx:id="btnAvancar" layoutX="1212.0" layoutY="380.0"
+            prefWidth="50.0" prefHeight="50.0" text="›"
+            onAction="#avancar"
+            style="-fx-background-color: rgba(44,80,49,0.15); -fx-text-fill: #2C5031; -fx-font-size: 28px; -fx-background-radius: 50; -fx-border-color: #2C5031; -fx-border-radius: 50; -fx-border-width: 1.5;">
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Button>
+
+</children>
+</Pane>
