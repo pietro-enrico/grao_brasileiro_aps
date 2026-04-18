@@ -13,7 +13,7 @@ public class DatabaseConnection {
             conn = DriverManager.getConnection(url);
         }
         catch (SQLException e) {
-            System.out.println(String.format("Erro na conexão com o banco de dados: %s", e.getMessage()));
+            System.err.println(String.format("Erro na conexão com o banco de dados: %s", e.getMessage()));
         }
         return conn;
     }

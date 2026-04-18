@@ -5,6 +5,7 @@ module app.graobrasileiroaps {
     requires org.kordamp.bootstrapfx.core;
     requires java.desktop;
     requires java.sql;
+    requires jbcrypt;
 
     opens app to javafx.fxml;
     opens login to javafx.fxml;
