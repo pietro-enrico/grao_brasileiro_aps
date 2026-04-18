@@ -1,9 +1,11 @@
 package register;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
+import message.Message;
 
 public class RegisterController {
     @FXML
@@ -16,10 +18,21 @@ public class RegisterController {
     private ComboBox<String> is_voluntary;
 
     @FXML
-    protected void OnRegister() {
+    protected boolean OnRegister() {
         RegisterDTO dto = new RegisterDTO();
+        RegisterDTO.setErrors(0);
+        dto.setFull_name(full_name.getText());
+        dto.setEmail(email.getText());
+        dto.setCpf(cpf.getText());
         dto.setIs_voluntary(is_voluntary.getValue());
-        System.out.println(dto.getIs_voluntary());
+        dto.setPassword(password.getText());
+        dto.setConfirm_password(confirm_password.getText());
+
+        if(RegisterDTO.getErrors()) {
+            Message.showMessage(AlertType.INFORMATION, "Atenção", "Campos obrigatórios não preenchidos", "Verifique o formulário e preencha todos os campos obrigatórios para prosseguir.");
+            return false;
+        }
+        return true;
     }
 
     @FXML
