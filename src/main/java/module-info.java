@@ -9,12 +9,14 @@ module app.graobrasileiroaps {
     opens app to javafx.fxml;
     opens login to javafx.fxml;
     opens register to javafx.fxml;
+    opens donate to javafx.fxml;
     opens collaborators to javafx.fxml;
     opens about to javafx.fxml;
 
     exports app;
     exports login;
     exports register;
+    exports donate;
     exports collaborators;
     exports about;
 }
