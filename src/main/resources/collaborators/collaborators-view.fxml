@@ -94,7 +94,7 @@
         </Label>
         <!-- tag -->
         <Rectangle arcHeight="20" arcWidth="20" fill="#EAD9C0" height="22.0" layoutX="326.0" layoutY="410.0" width="140.0" />
-        <Label layoutX="338.0" layoutY="412.0" text="Logística &amp; Gestão" textFill="#6B3A2A">
+        <Label layoutX="350.0" layoutY="413.0" text="Logística &amp; Gestão" textFill="#6B3A2A">
             <font><Font size="11.0" /></font>
         </Label>
 
