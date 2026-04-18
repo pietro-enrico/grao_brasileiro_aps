@@ -1,9 +1,10 @@
-package Donate;
+package donate;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
 import java.awt.*;
@@ -11,7 +12,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class DoacaoController implements Initializable {
+public class DonateController implements Initializable {
 
     // ===== SLIDES =====
     @FXML
