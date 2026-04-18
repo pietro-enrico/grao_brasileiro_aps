@@ -1,4 +1,4 @@
-package Donate;
+package donate;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,9 +10,9 @@ import java.io.IOException;
 public class Donate extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Donate.class.getResource("Donate-water.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Donate.class.getResource("water-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
-        stage.setTitle("Grão Brasileiro - APS Unip");
+        stage.setTitle("Doação - Grão Brasileiro");
         stage.setScene(scene);
         stage.show();
     }

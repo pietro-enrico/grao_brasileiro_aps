@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #F7E7C5;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="register.RegisterController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #F7E7C5;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginController">
 
    <!-- ===== QUINAS ===== -->
    <Pane layoutX="0.0" layoutY="0.0" prefHeight="132.0" prefWidth="224.0" style="-fx-background-color: #4A7C5A; -fx-background-radius: 0 0 110 0; -fx-opacity: 0.5;" />
@@ -147,7 +147,7 @@
    </Text>
    <PasswordField id="password" fx:id="password" layoutX="503.0" layoutY="385.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" prefHeight="38.0" prefWidth="304.0" promptText="********" style="-fx-background-color: #ffffff; -fx-border-radius: 8; -fx-border-color: none;" />
    <ButtonBar layoutX="73.0" layoutY="423.0" prefHeight="40.0" prefWidth="200.0" />
-   <Button layoutX="505.0" layoutY="444.0" maxHeight="38.0" maxWidth="634.0" minHeight="38.0" minWidth="304.0" mnemonicParsing="false" onAction="#OnRegister" prefHeight="38.0" prefWidth="304.0" style="-fx-background-color: #3A2A1A; -fx-border-color: none; -fx-border-radius: 8;" text="Cadastrar" textFill="#ffe1bf">
+   <Button layoutX="505.0" layoutY="444.0" maxHeight="38.0" maxWidth="634.0" minHeight="38.0" minWidth="304.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="304.0" style="-fx-background-color: #3A2A1A; -fx-border-color: none; -fx-border-radius: 8;" text="Cadastrar" textFill="#ffe1bf">
       <font>
          <Font name="Cambria Bold" size="14.0" />
       </font>
