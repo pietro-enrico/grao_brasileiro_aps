@@ -20,7 +20,8 @@ public class RegisterController {
     @FXML
     protected boolean OnRegister() {
         RegisterDTO dto = new RegisterDTO();
-        RegisterDTO.setErrors(0);
+        RegisterDTO.setErrors("");
+
         dto.setFull_name(full_name.getText());
         dto.setEmail(email.getText());
         dto.setCpf(cpf.getText());
@@ -28,8 +29,8 @@ public class RegisterController {
         dto.setPassword(password.getText());
         dto.setConfirm_password(confirm_password.getText());
 
-        if(RegisterDTO.getErrors()) {
-            Message.showMessage(AlertType.INFORMATION, "Atenção", "Campos obrigatórios não preenchidos", "Verifique o formulário e preencha todos os campos obrigatórios para prosseguir.");
+        if(!RegisterDTO.getErrors().isEmpty()) {
+            Message.showMessage(AlertType.INFORMATION, "Atenção", "Corrija os seguintes erros:", RegisterDTO.getErrors().toString());
             return false;
         }
         return true;
