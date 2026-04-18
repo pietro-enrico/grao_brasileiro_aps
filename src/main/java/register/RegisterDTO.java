@@ -21,24 +21,21 @@ public class RegisterDTO {
         }
     }
 
-    public String getEmail() {
-        return email;
-    }
+    public String getEmail() { return email; }
 
     public void setEmail(String email) {
         if(email.isEmpty()) {
             errors.append("\n- Email obrigatório.");
-        } else if(!email.matches(EMAIL_REGEX)) {
+        }
+        else if(!email.matches(EMAIL_REGEX)) {
             errors.append("\n- Email inválido");
         }
         else {
-            this.email = email.trim();
+            this.email = email.trim().toLowerCase();
         }
     }
 
-    public String getCpf() {
-        return cpf;
-    }
+    public String getCpf() { return cpf; }
 
     public void setCpf(String cpf) {
         if(cpf.isEmpty()) {
@@ -55,9 +52,7 @@ public class RegisterDTO {
         }
     }
 
-    public String getPassword() {
-        return password;
-    }
+    public String getPassword() { return password; }
 
     public void setPassword(String password) {
         if(password.isEmpty()) {
@@ -71,9 +66,7 @@ public class RegisterDTO {
         }
     }
 
-    public String getConfirm_password() {
-        return confirm_password;
-    }
+    public String getConfirm_password() { return confirm_password; }
 
     public void setConfirm_password(String confirm_password) {
         if(confirm_password.isEmpty()) {
@@ -87,9 +80,7 @@ public class RegisterDTO {
         }
     }
 
-    public Integer getIs_voluntary() {
-        return RegisterVoluntaryDict.options(is_voluntary);
-    }
+    public Boolean getIs_voluntary() { return RegisterVoluntaryDict.options(is_voluntary); }
 
     public void setIs_voluntary(String is_voluntary) {
         if(is_voluntary.isEmpty()) {
@@ -100,9 +91,7 @@ public class RegisterDTO {
         }
     }
 
-    public static StringBuilder getErrors() {
-        return errors;
-    }
+    public static StringBuilder getErrors() { return errors; }
 
     public static void setErrors(String errors) {
         RegisterDTO.errors = new StringBuilder(errors);
