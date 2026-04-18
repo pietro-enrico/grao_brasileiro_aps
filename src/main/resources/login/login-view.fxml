@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="register.RegisterController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginController">
 
    <!-- ===== QUINAS ===== -->
    <Pane layoutX="0.0" layoutY="0.0" prefHeight="132.0" prefWidth="224.0" style="-fx-background-color: #4A7C5A; -fx-background-radius: 0 0 110 0; -fx-opacity: 0.5;" />
@@ -120,49 +120,52 @@
    <Ellipse centerX="1062.0" centerY="520.0" fill="#7A6245" radiusX="4.0" radiusY="9.0" />
 
    <!-- ===== CONTEÚDO ORIGINAL ===== -->
-   <Text fill="#1a3a23" layoutX="543.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grão Brasileiro" textOrigin="CENTER" wrappingWidth="224.2734375">
+   <Text fill="#1a3a23" layoutX="509.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grão Brasileiro" textAlignment="JUSTIFY" textOrigin="CENTER" wrappingWidth="291.2734375">
       <font>
-         <Font name="Cambria Bold" size="30.0" />
+         <Font name="Cambria Bold" size="40.0" />
       </font>
    </Text>
-   <Text fill="#1a3a23" layoutX="549.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastre-se e doe agora mesmo!" textOrigin="CENTER" wrappingWidth="211.2734375">
+   <Text fill="#1a3a23" layoutX="524.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastre-se e doe agora mesmo!" textOrigin="CENTER" wrappingWidth="254.0">
       <font>
-         <Font name="Cambria" size="15.0" />
+         <Font name="Cambria" size="18.0" />
       </font>
    </Text>
-   <TextField id="email" fx:id="email" layoutX="503.0" layoutY="304.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" promptText="seu@email.com" style="-fx-background-color: #1a3a23; -fx-border-radius: 8; -fx-border-color: none;">
+   <TextField id="email" fx:id="email" layoutX="501.0" layoutY="269.0" maxHeight="47.0" maxWidth="304.0" minHeight="38.0" minWidth="298.0" prefHeight="40.0" prefWidth="298.0" promptText="seu@email.com" style="-fx-background-color: #2C5031; -fx-border-radius: 8; -fx-border-color: none; -fx-text-inner-color: FFFFFF; -fx-prompt-text-fill: FFFFFF;">
       <font>
-         <Font name="Cambria" size="13.0" />
+         <Font name="Cambria" size="14.0" />
       </font>
    </TextField>
-   <Text fill="#1a3a23" layoutX="503.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email*" textOrigin="CENTER" wrappingWidth="51.2734375">
+   <Text layoutX="500.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" textOrigin="CENTER" wrappingWidth="51.2734375">
       <font>
-         <Font name="Cambria" size="15.0" />
+         <Font name="Cambria" size="18.0" />
       </font>
    </Text>
-   <Text fill="#1a3a23" layoutX="503.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha*" textOrigin="CENTER" wrappingWidth="118.2734375">
+   <Text layoutX="500.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:" textOrigin="CENTER" wrappingWidth="118.2734375">
       <font>
-         <Font name="Cambria" size="15.0" />
+         <Font name="Cambria" size="18.0" />
       </font>
    </Text>
-   <PasswordField id="password" fx:id="password" layoutX="503.0" layoutY="385.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" prefHeight="38.0" prefWidth="304.0" promptText="********" style="-fx-background-color: #1a3a23; -fx-border-radius: 8; -fx-border-color: none;" />
+   <PasswordField id="password" fx:id="password" layoutX="501.0" layoutY="359.0" maxHeight="40.0" maxWidth="304.0" minHeight="38.0" minWidth="298.0" prefHeight="40.0" prefWidth="298.0" promptText="********" style="-fx-background-color: #2C5031; -fx-border-radius: 8; -fx-border-color: none; -fx-text-inner-color: FFFFFF; -fx-prompt-text-fill: FFFFFF;">
+      <font>
+         <Font size="14.0" />
+      </font></PasswordField>
    <ButtonBar layoutX="73.0" layoutY="423.0" prefHeight="40.0" prefWidth="200.0" />
-   <Button layoutX="505.0" layoutY="444.0" maxHeight="38.0" maxWidth="634.0" minHeight="38.0" minWidth="304.0" mnemonicParsing="false" onAction="#OnRegister" prefHeight="38.0" prefWidth="304.0" style="-fx-background-color: #3A2A1A; -fx-border-color: none; -fx-border-radius: 8;" text="Cadastrar" textFill="#ffe1bf">
+   <Button layoutX="501.0" layoutY="424.0" maxHeight="38.0" maxWidth="634.0" minHeight="38.0" minWidth="298.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="298.0" style="-fx-background-color: #3A2A1A; -fx-border-color: none; -fx-border-radius: 8;" text="Cadastrar" textFill="#ffe1bf">
       <font>
-         <Font name="Cambria Bold" size="14.0" />
+         <Font name="Cambria Bold" size="16.0" />
       </font>
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor>
    </Button>
-   <Text fill="#1a3a23" layoutX="540.0" layoutY="504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Não possui Login?" textOrigin="CENTER" wrappingWidth="118.2734375">
+   <Text fill="#1a3a23" layoutX="545.0" layoutY="499.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Não possui Login?" textOrigin="CENTER" wrappingWidth="130.0">
       <font>
-         <Font name="Cambria" size="15.0" />
+         <Font name="Cambria" size="16.0" />
       </font>
    </Text>
-   <Text fill="#1a3a23" layoutX="666.0" layoutY="504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastre-se" textOrigin="CENTER" underline="true" wrappingWidth="85.2734375">
+   <Text fill="#1a3a23" layoutX="675.0" layoutY="499.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastre-se" textOrigin="CENTER" underline="true" wrappingWidth="85.2734375">
       <font>
-         <Font name="Cambria Bold" size="15.0" />
+         <Font name="Cambria" size="16.0" />
       </font>
       <cursor>
          <Cursor fx:constant="HAND" />
@@ -170,7 +173,7 @@
    </Text>
    <Pane layoutX="-15.0" layoutY="604.0" prefHeight="117.0" prefWidth="1296.0" style="         -fx-background-color: #3A2A1A;         -fx-background-image: url('/assets/Textura.png');         -fx-background-repeat: repeat;       ">
       <children>
-         <Text fill="WHITE" layoutX="507.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Venha mudar o mundo" textOrigin="CENTER" wrappingWidth="319.2734375">
+         <Text fill="WHITE" layoutX="335.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Plante esperança, colha mudança: sua doação é a semente de um futuro mais justo." textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="639.2734375">
             <font>
                <Font name="Cambria Bold" size="30.0" />
             </font>

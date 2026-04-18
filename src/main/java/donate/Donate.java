@@ -10,7 +10,7 @@ import java.io.IOException;
 public class Donate extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Donate.class.getResource("water-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Donate.class.getResource("donate-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
         stage.setTitle("Doação - Grão Brasileiro");
         stage.setScene(scene);

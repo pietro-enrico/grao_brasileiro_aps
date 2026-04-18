@@ -8,25 +8,25 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #FFE1BF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="collaborators.CollaboratorsController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="collaborators.CollaboratorsController">
     <children>
 
         <!-- ===== NAVBAR ===== -->
-        <ImageView fitWidth="77.0" layoutX="110.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitWidth="77.0" layoutX="112.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../assets/coffee-beans.png" />
             </image>
         </ImageView>
-        <Label layoutX="189.0" layoutY="84.0" text="Grão Brasileiro" textFill="#1a3a23">
+        <Label layoutX="191.0" layoutY="61.0" text="Grão Brasileiro" textFill="#1a3a23">
             <font><Font size="40.0" /></font>
         </Label>
-        <Label layoutX="653.0" layoutY="98.0" text="Home" textFill="#1a3a23">
+        <Label layoutX="655.0" layoutY="75.0" text="Home" textFill="#1a3a23">
             <font><Font size="25.0" /></font>
         </Label>
-        <Label layoutX="785.0" layoutY="98.0" text="Doação" textFill="#1a3a23">
+        <Label layoutX="787.0" layoutY="75.0" text="Doação" textFill="#1a3a23">
             <font><Font size="25.0" /></font>
         </Label>
-        <Label layoutX="932.0" layoutY="98.0" text="Pagamento" textFill="#1a3a23">
+        <Label layoutX="934.0" layoutY="75.0" text="Pagamento" textFill="#1a3a23">
             <font><Font size="25.0" /></font>
         </Label>
 
@@ -78,7 +78,7 @@
 
         <!-- badge parceiro -->
         <Rectangle arcHeight="20" arcWidth="20" fill="#2C5031" height="20.0" layoutX="108.0" layoutY="418.0" width="160.0" />
-        <Label layoutX="120.0" layoutY="419.0" text="Parceiro estratégico" textFill="#A8C8A0">
+        <Label layoutX="141.0" layoutY="419.0" text="Parceiro estratégico" textFill="#A8C8A0">
             <font><Font size="11.0" /></font>
         </Label>
 
@@ -113,7 +113,7 @@
         </ImageView>
 
         <Rectangle arcHeight="20" arcWidth="20" fill="#2C5031" height="20.0" layoutX="108.0" layoutY="620.0" width="160.0" />
-        <Label layoutX="120.0" layoutY="621.0" text="Parceiro estratégico" textFill="#A8C8A0">
+        <Label layoutX="142.0" layoutY="622.0" text="Parceiro estratégico" textFill="#A8C8A0">
             <font><Font size="11.0" /></font>
         </Label>
 
@@ -127,10 +127,10 @@
             <font><Font size="14.0" /></font>
         </Label>
         <Rectangle arcHeight="20" arcWidth="20" fill="#EAD9C0" height="22.0" layoutX="326.0" layoutY="612.0" width="170.0" />
-        <Label layoutX="338.0" layoutY="614.0" text="Abastecimento &amp; Volume" textFill="#6B3A2A">
+        <Label layoutX="347.0" layoutY="615.0" text="Abastecimento &amp; Volume" textFill="#6B3A2A">
             <font><Font size="11.0" /></font>
         </Label>
-      <Label layoutX="1102.0" layoutY="98.0" text="Sobre" textFill="#1a3a23">
+      <Label layoutX="1104.0" layoutY="75.0" text="Sobre" textFill="#1a3a23">
          <font>
             <Font size="25.0" />
          </font>

@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #FFE1BF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="register.RegisterController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="register.RegisterController">
 
    <!-- ===== QUINAS ===== -->
    <Pane prefHeight="168.0" prefWidth="304.0" style="-fx-background-color: #4A7C5A; -fx-background-radius: 0 0 110 0; -fx-opacity: 0.5;" />
@@ -32,58 +32,58 @@
          <Font name="Cambria" size="15.0" />
       </font>
    </Text>
-   <TextField id="full_name" fx:id="full_name" layoutX="321.0" layoutY="256.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" promptText="Ex: João da Silva" style="-fx-background-color: #ffffff; -fx-border-radius: 8; -fx-border-color: none;">
+   <TextField id="full_name" fx:id="full_name" layoutX="321.0" layoutY="256.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" promptText="Ex: João da Silva" style="-fx-background-color: #4A7C5A; -fx-border-radius: 8; -fx-border-color: none; -fx-prompt-text-fill: FFFFFF; -fx-text-inner-color: FFFFFF;">
       <font>
          <Font name="Cambria" size="13.0" />
       </font>
    </TextField>
-   <Text fill="#1a3a23" layoutX="321.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Completo*" textOrigin="CENTER" wrappingWidth="118.2734375">
+   <Text layoutX="321.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Completo:" textOrigin="CENTER" wrappingWidth="118.2734375">
       <font>
          <Font name="Cambria" size="15.0" />
       </font>
    </Text>
-   <TextField id="email" fx:id="email" layoutX="654.0" layoutY="256.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" promptText="seu@email.com" style="-fx-background-color: #ffffff; -fx-border-radius: 8; -fx-border-color: none;">
+   <TextField id="email" fx:id="email" layoutX="654.0" layoutY="256.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" promptText="seu@email.com" style="-fx-background-color: #4A7C5A; -fx-border-radius: 8; -fx-border-color: none; -fx-prompt-text-fill: FFFFFF; -fx-text-inner-color: FFFFFF;">
       <font>
          <Font name="Cambria" size="13.0" />
       </font>
    </TextField>
-   <Text fill="#1a3a23" layoutX="654.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email*" textOrigin="CENTER" wrappingWidth="51.2734375">
+   <Text layoutX="654.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" textOrigin="CENTER" wrappingWidth="51.2734375">
       <font>
          <Font name="Cambria" size="15.0" />
       </font>
    </Text>
-   <TextField id="cpf" fx:id="cpf" layoutX="321.0" layoutY="352.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" promptText="EX: 000.000.000-00" style="-fx-background-color: #ffffff; -fx-border-radius: 8; -fx-border-color: none;">
+   <TextField id="cpf" fx:id="cpf" layoutX="321.0" layoutY="352.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" promptText="EX: 000.000.000-00" style="-fx-background-color: #4A7C5A; -fx-border-radius: 8; -fx-border-color: none; -fx-prompt-text-fill: FFFFFF; -fx-text-inner-color: FFFFFF;">
       <font>
          <Font name="Cambria" size="13.0" />
       </font>
    </TextField>
-   <Text fill="#1a3a23" layoutX="323.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF*" textOrigin="CENTER" wrappingWidth="45.2734375">
+   <Text layoutX="323.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:" textOrigin="CENTER" wrappingWidth="45.2734375">
       <font>
          <Font name="Cambria" size="15.0" />
       </font>
    </Text>
-   <Text fill="#1a3a23" layoutX="654.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seja voluntário*" textOrigin="CENTER" wrappingWidth="103.2734375">
+   <Text layoutX="654.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seja voluntário:" textOrigin="CENTER" wrappingWidth="103.2734375">
       <font>
          <Font name="Cambria" size="15.0" />
       </font>
    </Text>
-   <ComboBox id="is_voluntary" fx:id="is_voluntary" layoutX="653.0" layoutY="352.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" prefHeight="38.0" prefWidth="304.0" promptText="Quero mudar o mundo!" style="-fx-background-color: #ffffff; -fx-border-radius: 8; -fx-border-color: none;">
+   <ComboBox id="is_voluntary" fx:id="is_voluntary" layoutX="653.0" layoutY="352.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" prefHeight="38.0" prefWidth="304.0" promptText="Quero mudar o mundo!" style="-fx-background-color: #4A7C5A; -fx-border-radius: 8; -fx-border-color: none;-fx-text-fill: white; -fx-prompt-text-fill: white;">
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor>
    </ComboBox>
-   <Text fill="#1a3a23" layoutX="322.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha*" textOrigin="CENTER" wrappingWidth="118.2734375">
+   <Text layoutX="322.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:" textOrigin="CENTER" wrappingWidth="118.2734375">
       <font>
          <Font name="Cambria" size="15.0" />
       </font>
    </Text>
-   <Text fill="#1a3a23" layoutX="654.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmar Senha*" textOrigin="CENTER" wrappingWidth="118.2734375">
+   <Text layoutX="654.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmar Senha:" textOrigin="CENTER" wrappingWidth="118.2734375">
       <font>
          <Font name="Cambria" size="15.0" />
       </font>
    </Text>
-   <PasswordField id="password" fx:id="password" layoutX="322.0" layoutY="453.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" prefHeight="38.0" prefWidth="304.0" promptText="********" style="-fx-background-color: #ffffff; -fx-border-radius: 8; -fx-border-color: none;" />
-   <PasswordField id="confirm_password" fx:id="confirm_password" layoutX="654.0" layoutY="453.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" prefHeight="38.0" prefWidth="304.0" promptText="********" style="-fx-background-color: #ffffff; -fx-border-radius: 8; -fx-border-color: none;" />
+   <PasswordField id="password" fx:id="password" layoutX="322.0" layoutY="453.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" prefHeight="38.0" prefWidth="304.0" promptText="********" style="-fx-background-color: #4A7C5A; -fx-border-radius: 8; -fx-border-color: none; -fx-prompt-text-fill: FFFFFF; -fx-text-inner-color: FFFFFF;" />
+   <PasswordField id="confirm_password" fx:id="confirm_password" layoutX="654.0" layoutY="453.0" maxHeight="38.0" maxWidth="304.0" minHeight="38.0" minWidth="304.0" prefHeight="38.0" prefWidth="304.0" promptText="********" style="-fx-background-color: #4A7C5A; -fx-border-radius: 8; -fx-border-color: none; -fx-prompt-text-fill: FFFFFF; -fx-text-inner-color: FFFFFF;" />
    <ButtonBar layoutX="73.0" layoutY="423.0" prefHeight="40.0" prefWidth="200.0" />
    <Button layoutX="323.0" layoutY="526.0" maxHeight="38.0" maxWidth="634.0" minHeight="38.0" minWidth="634.0" mnemonicParsing="false" onAction="#OnRegister" prefHeight="38.0" prefWidth="634.0" style="-fx-background-color: #3A2A1A; -fx-border-color: none; -fx-border-radius: 8;" text="Cadastrar" textFill="#ffe1bf">
       <font>
