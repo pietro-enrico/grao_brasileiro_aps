@@ -1,11 +1,16 @@
 package register;
 
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
+import login.Login;
 import message.Message;
+import java.io.IOException;
 import java.util.Map;
 
 public class RegisterController {
@@ -17,6 +22,12 @@ public class RegisterController {
 
     @FXML
     private ComboBox<String> is_voluntary;
+
+    @FXML
+    public void initialize() {
+        is_voluntary.getItems().addAll("Quero mudar o mundo!", "Dessa vez não =/");
+        is_voluntary.setValue("Quero mudar o mundo!");
+    }
 
     @FXML
     protected boolean OnRegister() {
@@ -60,8 +71,12 @@ public class RegisterController {
     }
 
     @FXML
-    public void initialize() {
-        is_voluntary.getItems().addAll("Quero mudar o mundo!", "Dessa vez não =/");
-        is_voluntary.setValue("Quero mudar o mundo!");
+    public void clickToLogin(MouseEvent event) throws IOException {
+        Login login = new Login();
+        Stage stage = new Stage();
+        login.start(stage);
+
+        Stage stageAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stageAtual.close();
     }
  }
