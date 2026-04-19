@@ -98,7 +98,7 @@
          <Font name="Cambria" size="15.0" />
       </font>
    </Text>
-   <Text fill="#1a3a23" layoutX="683.0" layoutY="600.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textOrigin="CENTER" underline="true" wrappingWidth="45.2734375">
+   <Text fill="#1a3a23" layoutX="683.0" layoutY="600.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textOrigin="CENTER" underline="true" wrappingWidth="45.2734375" onMouseClicked="#clickToLogin">
       <font>
          <Font name="Cambria Bold" size="15.0" />
       </font>
