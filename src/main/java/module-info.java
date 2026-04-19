@@ -1,4 +1,4 @@
-module app.graobrasileiroaps {
+module app.grao_brasileiro_aps {
     requires javafx.controls;
     requires javafx.fxml;
 
