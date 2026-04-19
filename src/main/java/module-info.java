@@ -14,7 +14,7 @@ module app.graobrasileiroaps {
     opens collaborators to javafx.fxml;
     opens about to javafx.fxml;
     opens payment to javafx.fxml;
-    opens minhas_doacoes to javafx.fxml;
+    opens my_donates to javafx.fxml;
 
     exports app;
     exports login;
@@ -23,5 +23,5 @@ module app.graobrasileiroaps {
     exports collaborators;
     exports about;
     exports payment;
-    exports minhas_doacoes;
+    exports my_donates;
 }
