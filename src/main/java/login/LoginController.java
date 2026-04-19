@@ -1,5 +1,6 @@
 package login;
 
+import app.App;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
@@ -65,5 +66,11 @@ public class LoginController {
     }
 
     public void redirectToApp() throws IOException {
+        App app = new App();
+        Stage stage = new Stage();
+        app.start(stage);
+
+        Stage stageAtual = (Stage) button_login.getScene().getWindow();
+        stageAtual.close();
     }
 }
