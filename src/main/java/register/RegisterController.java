@@ -69,14 +69,4 @@ public class RegisterController {
             }
         }
     }
-
-    @FXML
-    public void clickToLogin(MouseEvent event) throws IOException {
-        Login login = new Login();
-        Stage stage = new Stage();
-        login.start(stage);
-
-        Stage stageAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stageAtual.close();
-    }
  }

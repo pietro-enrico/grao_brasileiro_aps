@@ -19,19 +19,19 @@
       <Label layoutX="200.0" layoutY="44.0" text="Grão Brasileiro" textFill="#1a3a23">
          <font><Font size="36.0" /></font>
       </Label>
-      <Label fx:id="donate" layoutX="689.0" layoutY="55.0" text="Doação" textFill="#1a3a23">
+      <Label fx:id="id_donate" layoutX="604.0" layoutY="55.0" onMouseClicked="#redirectToDonate" text="Doação" textFill="#1a3a23">
          <font><Font size="22.0" /></font>
          <cursor><Cursor fx:constant="HAND" /></cursor>
       </Label>
-      <Label fx:id="sobre" layoutX="819.0" layoutY="55.0" text="Sobre" textFill="#1a3a23">
+      <Label fx:id="id_sobre" layoutX="734.0" layoutY="55.0" onMouseClicked="#redirectToAbout" text="Sobre" textFill="#1a3a23">
          <font><Font size="22.0" /></font>
          <cursor><Cursor fx:constant="HAND" /></cursor>
       </Label>
-      <Label fx:id="colaboradores" layoutX="936.0" layoutY="55.0" text="Colaboradores" textFill="#1a3a23">
+      <Label fx:id="id_colaboradores" layoutX="851.0" layoutY="55.0" onMouseClicked="#redirectToCollaborators" text="Colaboradores" textFill="#1a3a23">
          <font><Font size="22.0" /></font>
          <cursor><Cursor fx:constant="HAND" /></cursor>
       </Label>
-      <Label fx:id="login" layoutX="1134.0" layoutY="55.0" text="Login" textFill="#1a3a23">
+      <Label fx:id="id_my_donate" layoutX="1049.0" layoutY="55.0" onMouseClicked="#redirectToMyDonates" text="Minhas Doações" textFill="#1a3a23">
          <font><Font size="22.0" /></font>
          <cursor><Cursor fx:constant="HAND" /></cursor>
       </Label>

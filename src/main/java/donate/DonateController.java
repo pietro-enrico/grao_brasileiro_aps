@@ -1,5 +1,6 @@
 package donate;
 
+import components.Components;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.BarChart;
@@ -12,7 +13,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class DonateController implements Initializable {
+public class DonateController extends Components implements Initializable {
 
     // ===== SLIDES =====
     @FXML

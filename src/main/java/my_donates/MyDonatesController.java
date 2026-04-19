@@ -1,4 +1,6 @@
 package my_donates;
 
-public class MyDonatesController {
+import components.Components;
+
+public class MyDonatesController extends Components {
 }

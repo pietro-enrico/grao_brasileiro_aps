@@ -1,5 +1,6 @@
 package payment;
 
+import components.Components;
 import javafx.animation.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -18,7 +19,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Random;
 
-public class PaymentController {
+public class PaymentController extends Components {
 
     @FXML
     private ComboBox<String> cbDesejaDoar;

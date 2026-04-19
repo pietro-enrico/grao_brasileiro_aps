@@ -1,6 +1,7 @@
 package login;
 
 import app.App;
+import components.Components;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
@@ -14,7 +15,7 @@ import register.Register;
 import java.io.IOException;
 import java.util.Map;
 
-public class LoginController {
+public class LoginController extends Components{
     @FXML
     private TextField email;
 
@@ -22,7 +23,7 @@ public class LoginController {
     private PasswordField password;
 
     @FXML
-    private Button button_login;
+    public static Button button_login;
 
     @FXML
     protected boolean onLogin() throws IOException {
@@ -53,24 +54,5 @@ public class LoginController {
                 return false;
             }
         }
-    }
-
-    @FXML
-    public void clickToRegister(MouseEvent event) throws IOException {
-        Register register = new Register();
-        Stage stage = new Stage();
-        register.start(stage);
-
-        Stage stageAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stageAtual.close();
-    }
-
-    public void redirectToApp() throws IOException {
-        App app = new App();
-        Stage stage = new Stage();
-        app.start(stage);
-
-        Stage stageAtual = (Stage) button_login.getScene().getWindow();
-        stageAtual.close();
     }
 }

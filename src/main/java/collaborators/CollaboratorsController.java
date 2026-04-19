@@ -1,3 +1,5 @@
 package collaborators;
 
-public class CollaboratorsController { }
+import components.Components;
+
+public class CollaboratorsController extends Components { }
