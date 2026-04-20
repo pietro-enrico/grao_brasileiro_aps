@@ -12,25 +12,25 @@
    <children>
 
       <!-- ===== NAVBAR ===== -->
-      <Label layoutX="172.0" layoutY="61.0" text="Grão Brasileiro" textFill="#1a3a23">
+      <Label layoutX="172.0" layoutY="61.0" style="-fx-font-family: 'georgia';" text="Grão Brasileiro" textFill="#1a3a23">
          <font><Font size="40.0" /></font>
       </Label>
-      <ImageView fitHeight="97.0" fitWidth="77.0" layoutX="93.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="97.0" fitWidth="77.0" layoutX="95.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
          <image><Image url="@../assets/coffee-beans.png" /></image>
       </ImageView>
-      <Label fx:id="id_home" layoutX="580.0" layoutY="72.0" onMouseClicked="#redirectToApp" text="Home" textFill="#1a3a23">
+      <Label fx:id="id_home" layoutX="580.0" layoutY="72.0" onMouseClicked="#redirectToApp" style="-fx-font-family: 'Georgia';" text="Home" textFill="#1a3a23">
          <font><Font size="25.0" /></font>
          <cursor><Cursor fx:constant="HAND" /></cursor>
       </Label>
-      <Label fx:id="id_donate" layoutX="689.0" layoutY="72.0" onMouseClicked="#redirectToDonate" text="Doação" textFill="#1a3a23">
+      <Label fx:id="id_donate" layoutX="689.0" layoutY="72.0" onMouseClicked="#redirectToDonate" style="-fx-font-family: 'Georgia';" text="Doação" textFill="#1a3a23">
          <font><Font size="25.0" /></font>
          <cursor><Cursor fx:constant="HAND" /></cursor>
       </Label>
-      <Label fx:id="id_collaborators" layoutX="814.0" layoutY="72.0" onMouseClicked="#redirectToCollaborators" text="Colaboradores" textFill="#1a3a23">
+      <Label fx:id="id_collaborators" layoutX="814.0" layoutY="72.0" onMouseClicked="#redirectToCollaborators" style="-fx-font-family: 'Georgia';" text="Colaboradores" textFill="#1a3a23">
          <font><Font size="25.0" /></font>
          <cursor><Cursor fx:constant="HAND" /></cursor>
       </Label>
-      <Label fx:id="id_my_donate" layoutX="1012.0" layoutY="72.0" onMouseClicked="#redirectToMyDonates" text="Minhas Doações" textFill="#1a3a23">
+      <Label fx:id="id_my_donate" layoutX="1012.0" layoutY="72.0" onMouseClicked="#redirectToMyDonates" style="-fx-font-family: 'Georgia';" text="Minhas Doações" textFill="#1a3a23">
          <font>
             <Font size="25.0" />
          </font>

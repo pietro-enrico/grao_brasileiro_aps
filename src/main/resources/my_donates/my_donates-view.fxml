@@ -13,23 +13,23 @@
                <Image url="@../assets/coffee-beans.png" />
            </image>
        </ImageView>
-       <Label layoutX="191.0" layoutY="61.0" text="Grão Brasileiro" textFill="#1a3a23">
+       <Label layoutX="191.0" layoutY="61.0" style="-fx-font-family: 'georgia';" text="Grão Brasileiro" textFill="#1a3a23">
            <font><Font size="40.0" /></font>
        </Label>
-       <Label fx:id="id_home" layoutX="640.0" layoutY="76.0" text="Home" textFill="#1a3a23" onMouseClicked="#redirectToApp">
-           <font><Font size="22.0" /></font>
+       <Label fx:id="id_home" layoutX="597.0" layoutY="72.0" onMouseClicked="#redirectToApp" style="-fx-font-family: 'georgia';" text="Home" textFill="#1a3a23">
+           <font><Font size="26.0" /></font>
        </Label>
-       <Label fx:id="id_donate" layoutX="766.0" layoutY="74.0" text="Doação" textFill="#1a3a23" onMouseClicked="#redirectToDonate">
-           <font><Font size="22.0" /></font>
+       <Label fx:id="id_donate" layoutX="723.0" layoutY="70.0" onMouseClicked="#redirectToDonate" style="-fx-font-family: 'georgia';" text="Doação" textFill="#1a3a23">
+           <font><Font size="26.0" /></font>
        </Label>
-      <Label fx:id="id_collaborators" layoutX="909.0" layoutY="76.0" text="Colaboradores" textFill="#1a3a23" onMouseClicked="#redirectToCollaborators">
+      <Label fx:id="id_collaborators" layoutX="866.0" layoutY="72.0" onMouseClicked="#redirectToCollaborators" style="-fx-font-family: 'georgia';" text="Colaboradores" textFill="#1a3a23">
          <font>
-            <Font size="22.0" />
+            <Font size="26.0" />
          </font>
       </Label>
-      <Label fx:id="id_about" layoutX="1124.0" layoutY="76.0" text="Sobre" textFill="#1a3a23" onMouseClicked="#redirectToAbout">
+      <Label fx:id="id_about" layoutX="1081.0" layoutY="72.0" onMouseClicked="#redirectToAbout" style="-fx-font-family: 'georgia';" text="Sobre" textFill="#1a3a23">
          <font>
-            <Font size="22.0" />
+            <Font size="26.0" />
          </font>
       </Label>
       <Pane layoutX="112.0" layoutY="187.0" prefHeight="108.0" prefWidth="573.0" style="-fx-background-color: #3A2A1A; -fx-background-radius: 10;">

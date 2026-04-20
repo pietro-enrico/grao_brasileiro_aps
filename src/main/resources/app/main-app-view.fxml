@@ -13,26 +13,26 @@
    <children>
 
       <!-- ===== NAVBAR ===== -->
-      <ImageView fitHeight="97.0" fitWidth="77.0" layoutX="121.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="69.0" fitWidth="67.0" layoutX="127.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
          <image><Image url="@../assets/coffee-beans.png" /></image>
       </ImageView>
-      <Label layoutX="200.0" layoutY="44.0" text="Grão Brasileiro" textFill="#1a3a23">
-         <font><Font size="36.0" /></font>
+      <Label layoutX="194.0" layoutY="55.0" style="-fx-font-family: 'Georgia';" text="Grão Brasileiro" textFill="#1a3a23">
+         <font><Font size="40.0" /></font>
       </Label>
-      <Label fx:id="id_donate" layoutX="604.0" layoutY="55.0" onMouseClicked="#redirectToDonate" text="Doação" textFill="#1a3a23">
-         <font><Font size="22.0" /></font>
+      <Label fx:id="id_donate" layoutX="630.0" layoutY="65.0" onMouseClicked="#redirectToDonate" style="-fx-font-family: 'Georgia';" text="Doação" textFill="#1a3a23">
+         <font><Font size="25.0" /></font>
          <cursor><Cursor fx:constant="HAND" /></cursor>
       </Label>
-      <Label fx:id="id_sobre" layoutX="734.0" layoutY="55.0" onMouseClicked="#redirectToAbout" text="Sobre" textFill="#1a3a23">
-         <font><Font size="22.0" /></font>
+      <Label fx:id="id_sobre" layoutX="740.0" layoutY="65.0" onMouseClicked="#redirectToAbout" style="-fx-font-family: 'Georgia';" text="Sobre" textFill="#1a3a23">
+         <font><Font size="25.0" /></font>
          <cursor><Cursor fx:constant="HAND" /></cursor>
       </Label>
-      <Label fx:id="id_colaboradores" layoutX="851.0" layoutY="55.0" onMouseClicked="#redirectToCollaborators" text="Colaboradores" textFill="#1a3a23">
-         <font><Font size="22.0" /></font>
+      <Label fx:id="id_colaboradores" layoutX="836.0" layoutY="65.0" onMouseClicked="#redirectToCollaborators" style="-fx-font-family: 'Georgia';" text="Colaboradores" textFill="#1a3a23">
+         <font><Font size="25.0" /></font>
          <cursor><Cursor fx:constant="HAND" /></cursor>
       </Label>
-      <Label fx:id="id_my_donate" layoutX="1049.0" layoutY="55.0" onMouseClicked="#redirectToMyDonates" text="Minhas Doações" textFill="#1a3a23">
-         <font><Font size="22.0" /></font>
+      <Label fx:id="id_my_donate" layoutX="1025.0" layoutY="65.0" onMouseClicked="#redirectToMyDonates" style="-fx-font-family: 'Georgia';" text="Minhas Doações" textFill="#1a3a23">
+         <font><Font size="25.0" /></font>
          <cursor><Cursor fx:constant="HAND" /></cursor>
       </Label>
 
@@ -58,12 +58,12 @@
       </Label>
 
       <!-- botão Quero Ajudar -->
-      <Button fx:id="btnAjudar" layoutX="121.0" layoutY="368.0" prefHeight="44.0" prefWidth="180.0" style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-font-size: 15px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: none; -fx-cursor: hand;" text="Quero Ajudar" onMouseClicked="#redirectToPayment">
+      <Button fx:id="btnAjudar" layoutX="121.0" layoutY="368.0" onMouseClicked="#redirectToPayment" prefHeight="44.0" prefWidth="180.0" style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-font-size: 15px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: none; -fx-cursor: hand;" text="Quero Ajudar">
          <cursor><Cursor fx:constant="HAND" /></cursor>
       </Button>
 
       <!-- botão Saiba Mais -->
-      <Button fx:id="btnSaibaMais" layoutX="318.0" layoutY="368.0" prefHeight="44.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-text-fill: #2C5031; -fx-font-size: 15px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: #2C5031; -fx-border-width: 2; -fx-border-radius: 8; -fx-cursor: hand;" text="Saiba Mais" onMouseClicked="#redirectToAbout">
+      <Button fx:id="btnSaibaMais" layoutX="318.0" layoutY="368.0" onMouseClicked="#redirectToAbout" prefHeight="44.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-text-fill: #2C5031; -fx-font-size: 15px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: #2C5031; -fx-border-width: 2; -fx-border-radius: 8; -fx-cursor: hand;" text="Saiba Mais">
          <cursor><Cursor fx:constant="HAND" /></cursor>
       </Button>
 

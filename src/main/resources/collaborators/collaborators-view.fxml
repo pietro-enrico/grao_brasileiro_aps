@@ -12,24 +12,24 @@
     <children>
 
         <!-- ===== NAVBAR ===== -->
-        <ImageView fitWidth="77.0" layoutX="112.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitWidth="77.0" layoutX="116.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../assets/coffee-beans.png" />
             </image>
         </ImageView>
-        <Label layoutX="191.0" layoutY="61.0" text="Grão Brasileiro" textFill="#1a3a23">
+        <Label layoutX="192.0" layoutY="67.0" style="-fx-font-family: 'Georgia';" text="Grão Brasileiro" textFill="#1a3a23">
             <font><Font size="40.0" /></font>
         </Label>
-        <Label fx:id="id_home" layoutX="651.0" layoutY="75.0" onMouseClicked="#redirectToApp" text="Home" textFill="#1a3a23">
+        <Label fx:id="id_home" layoutX="649.0" layoutY="78.0" onMouseClicked="#redirectToApp" style="-fx-font-family: 'Georgia';" text="Home" textFill="#1a3a23">
             <font><Font size="25.0" /></font>
         </Label>
-        <Label fx:id="id_donate" layoutX="759.0" layoutY="75.0" onMouseClicked="#redirectToDonate" text="Doação" textFill="#1a3a23">
+        <Label fx:id="id_donate" layoutX="757.0" layoutY="78.0" onMouseClicked="#redirectToDonate" style="-fx-font-family: 'Georgia';" text="Doação" textFill="#1a3a23">
             <font><Font size="25.0" /></font>
         </Label>
-        <Label fx:id="id_my_donate" layoutX="881.0" layoutY="75.0" onMouseClicked="#redirectToMyDonates" text="Minhas Doações" textFill="#1a3a23">
+        <Label fx:id="id_my_donate" layoutX="879.0" layoutY="78.0" onMouseClicked="#redirectToMyDonates" style="-fx-font-family: 'Georgia';" text="Minhas Doações" textFill="#1a3a23">
             <font><Font size="25.0" /></font>
         </Label>
-      <Label fx:id="id_about" layoutX="1104.0" layoutY="75.0" text="Sobre" textFill="#1a3a23" onMouseClicked="#redirectToAbout">
+      <Label fx:id="id_about" layoutX="1102.0" layoutY="78.0" onMouseClicked="#redirectToAbout" style="-fx-font-family: 'Georgia';" text="Sobre" textFill="#1a3a23">
          <font>
             <Font size="25.0" />
          </font>
