@@ -2,16 +2,11 @@ package register;
 
 import components.Components;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
-import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
-import login.Login;
 import message.Message;
-import java.io.IOException;
 import java.util.Map;
 
 public class RegisterController extends Components {

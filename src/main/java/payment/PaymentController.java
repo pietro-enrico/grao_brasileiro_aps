@@ -13,7 +13,6 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.util.Duration;
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;

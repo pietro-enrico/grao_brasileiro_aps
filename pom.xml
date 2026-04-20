@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>app</groupId>
-    <artifactId>grao-brasileiro-APS</artifactId>
+    <artifactId>grao_brasileiro_aps</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>grao-brasileiro-APS</name>
+    <name>grao_brasileiro_aps</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -80,7 +80,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>app.graobrasileiroaps/app.Login
+                            <mainClass>app.grao_brasileiro_aps/app.Login
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
