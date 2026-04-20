@@ -11,15 +11,17 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.util.Duration;
+import login.LoginController;
 import message.Message;
 import register.RegisterDTO;
+import user_session.UserSession;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Map;
 import java.util.Random;
 
 public class PaymentController extends Components {
@@ -71,7 +73,6 @@ public class PaymentController extends Components {
     private final ToggleGroup pagamentoGroup = new ToggleGroup();
 
     private String codigoCorreiosAtual = "";
-    private String codigoPixAtual = "";
 
     private final ObservableList<String> listaAlimentos = FXCollections.observableArrayList(
             "Selecione o alimento", "Arroz", "Feijão", "Macarrão", "Óleo", "Açúcar", "Farinha"
@@ -158,36 +159,41 @@ public class PaymentController extends Components {
 
     @FXML
     private void confirmarDoacao() {
-        String opcao = cbDesejaDoar.getValue();
+        PaymentDTO dto = new PaymentDTO();
+        PaymentDTO.setErrors("");
+        dto.setCategoria(cbDesejaDoar.getValue());
+        dto.setSub_categoria(cbSuprimento.getValue());
+        dto.setValue(Float.parseFloat(tfValor.getText()));
+        dto.setQuantity(tfQuantidade.getText());
+        dto.setPayment_type(pagamentoGroup.getSelectedToggle().toString());
+        System.out.println(UserSession.getInstance().getId_user());
 
-        if (opcao == null || "Selecione o que doar".equals(opcao)) {
-            Message.showMessage(Alert.AlertType.INFORMATION, "Atenção", "Por favor, selecione uma opção de doação!", PaymentDTO.getErrors().toString());
-            return;
-        }
-
-        Toggle selecionado = pagamentoGroup.getSelectedToggle();
-        if (selecionado == null) {
+        if (pagamentoGroup.getSelectedToggle() == null) {
             Message.showMessage(Alert.AlertType.INFORMATION, "Atenção", "Por favor, selecione uma opção de pagamento, antes de confirmar a doação!", PaymentDTO.getErrors().toString());;
             return;
         }
 
-        if (selecionado == btnPix && "Dinheiro".equals(opcao)) {
-            gerarPix();
-        } else if (selecionado == btnCorreios && ("Alimento".equals(opcao) || "Bebida".equals(opcao))) {
-            gerarSeloCorreios();
-        } else if (selecionado == btnCC || selecionado == btnPayPal) {
-            alerta("Doação cadastrada com sucesso via "
-                    + ((ToggleButton) selecionado).getText() + "!");
-            qrCodeBox.setVisible(false);
-            correiosBox.setVisible(false);
+        if (!PaymentDTO.getErrors().isEmpty()) {
+            Message.showMessage(Alert.AlertType.INFORMATION, "Atenção", "Corrija os seguintes erros:", PaymentDTO.getErrors().toString());
         } else {
-            Message.showMessage(Alert.AlertType.INFORMATION, "Atenção", "Forma de pagamento incompatível com o tipo de doação!", PaymentDTO.getErrors().toString());
+            Map<String, Object> insertDonate =  PaymentService.insertDonate(dto);
+
+            if (pagamentoGroup.getSelectedToggle() == btnPix && "Dinheiro".equals(cbDesejaDoar.getValue())) {
+                gerarPix();
+            } else if (pagamentoGroup.getSelectedToggle() == btnCorreios && ("Alimento".equals(cbDesejaDoar.getValue()) || "Bebida".equals(cbDesejaDoar.getValue()))) {
+                gerarSeloCorreios();
+            } else if (pagamentoGroup.getSelectedToggle() == btnCC || pagamentoGroup.getSelectedToggle() == btnPayPal) {
+                alerta("Doação cadastrada com sucesso via "
+                        + ((ToggleButton) pagamentoGroup.getSelectedToggle()).getText() + "!");
+                qrCodeBox.setVisible(false);
+                correiosBox.setVisible(false);
+            }
         }
     }
 
     private void gerarPix() {
         String valor = tfValor.getText().isEmpty() ? "0,00" : tfValor.getText();
-        codigoPixAtual = "00020126580014BR.GOV.BCB.PIX0136GRAO-"
+        String codigoPixAtual = "00020126580014BR.GOV.BCB.PIX0136GRAO-"
                 + System.currentTimeMillis() + "5204000053039865802BR6009SAOPAULO";
 
         lblValorDoado.setText("VALOR DOADO:\nR$ " + valor);

@@ -7,8 +7,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import message.Message;
+import user_session.UserSession;
+
 import java.io.IOException;
 import java.util.Map;
+import java.util.Objects;
 
 public class LoginController extends Components {
     @FXML
@@ -37,6 +40,7 @@ public class LoginController extends Components {
                 Message.showMessage(Alert.AlertType.CONFIRMATION, "Confirmação", "Login com sucesso!", "Seu login foi realizado com sucesso! Seja bem-vindo a Grão Brasileiro, faça as suas doações e mude o mundo!");
                 email.setText("");
                 password.setText("");
+                UserSession.startSession((Integer) autenticarUsuario.get("id_user"), autenticarUsuario.get("full_name").toString());
                 redirectToAppByLogin(button_login);
                 return true;
             }

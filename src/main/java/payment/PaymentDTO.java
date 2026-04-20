@@ -1,20 +1,18 @@
 package payment;
 
-
-
 public class PaymentDTO {
     private Float value;
-    private String categoria,sub_categoria, quantity, payment_type;
+    private String categoria, sub_categoria, quantity, payment_type;
     private static StringBuilder errors = new StringBuilder();
 
     public String getCategoria(){
         return categoria;
     }
 
-    public void setCategoria(String categoria){
+    public void setCategoria(String categoria) {
         if (categoria.isEmpty()){
-            errors.append("\n - O campo categoria é obrigatorio o preenchimento!" );
-        } else{
+            errors.append("\n - O campo categoria é obrigatório o preenchimento!" );
+        } else {
             this.categoria = categoria;
         }
     }
@@ -24,8 +22,8 @@ public class PaymentDTO {
     }
 
     public void setSub_categoria(String sub_categoria){
-        if (sub_categoria.isEmpty()){
-            errors.append("\n - O campo subcategoria é obrigatorio o preenchimento!");
+        if (!categoria.equals("Dinheiro") && sub_categoria.isEmpty()) {
+            errors.append("\n - O campo subcategoria é obrigatório o preenchimento!");
         }
         else {
             this.sub_categoria = sub_categoria;
@@ -38,7 +36,7 @@ public class PaymentDTO {
 
     public void setQuantity(String quantity){
         if (quantity.isEmpty()){
-            errors.append("\n - O campo quantidade é obrigatorio o preenchimento!");
+            errors.append("\n - O campo quantidade é obrigatório o preenchimento!");
         }else{
             this.quantity = quantity;
         }
@@ -50,7 +48,9 @@ public class PaymentDTO {
 
     public void setValue(Float value){
         if (value.isNaN()){
-            errors.append("\n - O campo valor é obrigatorio o preenchimento!");
+            errors.append("\n - O campo valor é obrigatório o preenchimento!");
+        } else {
+            this.value = value;
         }
     }
 
@@ -60,8 +60,8 @@ public class PaymentDTO {
 
     public void setPayment_type(String payment_type){
         if (payment_type.isEmpty()){
-            errors.append("\n - O campo tipo de pagamento é obrigatorio o preenchimento");
-        }else{
+            errors.append("\n - O campo tipo de pagamento é obrigatório o preenchimento");
+        } else{
             this.payment_type = payment_type;
         }
     }
