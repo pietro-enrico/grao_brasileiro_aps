@@ -1,21 +1,16 @@
 package login;
 
-import app.App;
 import components.Components;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
 import message.Message;
-import register.Register;
 import java.io.IOException;
 import java.util.Map;
 
-public class LoginController extends Components{
+public class LoginController extends Components {
     @FXML
     private TextField email;
 
@@ -23,7 +18,7 @@ public class LoginController extends Components{
     private PasswordField password;
 
     @FXML
-    public static Button button_login;
+    public Button button_login;
 
     @FXML
     protected boolean onLogin() throws IOException {
@@ -42,7 +37,7 @@ public class LoginController extends Components{
                 Message.showMessage(Alert.AlertType.CONFIRMATION, "Confirmação", "Login com sucesso!", "Seu login foi realizado com sucesso! Seja bem-vindo a Grão Brasileiro, faça as suas doações e mude o mundo!");
                 email.setText("");
                 password.setText("");
-                redirectToAppByLogin();
+                redirectToAppByLogin(button_login);
                 return true;
             }
             else if(autenticarUsuario.get("status").equals("error") && autenticarUsuario.get("code").equals(401)) {
