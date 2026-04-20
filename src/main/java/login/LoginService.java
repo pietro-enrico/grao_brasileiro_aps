@@ -27,7 +27,9 @@ public class LoginService {
                 return Map.of(
                         "status", "success",
                         "message", "Login realizado com sucesso",
-                        "code", 200
+                        "code", 200,
+                        "id_user", exists.get("id_user"),
+                        "full_name", exists.get("full_name")
                 );
             }
             else {
@@ -41,7 +43,7 @@ public class LoginService {
     }
 
     public static Map<String, Object> verifyExistsUser(LoginDTO user) {
-        String sql = "SELECT id_user, password FROM User WHERE email = ? LIMIT 1";
+        String sql = "SELECT id_user, full_name, password FROM User WHERE email = ? LIMIT 1";
 
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1, user.getEmail());
@@ -49,6 +51,7 @@ public class LoginService {
             if (resultSelect.next()) {
                 return Map.of(
                         "id_user", resultSelect.getInt("id_user"),
+                        "full_name", resultSelect.getString("full_name"),
                         "password", resultSelect.getString("password")
                 );
             } else {

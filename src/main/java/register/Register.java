@@ -5,10 +5,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Register extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+        Logger logger = Logger.getLogger("javafx");
+        logger.setLevel(Level.SEVERE);
         FXMLLoader fxmlLoader = new FXMLLoader(Register.class.getResource("register-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1280, 720);
         stage.setTitle("Cadastro de Usuário - Grão Brasileiro");
