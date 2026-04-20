@@ -42,7 +42,7 @@ public class LoginController extends Components{
                 Message.showMessage(Alert.AlertType.CONFIRMATION, "Confirmação", "Login com sucesso!", "Seu login foi realizado com sucesso! Seja bem-vindo a Grão Brasileiro, faça as suas doações e mude o mundo!");
                 email.setText("");
                 password.setText("");
-                redirectToApp();
+                redirectToAppByLogin();
                 return true;
             }
             else if(autenticarUsuario.get("status").equals("error") && autenticarUsuario.get("code").equals(401)) {

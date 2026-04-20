@@ -18,17 +18,25 @@
       <ImageView fitHeight="97.0" fitWidth="77.0" layoutX="93.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
          <image><Image url="@../assets/coffee-beans.png" /></image>
       </ImageView>
-      <Label fx:id="home" layoutX="672.0" layoutY="72.0" text="Home" textFill="#1a3a23">
+      <Label fx:id="id_home" layoutX="580.0" layoutY="72.0" onMouseClicked="#redirectToApp" text="Home" textFill="#1a3a23">
          <font><Font size="25.0" /></font>
          <cursor><Cursor fx:constant="HAND" /></cursor>
       </Label>
-      <Label fx:id="donate" layoutX="884.0" layoutY="72.0" text="Doação" textFill="#1a3a23">
+      <Label fx:id="id_donate" layoutX="689.0" layoutY="72.0" onMouseClicked="#redirectToDonate" text="Doação" textFill="#1a3a23">
          <font><Font size="25.0" /></font>
          <cursor><Cursor fx:constant="HAND" /></cursor>
       </Label>
-      <Label fx:id="partnerships" layoutX="1080.0" layoutY="72.0" text="Parcerias" textFill="#1a3a23">
+      <Label fx:id="id_collaborators" layoutX="814.0" layoutY="72.0" onMouseClicked="#redirectToCollaborators" text="Colaboradores" textFill="#1a3a23">
          <font><Font size="25.0" /></font>
          <cursor><Cursor fx:constant="HAND" /></cursor>
+      </Label>
+      <Label fx:id="id_my_donate" layoutX="1012.0" layoutY="72.0" onMouseClicked="#redirectToMyDonates" text="Minhas Doações" textFill="#1a3a23">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Label>
 
       <!-- ===== BANNER VERDE ===== -->

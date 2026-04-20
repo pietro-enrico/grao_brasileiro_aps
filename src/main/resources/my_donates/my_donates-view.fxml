@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="my_donates.MyDonatesController">
    <children>
        <ImageView fitWidth="77.0" layoutX="112.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
            <image>
@@ -16,21 +16,18 @@
        <Label layoutX="191.0" layoutY="61.0" text="Grão Brasileiro" textFill="#1a3a23">
            <font><Font size="40.0" /></font>
        </Label>
-       <Label layoutX="606.0" layoutY="75.0" text="Home" textFill="#1a3a23">
+       <Label fx:id="id_home" layoutX="640.0" layoutY="76.0" text="Home" textFill="#1a3a23" onMouseClicked="#redirectToApp">
            <font><Font size="22.0" /></font>
        </Label>
-       <Label layoutX="698.0" layoutY="76.0" text="Doação" textFill="#1a3a23">
+       <Label fx:id="id_donate" layoutX="766.0" layoutY="74.0" text="Doação" textFill="#1a3a23" onMouseClicked="#redirectToDonate">
            <font><Font size="22.0" /></font>
        </Label>
-       <Label layoutX="805.0" layoutY="76.0" text="Pagamento" textFill="#1a3a23">
-           <font><Font size="22.0" /></font>
-       </Label>
-      <Label layoutX="948.0" layoutY="76.0" text="Colaboradores" textFill="#1a3a23">
+      <Label fx:id="id_collaborators" layoutX="909.0" layoutY="76.0" text="Colaboradores" textFill="#1a3a23" onMouseClicked="#redirectToCollaborators">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Label layoutX="1124.0" layoutY="76.0" text="Sobre" textFill="#1a3a23">
+      <Label fx:id="id_about" layoutX="1124.0" layoutY="76.0" text="Sobre" textFill="#1a3a23" onMouseClicked="#redirectToAbout">
          <font>
             <Font size="22.0" />
          </font>

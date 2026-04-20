@@ -88,12 +88,21 @@ public class Components {
     }
 
     @FXML
-    public void redirectToApp() throws IOException {
+    public static void redirectToAppByLogin() throws IOException {
         App app = new App();
         Stage stage = new Stage();
         app.start(stage);
 
         Stage stageAtual = (Stage) LoginController.button_login.getScene().getWindow();
+        stageAtual.close();
+    }
+
+    public void redirectToApp(MouseEvent event) throws IOException {
+        App app = new App();
+        Stage stage = new Stage();
+        app.start(stage);
+
+        Stage stageAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stageAtual.close();
     }
 }

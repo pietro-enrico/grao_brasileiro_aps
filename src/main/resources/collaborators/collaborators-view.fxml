@@ -20,15 +20,20 @@
         <Label layoutX="191.0" layoutY="61.0" text="Grão Brasileiro" textFill="#1a3a23">
             <font><Font size="40.0" /></font>
         </Label>
-        <Label layoutX="655.0" layoutY="75.0" text="Home" textFill="#1a3a23">
+        <Label fx:id="id_home" layoutX="651.0" layoutY="75.0" onMouseClicked="#redirectToApp" text="Home" textFill="#1a3a23">
             <font><Font size="25.0" /></font>
         </Label>
-        <Label layoutX="787.0" layoutY="75.0" text="Doação" textFill="#1a3a23">
+        <Label fx:id="id_donate" layoutX="759.0" layoutY="75.0" onMouseClicked="#redirectToDonate" text="Doação" textFill="#1a3a23">
             <font><Font size="25.0" /></font>
         </Label>
-        <Label layoutX="934.0" layoutY="75.0" text="Pagamento" textFill="#1a3a23">
+        <Label fx:id="id_my_donate" layoutX="881.0" layoutY="75.0" onMouseClicked="#redirectToMyDonates" text="Minhas Doações" textFill="#1a3a23">
             <font><Font size="25.0" /></font>
         </Label>
+      <Label fx:id="id_about" layoutX="1104.0" layoutY="75.0" text="Sobre" textFill="#1a3a23" onMouseClicked="#redirectToAbout">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
 
         <!-- ===== BANNER VERDE ===== -->
         <Rectangle fill="#2C5031" height="90.0" layoutX="0.0" layoutY="148.0" width="1280.0" />
@@ -130,11 +135,6 @@
         <Label layoutX="347.0" layoutY="615.0" text="Abastecimento &amp; Volume" textFill="#6B3A2A">
             <font><Font size="11.0" /></font>
         </Label>
-      <Label layoutX="1104.0" layoutY="75.0" text="Sobre" textFill="#1a3a23">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </Label>
 
     </children>
 </Pane>

@@ -22,18 +22,26 @@
     <Label layoutX="171.0" layoutY="50.0" text="Grão Brasileiro" textFill="#1a3a23">
         <font><Font size="28.0" /></font>
     </Label>
-    <Label fx:id="navHome" layoutX="700.0" layoutY="58.0" text="Home" textFill="#1a3a23">
+    <Label fx:id="Home" layoutX="648.0" layoutY="58.0" onMouseClicked="#redirectToApp" text="Home" textFill="#1a3a23">
         <font><Font size="20.0" /></font>
         <cursor><Cursor fx:constant="HAND" /></cursor>
     </Label>
-    <Label fx:id="navColab" layoutX="860.0" layoutY="58.0" text="Colaboradores" textFill="#1a3a23">
+    <Label fx:id="id_collaborators" layoutX="743.0" layoutY="58.0" onMouseClicked="#redirectToCollaborators" text="Colaboradores" textFill="#1a3a23">
         <font><Font size="20.0" /></font>
         <cursor><Cursor fx:constant="HAND" /></cursor>
     </Label>
-    <Label fx:id="navSobre" layoutX="1090.0" layoutY="58.0" text="Sobre" textFill="#1a3a23">
+    <Label fx:id="id_Sobre" layoutX="1102.0" layoutY="58.0" text="Sobre" textFill="#1a3a23" onMouseClicked="#redirectToAbout">
         <font><Font size="20.0" /></font>
         <cursor><Cursor fx:constant="HAND" /></cursor>
     </Label>
+      <Label fx:id="id_my_donate" layoutX="915.0" layoutY="58.0" onMouseClicked="#redirectToMyDonates" text="Minhas Doações" textFill="#1a3a23">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
     <Rectangle fill="WHITE" height="1.5" layoutX="0.0" layoutY="88.0" width="1280.0" />
 
     <!-- ===== SLIDE 1 — BEBIDAS ===== -->
@@ -54,7 +62,7 @@
         </Label>
 
         <!-- botão DOE -->
-        <Button fx:id="btnDoe1" layoutX="108.0" layoutY="268.0" onAction="#onDoe1" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: none;" text="DOE AGORA">
+        <Button fx:id="btnDoe1" layoutX="108.0" layoutY="268.0" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: none;" text="DOE AGORA" onMouseClicked="#redirectToPayment">
             <cursor><Cursor fx:constant="HAND" /></cursor>
         </Button>
 
@@ -105,7 +113,7 @@
             <font><Font size="16.0" /></font>
         </Label>
 
-        <Button fx:id="btnDoe2" layoutX="108.0" layoutY="268.0" onAction="#onDoe2" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: none;" text="DOE AGORA">
+        <Button fx:id="btnDoe2" layoutX="108.0" layoutY="268.0" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: none;" text="DOE AGORA" onMouseClicked="#redirectToPayment">
             <cursor><Cursor fx:constant="HAND" /></cursor>
         </Button>
 
@@ -148,7 +156,7 @@
             <font><Font size="16.0" /></font>
         </Label>
 
-        <Button fx:id="btnDoe3" layoutX="108.0" layoutY="268.0" onAction="#onDoe3" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: none;" text="DOE AGORA">
+        <Button fx:id="btnDoe3" layoutX="108.0" layoutY="268.0"  prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: none;" text="DOE AGORA" onMouseClicked="#redirectToPayment">
             <cursor><Cursor fx:constant="HAND" /></cursor>
         </Button>
 
