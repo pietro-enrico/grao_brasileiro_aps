@@ -16,27 +16,27 @@
 <children>
 
     <!-- ===== NAVBAR ===== -->
-    <ImageView fitHeight="70.0" fitWidth="56.0" layoutX="109.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fitHeight="65.0" fitWidth="74.0" layoutX="108.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
         <image><Image url="@../assets/coffee-beans.png" /></image>
     </ImageView>
-    <Label layoutX="171.0" layoutY="50.0" text="Grão Brasileiro" textFill="#1a3a23">
-        <font><Font size="28.0" /></font>
+    <Label layoutX="171.0" layoutY="48.0" prefHeight="50.0" prefWidth="250.0" style="-fx-font-family: 'georgia';" text="Grão Brasileiro" textFill="#1a3a23">
+        <font><Font size="36.0" /></font>
     </Label>
-    <Label fx:id="Home" layoutX="648.0" layoutY="58.0" onMouseClicked="#redirectToApp" text="Home" textFill="#1a3a23">
-        <font><Font size="20.0" /></font>
+    <Label fx:id="Home" layoutX="572.0" layoutY="62.0" onMouseClicked="#redirectToApp" style="-fx-font-family: 'georgia';" text="Home" textFill="#1a3a23">
+        <font><Font size="25.0" /></font>
         <cursor><Cursor fx:constant="HAND" /></cursor>
     </Label>
-    <Label fx:id="id_collaborators" layoutX="743.0" layoutY="58.0" onMouseClicked="#redirectToCollaborators" text="Colaboradores" textFill="#1a3a23">
-        <font><Font size="20.0" /></font>
+    <Label fx:id="id_collaborators" layoutX="676.0" layoutY="62.0" onMouseClicked="#redirectToCollaborators" style="-fx-font-family: 'georgia';" text="Colaboradores" textFill="#1a3a23">
+        <font><Font size="25.0" /></font>
         <cursor><Cursor fx:constant="HAND" /></cursor>
     </Label>
-    <Label fx:id="id_Sobre" layoutX="1102.0" layoutY="58.0" text="Sobre" textFill="#1a3a23" onMouseClicked="#redirectToAbout">
-        <font><Font size="20.0" /></font>
+    <Label fx:id="id_Sobre" layoutX="1091.0" layoutY="62.0" onMouseClicked="#redirectToAbout" style="-fx-font-family: 'georgia';" text="Sobre" textFill="#1a3a23">
+        <font><Font size="25.0" /></font>
         <cursor><Cursor fx:constant="HAND" /></cursor>
     </Label>
-      <Label fx:id="id_my_donate" layoutX="915.0" layoutY="58.0" onMouseClicked="#redirectToMyDonates" text="Minhas Doações" textFill="#1a3a23">
+      <Label fx:id="id_my_donate" layoutX="874.0" layoutY="62.0" onMouseClicked="#redirectToMyDonates" style="-fx-font-family: 'georgia';" text="Minhas Doações" textFill="#1a3a23">
          <font>
-            <Font size="20.0" />
+            <Font size="25.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
@@ -62,7 +62,7 @@
         </Label>
 
         <!-- botão DOE -->
-        <Button fx:id="btnDoe1" layoutX="108.0" layoutY="268.0" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: none;" text="DOE AGORA" onMouseClicked="#redirectToPayment">
+        <Button fx:id="btnDoe1" layoutX="108.0" layoutY="268.0" onMouseClicked="#redirectToPayment" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: none;" text="DOE AGORA">
             <cursor><Cursor fx:constant="HAND" /></cursor>
         </Button>
 
@@ -113,7 +113,7 @@
             <font><Font size="16.0" /></font>
         </Label>
 
-        <Button fx:id="btnDoe2" layoutX="108.0" layoutY="268.0" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: none;" text="DOE AGORA" onMouseClicked="#redirectToPayment">
+        <Button fx:id="btnDoe2" layoutX="108.0" layoutY="268.0" onMouseClicked="#redirectToPayment" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: none;" text="DOE AGORA">
             <cursor><Cursor fx:constant="HAND" /></cursor>
         </Button>
 
@@ -156,7 +156,7 @@
             <font><Font size="16.0" /></font>
         </Label>
 
-        <Button fx:id="btnDoe3" layoutX="108.0" layoutY="268.0"  prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: none;" text="DOE AGORA" onMouseClicked="#redirectToPayment">
+        <Button fx:id="btnDoe3" layoutX="108.0" layoutY="268.0" onMouseClicked="#redirectToPayment" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: none;" text="DOE AGORA">
             <cursor><Cursor fx:constant="HAND" /></cursor>
         </Button>
 
