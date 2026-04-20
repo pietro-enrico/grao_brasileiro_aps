@@ -99,10 +99,10 @@ public class Components {
     }
 
     @FXML
-    public static void redirectToRegisterByLogin(Button button_register) throws IOException {
-        Register register = new Register();
+    public static void redirectToLoginByRegister(Button button_register) throws IOException {
+        Login login = new Login();
         Stage stage = new Stage();
-        register.start(stage);
+        login.start(stage);
 
         Stage stageAtual = (Stage) button_register.getScene().getWindow();
         stageAtual.close();

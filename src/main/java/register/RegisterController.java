@@ -59,7 +59,7 @@ public class RegisterController extends Components {
                     field.setText("");
                 }
                 is_voluntary.setValue("Quero mudar o mundo!");
-                redirectToRegisterByLogin(button_register);
+                redirectToLoginByRegister(button_register);
                 return true;
             }
             else if(register.get("status").equals("error") && register.get("code").equals(409)) {

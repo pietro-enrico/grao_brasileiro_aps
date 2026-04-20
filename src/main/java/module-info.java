@@ -6,6 +6,7 @@ module grao.brasileiro.aps {
     requires java.desktop;
     requires java.sql;
     requires jbcrypt;
+    requires org.jetbrains.annotations;
 
     opens app to javafx.fxml;
     opens login to javafx.fxml;
