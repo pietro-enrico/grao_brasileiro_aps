@@ -6,6 +6,7 @@ import collaborators.Collaborators;
 import donate.Donate;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import login.Login;
@@ -29,7 +30,7 @@ public class Components {
 
     @FXML
     public  void redirectToAbout(MouseEvent event) throws IOException {
-        About about= new About();
+        About about = new About();
         Stage stage = new Stage();
         about.start(stage);
 
@@ -39,7 +40,7 @@ public class Components {
 
     @FXML
     public  void redirectToCollaborators(MouseEvent event) throws IOException {
-        Collaborators collaborators= new Collaborators();
+        Collaborators collaborators = new Collaborators();
         Stage stage = new Stage();
         collaborators.start(stage);
 
@@ -49,7 +50,7 @@ public class Components {
 
     @FXML
     public  void redirectToMyDonates(MouseEvent event) throws IOException {
-        MyDonates myDonates= new MyDonates();
+        MyDonates myDonates = new MyDonates();
         Stage stage = new Stage();
         myDonates.start(stage);
 
@@ -59,7 +60,7 @@ public class Components {
 
     @FXML
     public  void redirectToPayment(MouseEvent event) throws IOException {
-        Payment payment= new Payment();
+        Payment payment = new Payment();
         Stage stage = new Stage();
         payment.start(stage);
 
@@ -88,12 +89,12 @@ public class Components {
     }
 
     @FXML
-    public void redirectToApp() throws IOException {
+    public static void redirectToApp(Button button_login) throws IOException {
         App app = new App();
         Stage stage = new Stage();
         app.start(stage);
 
-        Stage stageAtual = (Stage) LoginController.button_login.getScene().getWindow();
+        Stage stageAtual = (Stage) button_login.getScene().getWindow();
         stageAtual.close();
     }
 }
