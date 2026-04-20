@@ -20,13 +20,15 @@
 
 /* Estilo da lista suspensa (o popup) */
 .combo-box-popup .list-view {
-    -fx-background-color: #4A7C5A;
+    -fx-background-color:  #FFFFFF;
+    -fx-cursor: hand;
 }
 
 /* Estilo de cada item individual na lista */
 .combo-box-popup .list-view .list-cell {
-    -fx-text-fill: white;
+    -fx-text-fill: #4A7C5A;
     -fx-padding: 5 0 5 10;
+    -fx-cursor: hand;
 }
 
 /* Efeito ao passar o mouse sobre os itens da lista */
