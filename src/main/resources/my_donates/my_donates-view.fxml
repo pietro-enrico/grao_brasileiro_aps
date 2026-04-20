@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -18,19 +20,34 @@
        </Label>
        <Label fx:id="id_home" layoutX="597.0" layoutY="72.0" onMouseClicked="#redirectToApp" style="-fx-font-family: 'georgia';" text="Home" textFill="#1a3a23">
            <font><Font size="26.0" /></font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
        </Label>
        <Label fx:id="id_donate" layoutX="723.0" layoutY="70.0" onMouseClicked="#redirectToDonate" style="-fx-font-family: 'georgia';" text="Doação" textFill="#1a3a23">
            <font><Font size="26.0" /></font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
        </Label>
       <Label fx:id="id_collaborators" layoutX="866.0" layoutY="72.0" onMouseClicked="#redirectToCollaborators" style="-fx-font-family: 'georgia';" text="Colaboradores" textFill="#1a3a23">
          <font>
             <Font size="26.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Label>
       <Label fx:id="id_about" layoutX="1081.0" layoutY="72.0" onMouseClicked="#redirectToAbout" style="-fx-font-family: 'georgia';" text="Sobre" textFill="#1a3a23">
          <font>
             <Font size="26.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Label>
       <Pane layoutX="112.0" layoutY="187.0" prefHeight="108.0" prefWidth="573.0" style="-fx-background-color: #3A2A1A; -fx-background-radius: 10;">
          <children>

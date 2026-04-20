@@ -11,6 +11,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.util.Duration;
 import java.io.File;
@@ -85,8 +86,9 @@ public class PaymentController extends Components {
         btnCorreios.setToggleGroup(pagamentoGroup);
 
         // Dropdown principal
-        cbDesejaDoar.getItems().addAll("Selecione o que doar", "Dinheiro", "Alimento", "Bebida");
-        cbDesejaDoar.getSelectionModel().selectFirst();
+        cbDesejaDoar.getItems().addAll("Dinheiro", "Alimento", "Bebida");
+        cbDesejaDoar.setPromptText("Selecione o alimento");
+        cbDesejaDoar.setValue(null);
         cbDesejaDoar.valueProperty().addListener((obs, oldV, newV) -> atualizarCampos(newV));
 
         // Animação (glow) nos botões
