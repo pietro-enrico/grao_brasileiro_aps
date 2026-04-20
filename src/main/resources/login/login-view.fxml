@@ -130,7 +130,7 @@
          <Font name="Cambria" size="18.0" />
       </font>
    </Text>
-   <TextField id="email" fx:id="email" layoutX="501.0" layoutY="269.0" maxHeight="47.0" maxWidth="304.0" minHeight="38.0" minWidth="298.0" prefHeight="40.0" prefWidth="298.0" promptText="seu@email.com" style="-fx-background-color: #2C5031; -fx-border-radius: 8; -fx-border-color: none; -fx-text-inner-color: FFFFFF; -fx-prompt-text-fill: FFFFFF;">
+   <TextField id="email" fx:id="email" layoutX="501.0" layoutY="269.0" maxHeight="47.0" maxWidth="304.0" minHeight="38.0" minWidth="298.0" prefHeight="40.0" prefWidth="298.0" promptText="seu@email.com" style="-fx-background-color: #4A7C5A; -fx-border-radius: 8; -fx-border-color: none; -fx-text-inner-color: FFFFFF; -fx-prompt-text-fill: FFFFFF;">
       <font>
          <Font name="Cambria" size="14.0" />
       </font>
@@ -145,7 +145,7 @@
          <Font name="Cambria" size="18.0" />
       </font>
    </Text>
-   <PasswordField id="password" fx:id="password" layoutX="501.0" layoutY="359.0" maxHeight="40.0" maxWidth="304.0" minHeight="38.0" minWidth="298.0" prefHeight="40.0" prefWidth="298.0" promptText="********" style="-fx-background-color: #2C5031; -fx-border-radius: 8; -fx-border-color: none; -fx-text-inner-color: FFFFFF; -fx-prompt-text-fill: FFFFFF;">
+   <PasswordField id="password" fx:id="password" layoutX="501.0" layoutY="359.0" maxHeight="40.0" maxWidth="304.0" minHeight="38.0" minWidth="298.0" prefHeight="40.0" prefWidth="298.0" promptText="********" style="-fx-background-color: #4A7C5A; -fx-border-radius: 8; -fx-border-color: none; -fx-text-inner-color: FFFFFF; -fx-prompt-text-fill: FFFFFF;">
       <font>
          <Font size="14.0" />
       </font>

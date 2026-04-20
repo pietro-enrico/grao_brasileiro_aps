@@ -3,10 +3,13 @@ package register;
 import components.Components;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import message.Message;
+
+import java.io.IOException;
 import java.util.Map;
 
 public class RegisterController extends Components {
@@ -20,13 +23,16 @@ public class RegisterController extends Components {
     private ComboBox<String> is_voluntary;
 
     @FXML
+    private Button button_register;
+
+    @FXML
     public void initialize() {
         is_voluntary.getItems().addAll("Quero mudar o mundo!", "Dessa vez não =/");
         is_voluntary.setValue("Quero mudar o mundo!");
     }
 
     @FXML
-    protected boolean OnRegister() {
+    protected boolean OnRegister() throws IOException {
         RegisterDTO dto = new RegisterDTO();
         RegisterDTO.setErrors("");
 
@@ -53,6 +59,7 @@ public class RegisterController extends Components {
                     field.setText("");
                 }
                 is_voluntary.setValue("Quero mudar o mundo!");
+                redirectToRegisterByLogin(button_register);
                 return true;
             }
             else if(register.get("status").equals("error") && register.get("code").equals(409)) {

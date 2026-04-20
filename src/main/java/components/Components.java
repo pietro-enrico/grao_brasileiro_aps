@@ -6,6 +6,7 @@ import collaborators.Collaborators;
 import donate.Donate;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import login.Login;
@@ -88,12 +89,22 @@ public class Components {
     }
 
     @FXML
-    public static void redirectToAppByLogin() throws IOException {
+    public static void redirectToAppByLogin(Button button_login) throws IOException {
         App app = new App();
         Stage stage = new Stage();
         app.start(stage);
 
-        Stage stageAtual = (Stage) LoginController.button_login.getScene().getWindow();
+        Stage stageAtual = (Stage) button_login.getScene().getWindow();
+        stageAtual.close();
+    }
+
+    @FXML
+    public static void redirectToRegisterByLogin(Button button_register) throws IOException {
+        Register register = new Register();
+        Stage stage = new Stage();
+        register.start(stage);
+
+        Stage stageAtual = (Stage) button_register.getScene().getWindow();
         stageAtual.close();
     }
 
