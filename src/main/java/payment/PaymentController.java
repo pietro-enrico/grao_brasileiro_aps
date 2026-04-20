@@ -14,6 +14,9 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.util.Duration;
+import message.Message;
+import register.RegisterDTO;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -158,13 +161,13 @@ public class PaymentController extends Components {
         String opcao = cbDesejaDoar.getValue();
 
         if (opcao == null || "Selecione o que doar".equals(opcao)) {
-            alerta("Selecione o que deseja doar.");
+            Message.showMessage(Alert.AlertType.INFORMATION, "Atenção", "Por favor, selecione uma opção de doação!", PaymentDTO.getErrors().toString());
             return;
         }
 
         Toggle selecionado = pagamentoGroup.getSelectedToggle();
         if (selecionado == null) {
-            alerta("Selecione uma forma de pagamento.");
+            Message.showMessage(Alert.AlertType.INFORMATION, "Atenção", "Por favor, selecione uma opção de pagamento, antes de confirmar a doação!", PaymentDTO.getErrors().toString());;
             return;
         }
 
@@ -178,7 +181,7 @@ public class PaymentController extends Components {
             qrCodeBox.setVisible(false);
             correiosBox.setVisible(false);
         } else {
-            alerta("Forma de pagamento incompatível com o tipo de doação.");
+            Message.showMessage(Alert.AlertType.INFORMATION, "Atenção", "Forma de pagamento incompatível com o tipo de doação!", PaymentDTO.getErrors().toString());
         }
     }
 
