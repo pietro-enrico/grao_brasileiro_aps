@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -22,17 +23,32 @@
     <Label fx:id="id_donate" layoutX="589.0" layoutY="95.0" onMouseClicked="#redirectToDonate" style="-fx-font-family: 'Georgia'; -fx-font-size: 25px; -fx-text-fill: #1B3A1B;" text="Doação" textFill="#1a3a23">
       <font>
          <Font size="18.0" />
-      </font></Label>
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor></Label>
     <Label fx:id="id_about" layoutX="709.0" layoutY="95.0" onMouseClicked="#redirectToAbout" style="-fx-font-family: 'Georgia'; -fx-font-size: 25px; -fx-text-fill: #1B3A1B;" text="Sobre" textFill="#1a3a23">
       <font>
          <Font size="15.0" />
-      </font></Label>
-    <Label fx:id="id_collaborators" layoutX="809.0" layoutY="95.0" onMouseClicked="#redirectToCollaborators" style="-fx-font-family: 'Georgia'; -fx-font-size: 25px; -fx-text-fill: #1B3A1B;" text="Colaboradores" textFill="#1a3a23" />
-    <Label fx:id="id_my_donates" layoutX="999.0" layoutY="95.0" onMouseClicked="#redirectToMyDonates" style="-fx-font-family: 'Georgia'; -fx-font-size: 25px; -fx-text-fill: #1B3A1B;" text="Minhas Doações" textFill="#1a3a23" />
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor></Label>
+    <Label fx:id="id_collaborators" layoutX="809.0" layoutY="95.0" onMouseClicked="#redirectToCollaborators" style="-fx-font-family: 'Georgia'; -fx-font-size: 25px; -fx-text-fill: #1B3A1B;" text="Colaboradores" textFill="#1a3a23">
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor></Label>
+    <Label fx:id="id_my_donates" layoutX="999.0" layoutY="95.0" onMouseClicked="#redirectToMyDonates" style="-fx-font-family: 'Georgia'; -fx-font-size: 25px; -fx-text-fill: #1B3A1B;" text="Minhas Doações" textFill="#1a3a23">
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor></Label>
 
     <!-- COLUNA ESQUERDA -->
     <Label layoutX="150.0" layoutY="220.0" style="-fx-font-size:17px; -fx-font-weight:bold; -fx-text-fill:#333;" text="O que deseja doar?" />
-    <ComboBox fx:id="cbDesejaDoar" layoutX="150.0" layoutY="250.0" prefHeight="35.0" prefWidth="330.0" style="-fx-background-color:#D9E8D4; -fx-background-radius:4;" />
+    <ComboBox fx:id="cbDesejaDoar" layoutX="150.0" layoutY="250.0" prefHeight="35.0" prefWidth="330.0" style="-fx-background-color:#D9E8D4; -fx-background-radius:4;">
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor></ComboBox>
 
     <Label fx:id="lblSuprimento" layoutX="150.0" layoutY="310.0" style="-fx-font-size:17px; -fx-font-weight:bold; -fx-text-fill:#333;" text="Qual tipo de suprimento?" visible="false" />
     <ComboBox fx:id="cbSuprimento" layoutX="150.0" layoutY="340.0" prefHeight="35.0" prefWidth="330.0" style="-fx-background-color:#D9E8D4; -fx-background-radius:4;" visible="false" />
@@ -51,7 +67,10 @@
     <ToggleButton fx:id="btnPayPal" layoutX="1030.0" layoutY="250.0" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color:#D9E8D4; -fx-text-fill:#333; -fx-background-radius:4; -fx-font-size:14px;" text="PayPal" visible="false" />
     <ToggleButton fx:id="btnCorreios" layoutX="650.0" layoutY="250.0" prefHeight="40.0" prefWidth="520.0" style="-fx-background-color:#FFE082; -fx-text-fill:#5D4037; -fx-background-radius:4; -fx-font-size:14px; -fx-font-weight:bold;" text="📦 Correios" visible="false" />
 
-    <Button fx:id="btnConfirmar" layoutX="650.0" layoutY="320.0" onAction="#confirmarDoacao" prefHeight="45.0" prefWidth="520.0" style="-fx-background-color:#3B2A1A; -fx-text-fill:white; -fx-background-radius:4; -fx-font-size:16px;" text="Confirmar" />
+    <Button fx:id="btnConfirmar" layoutX="650.0" layoutY="320.0" onAction="#confirmarDoacao" prefHeight="45.0" prefWidth="520.0" style="-fx-background-color:#3B2A1A; -fx-text-fill:white; -fx-background-radius:4; -fx-font-size:16px;" text="Confirmar">
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor></Button>
 
     <!-- QR CODE -->
     <Pane fx:id="qrCodeBox" layoutX="650.0" layoutY="390.0" prefHeight="290.0" prefWidth="520.0" style="-fx-background-color:#3B2A1A; -fx-background-radius:8;" visible="false">

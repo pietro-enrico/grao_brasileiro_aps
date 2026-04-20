@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -22,17 +23,29 @@
         </Label>
         <Label fx:id="id_home" layoutX="649.0" layoutY="78.0" onMouseClicked="#redirectToApp" style="-fx-font-family: 'Georgia';" text="Home" textFill="#1a3a23">
             <font><Font size="25.0" /></font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
         </Label>
         <Label fx:id="id_donate" layoutX="757.0" layoutY="78.0" onMouseClicked="#redirectToDonate" style="-fx-font-family: 'Georgia';" text="Doação" textFill="#1a3a23">
             <font><Font size="25.0" /></font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
         </Label>
         <Label fx:id="id_my_donate" layoutX="879.0" layoutY="78.0" onMouseClicked="#redirectToMyDonates" style="-fx-font-family: 'Georgia';" text="Minhas Doações" textFill="#1a3a23">
             <font><Font size="25.0" /></font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
         </Label>
       <Label fx:id="id_about" layoutX="1102.0" layoutY="78.0" onMouseClicked="#redirectToAbout" style="-fx-font-family: 'Georgia';" text="Sobre" textFill="#1a3a23">
          <font>
             <Font size="25.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Label>
 
         <!-- ===== BANNER VERDE ===== -->
