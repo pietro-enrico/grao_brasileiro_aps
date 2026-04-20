@@ -1,0 +1,41 @@
+/* Estilo do botão principal do ComboBox */
+.combo-box {
+    -fx-background-color: #4A7C5A; /* Sua cor verde */
+    -fx-background-radius: 5;
+    -fx-border-color: #3d664a;      /* Borda um pouco mais escura para dar profundidade */
+    -fx-border-radius: 5;
+}
+
+/* Cor do texto do item selecionado e do placeholder */
+.combo-box .list-cell {
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+}
+
+/* Força o placeholder a ficar branco */
+.combo-box .text-field {
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: white;
+}
+
+/* Estilo da lista suspensa (o popup) */
+.combo-box-popup .list-view {
+    -fx-background-color: #4A7C5A;
+}
+
+/* Estilo de cada item individual na lista */
+.combo-box-popup .list-view .list-cell {
+    -fx-text-fill: white;
+    -fx-padding: 5 0 5 10;
+}
+
+/* Efeito ao passar o mouse sobre os itens da lista */
+.combo-box-popup .list-view .list-cell:filled:hover {
+    -fx-background-color: #3d664a; /* Um tom de verde mais escuro para o hover */
+    -fx-text-fill: white;
+}
+
+/* Cor da seta (o ícone de abrir) */
+.combo-box .arrow-button .arrow {
+    -fx-background-color: white;
+}

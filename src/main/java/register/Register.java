@@ -14,5 +14,6 @@ public class Register extends Application {
         stage.setTitle("Cadastro de Usuário - Grão Brasileiro");
         stage.setScene(scene);
         stage.show();
+        scene.getStylesheets().add(getClass().getResource("/css/combo_box.css").toExternalForm());
     }
 }
