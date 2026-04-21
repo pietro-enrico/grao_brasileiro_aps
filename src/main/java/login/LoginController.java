@@ -8,10 +8,8 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import message.Message;
 import user_session.UserSession;
-
 import java.io.IOException;
 import java.util.Map;
-import java.util.Objects;
 
 public class LoginController extends Components {
     @FXML
