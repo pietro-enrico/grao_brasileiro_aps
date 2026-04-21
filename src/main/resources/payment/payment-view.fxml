@@ -45,27 +45,42 @@
 
     <!-- COLUNA ESQUERDA -->
     <Label layoutX="150.0" layoutY="220.0" style="-fx-font-size:17px; -fx-font-weight:bold; -fx-text-fill:#333;" text="O que deseja doar?" />
-    <ComboBox fx:id="cbDesejaDoar" layoutX="150.0" layoutY="250.0" prefHeight="35.0" prefWidth="330.0" style="-fx-background-color:#D9E8D4; -fx-background-radius:4;">
+    <ComboBox fx:id="categoria" layoutX="150.0" layoutY="250.0" prefHeight="35.0" prefWidth="330.0" style="-fx-background-color:#D9E8D4; -fx-background-radius:4;">
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor></ComboBox>
 
     <Label fx:id="lblSuprimento" layoutX="150.0" layoutY="310.0" style="-fx-font-size:17px; -fx-font-weight:bold; -fx-text-fill:#333;" text="Qual tipo de suprimento?" visible="false" />
-    <ComboBox fx:id="cbSuprimento" layoutX="150.0" layoutY="340.0" prefHeight="35.0" prefWidth="330.0" style="-fx-background-color:#D9E8D4; -fx-background-radius:4;" visible="false" />
+    <ComboBox fx:id="sub_categoria" layoutX="150.0" layoutY="340.0" prefHeight="35.0" prefWidth="330.0" style="-fx-background-color:#D9E8D4; -fx-background-radius:4;" visible="false">
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor></ComboBox>
 
     <Label fx:id="lblQuantidade" layoutX="150.0" layoutY="400.0" style="-fx-font-size:17px; -fx-font-weight:bold; -fx-text-fill:#333;" text="Quantidade?" visible="false" />
-    <TextField fx:id="tfQuantidade" layoutX="150.0" layoutY="430.0" prefHeight="35.0" prefWidth="330.0" promptText="Escreva a quantidade" style="-fx-background-color:#D9E8D4; -fx-background-radius:4;" visible="false" />
+    <TextField fx:id="quantidade" layoutX="150.0" layoutY="430.0" prefHeight="35.0" prefWidth="330.0" promptText="Escreva a quantidade" style="-fx-background-color:#D9E8D4; -fx-background-radius:4;" visible="false" />
 
     <Label fx:id="lblValor" layoutX="150.0" layoutY="300.0" style="-fx-font-size:17px; -fx-font-weight:bold; -fx-text-fill:#333;" text="Valor:" visible="false" />
-    <TextField fx:id="tfValor" layoutX="150.0" layoutY="330.0" prefHeight="35.0" prefWidth="330.0" promptText="0,00" style="-fx-background-color:#D9E8D4; -fx-background-radius:4;" visible="false" />
+    <TextField fx:id="value" layoutX="150.0" layoutY="330.0" prefHeight="35.0" prefWidth="330.0" promptText="0,00" style="-fx-background-color:#D9E8D4; -fx-background-radius:4;" visible="false" />
 
     <!-- COLUNA DIREITA -->
     <Label layoutX="650.0" layoutY="220.0" style="-fx-font-size:17px; -fx-font-weight:bold; -fx-text-fill:#333;" text="Selecione a Forma de Pagamento:" />
 
-    <ToggleButton fx:id="btnPix" layoutX="650.0" layoutY="250.0" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color:#D9E8D4; -fx-text-fill:#333; -fx-background-radius:4; -fx-font-size:14px;" text="Pix" visible="false" />
-    <ToggleButton fx:id="btnCC" layoutX="820.0" layoutY="250.0" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color:#D9E8D4; -fx-text-fill:#333; -fx-background-radius:4; -fx-font-size:14px;" text="Cartão de crédito" visible="false" />
-    <ToggleButton fx:id="btnPayPal" layoutX="1030.0" layoutY="250.0" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color:#D9E8D4; -fx-text-fill:#333; -fx-background-radius:4; -fx-font-size:14px;" text="PayPal" visible="false" />
-    <ToggleButton fx:id="btnCorreios" layoutX="650.0" layoutY="250.0" prefHeight="40.0" prefWidth="520.0" style="-fx-background-color:#FFE082; -fx-text-fill:#5D4037; -fx-background-radius:4; -fx-font-size:14px; -fx-font-weight:bold;" text="📦 Correios" visible="false" />
+    <ToggleButton fx:id="btnPix" layoutX="650.0" layoutY="250.0" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color:#D9E8D4; -fx-text-fill:#333; -fx-background-radius:4; -fx-font-size:14px;" text="Pix" visible="false">
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor></ToggleButton>
+    <ToggleButton fx:id="btnCC" layoutX="820.0" layoutY="250.0" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color:#D9E8D4; -fx-text-fill:#333; -fx-background-radius:4; -fx-font-size:14px;" text="Cartão de crédito" visible="false">
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor></ToggleButton>
+    <ToggleButton fx:id="btnPayPal" layoutX="1030.0" layoutY="250.0" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color:#D9E8D4; -fx-text-fill:#333; -fx-background-radius:4; -fx-font-size:14px;" text="PayPal" visible="false">
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor></ToggleButton>
+    <ToggleButton fx:id="btnCorreios" layoutX="650.0" layoutY="250.0" prefHeight="40.0" prefWidth="520.0" style="-fx-background-color:#FFE082; -fx-text-fill:#5D4037; -fx-background-radius:4; -fx-font-size:14px; -fx-font-weight:bold;" text="📦 Correios" visible="false">
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor></ToggleButton>
 
     <Button fx:id="btnConfirmar" layoutX="650.0" layoutY="320.0" onAction="#confirmarDoacao" prefHeight="45.0" prefWidth="520.0" style="-fx-background-color:#3B2A1A; -fx-text-fill:white; -fx-background-radius:4; -fx-font-size:16px;" text="Confirmar">
       <cursor>
@@ -86,7 +101,10 @@
         <Label fx:id="lblCodigoCorreios" layoutX="40.0" layoutY="80.0" style="-fx-text-fill:#000; -fx-font-family:'Consolas'; -fx-font-weight:bold; -fx-font-size:22px;" text="—" />
         <Label layoutX="40.0" layoutY="125.0" style="-fx-text-fill:#5D4037; -fx-font-weight:bold; -fx-font-size:13px;" text="Destinatário:" />
         <Label layoutX="40.0" layoutY="145.0" style="-fx-text-fill:#333; -fx-font-size:12px;" text="Grão Brasileiro - Centro de Doações&#10;Rua das Flores, 123 - São Paulo/SP - CEP 01234-567" />
-        <Button fx:id="btnBaixarSelo" layoutX="150.0" layoutY="220.0" onAction="#baixarSeloCorreios" prefHeight="38.0" prefWidth="220.0" style="-fx-background-color:#5D4037; -fx-text-fill:white; -fx-background-radius:4; -fx-font-weight:bold;" text="⬇  Baixar selo (.txt)" />
+        <Button fx:id="btnBaixarSelo" layoutX="150.0" layoutY="220.0" onAction="#baixarSeloCorreios" prefHeight="38.0" prefWidth="220.0" style="-fx-background-color:#5D4037; -fx-text-fill:white; -fx-background-radius:4; -fx-font-weight:bold;" text="⬇  Baixar selo (.txt)">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
     </Pane>
 
 </Pane>

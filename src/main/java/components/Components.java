@@ -10,7 +10,6 @@ import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import login.Login;
-import login.LoginController;
 import my_donates.MyDonates;
 import payment.Payment;
 import register.Register;
