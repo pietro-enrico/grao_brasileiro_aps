@@ -92,7 +92,7 @@
         <Rectangle fx:id="progress1" arcHeight="12" arcWidth="12" fill="#2C5031" height="12.0" layoutX="660.0" layoutY="452.0" width="335.0" />
 
         <!-- indicador slide -->
-        <Label layoutX="115.0" layoutY="500.0" text="1 • 2 • 3" textFill="#7A5030">
+        <Label layoutX="90.0" layoutY="500.0" text="1 • 2 • 3" textFill="#7A5030">
             <font><Font size="18.0" /></font>
         </Label>
 
