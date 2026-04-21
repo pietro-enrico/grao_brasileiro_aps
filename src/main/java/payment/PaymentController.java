@@ -1,7 +1,10 @@
 package payment;
 
 import components.Components;
-import javafx.animation.*;
+import javafx.animation.Interpolator;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -13,11 +16,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.util.Duration;
-import login.LoginController;
 import message.Message;
-import register.RegisterDTO;
-import user_session.UserSession;
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -25,29 +24,36 @@ import java.util.Map;
 import java.util.Random;
 
 public class PaymentController extends Components {
+    @FXML
+    private ComboBox<String> categoria;
 
     @FXML
-    private ComboBox<String> cbDesejaDoar;
+    private ComboBox<String> sub_categoria;
+
     @FXML
-    private ComboBox<String> cbSuprimento;
+    private TextField quantidade;
+
     @FXML
-    private TextField tfQuantidade;
-    @FXML
-    private TextField tfValor;
+    private TextField value;
 
     @FXML
     private Label lblSuprimento;
+
     @FXML
     private Label lblQuantidade;
+
     @FXML
     private Label lblValor;
 
     @FXML
     private ToggleButton btnPix;
+
     @FXML
     private ToggleButton btnCC;
+
     @FXML
     private ToggleButton btnPayPal;
+
     @FXML
     private ToggleButton btnCorreios;
 
@@ -56,44 +62,45 @@ public class PaymentController extends Components {
 
     @FXML
     private Pane qrCodeBox;
+
     @FXML
     private Label lblValorDoado;
+
     @FXML
     private Label lblCodigoPix;
+
     @FXML
     private ImageView qrImageView;
 
     @FXML
     private Pane correiosBox;
+
     @FXML
     private Label lblCodigoCorreios;
+
     @FXML
     private Button btnBaixarSelo;
 
-    private final ToggleGroup pagamentoGroup = new ToggleGroup();
+    private final ToggleGroup pagamento = new ToggleGroup();
 
     private String codigoCorreiosAtual = "";
 
-    private final ObservableList<String> listaAlimentos = FXCollections.observableArrayList(
-            "Selecione o alimento", "Arroz", "Feijão", "Macarrão", "Óleo", "Açúcar", "Farinha"
-    );
-    private final ObservableList<String> listaBebidas = FXCollections.observableArrayList(
-            "Selecione a bebida", "Leite", "Suco", "Água mineral", "Achocolatado", "Café"
-    );
+    private final ObservableList<String> listaAlimentos = FXCollections.observableArrayList("Arroz", "Feijão", "Macarrão", "Óleo", "Açúcar", "Farinha");
+    private final ObservableList<String> listaBebidas = FXCollections.observableArrayList("Leite", "Suco", "Água mineral", "Achocolatado", "Café");
 
     @FXML
     public void initialize() {
         // Associa os botões ao ToggleGroup
-        btnPix.setToggleGroup(pagamentoGroup);
-        btnCC.setToggleGroup(pagamentoGroup);
-        btnPayPal.setToggleGroup(pagamentoGroup);
-        btnCorreios.setToggleGroup(pagamentoGroup);
+        btnPix.setToggleGroup(pagamento);
+        btnCC.setToggleGroup(pagamento);
+        btnPayPal.setToggleGroup(pagamento);
+        btnCorreios.setToggleGroup(pagamento);
 
         // Dropdown principal
-        cbDesejaDoar.getItems().addAll("Dinheiro", "Alimento", "Bebida");
-        cbDesejaDoar.setPromptText("Selecione o alimento");
-        cbDesejaDoar.setValue(null);
-        cbDesejaDoar.valueProperty().addListener((obs, oldV, newV) -> atualizarCampos(newV));
+        categoria.getItems().addAll("Dinheiro", "Alimento", "Bebida");
+        categoria.setPromptText("Selecione o alimento");
+        categoria.setValue(null);
+        categoria.valueProperty().addListener((obs, oldV, newV) -> atualizarCampos(newV));
 
         // Animação (glow) nos botões
         configurarGlow(btnPix, Color.web("#1DB8A8"));
@@ -130,69 +137,73 @@ public class PaymentController extends Components {
         boolean isFisico = isAlimento || isBebida;
 
         if (isAlimento) {
+            sub_categoria.setItems(listaAlimentos);
             lblSuprimento.setText("Qual tipo de alimento?");
-            cbSuprimento.setItems(listaAlimentos);
-            cbSuprimento.getSelectionModel().selectFirst();
+            sub_categoria.setPromptText("Selecione o alimento");
+            sub_categoria.setValue(null);
         } else if (isBebida) {
+            sub_categoria.setItems(listaBebidas);
             lblSuprimento.setText("Qual tipo de bebida?");
-            cbSuprimento.setItems(listaBebidas);
-            cbSuprimento.getSelectionModel().selectFirst();
+            sub_categoria.setPromptText("Selecione a bebida");
+            sub_categoria.setValue(null);
         }
 
         lblSuprimento.setVisible(isFisico);
-        cbSuprimento.setVisible(isFisico);
+        sub_categoria.setVisible(isFisico);
         lblQuantidade.setVisible(isFisico);
-        tfQuantidade.setVisible(isFisico);
+        quantidade.setVisible(isFisico);
 
         lblValor.setVisible(isDinheiro);
-        tfValor.setVisible(isDinheiro);
+        value.setVisible(isDinheiro);
 
         btnPix.setVisible(isDinheiro);
         btnCC.setVisible(isDinheiro);
         btnPayPal.setVisible(isDinheiro);
         btnCorreios.setVisible(isFisico);
 
-        pagamentoGroup.selectToggle(null);
+        pagamento.selectToggle(null);
         qrCodeBox.setVisible(false);
         correiosBox.setVisible(false);
     }
 
     @FXML
-    private void confirmarDoacao() {
+    private boolean confirmarDoacao() {
         PaymentDTO dto = new PaymentDTO();
         PaymentDTO.setErrors("");
-        dto.setCategoria(cbDesejaDoar.getValue());
-        dto.setSub_categoria(cbSuprimento.getValue());
-        dto.setValue(Float.parseFloat(tfValor.getText()));
-        dto.setQuantity(tfQuantidade.getText());
-        dto.setPayment_type(pagamentoGroup.getSelectedToggle().toString());
-        System.out.println(UserSession.getInstance().getId_user());
 
-        if (pagamentoGroup.getSelectedToggle() == null) {
-            Message.showMessage(Alert.AlertType.INFORMATION, "Atenção", "Por favor, selecione uma opção de pagamento, antes de confirmar a doação!", PaymentDTO.getErrors().toString());;
-            return;
-        }
+        dto.setCategoria(categoria.getValue());
+        dto.setSubCategoria(sub_categoria.getValue());
+        dto.setValor(value.getText());
+        dto.setQuantidade(quantidade.getText());
+        dto.setTipoPagamento(pagamento.getSelectedToggle());
 
         if (!PaymentDTO.getErrors().isEmpty()) {
             Message.showMessage(Alert.AlertType.INFORMATION, "Atenção", "Corrija os seguintes erros:", PaymentDTO.getErrors().toString());
+            return false;
         } else {
-            Map<String, Object> insertDonate =  PaymentService.insertDonate(dto);
+            Map<String, Object> insertDonate = PaymentService.insertDonate(dto);
 
-            if (pagamentoGroup.getSelectedToggle() == btnPix && "Dinheiro".equals(cbDesejaDoar.getValue())) {
-                gerarPix();
-            } else if (pagamentoGroup.getSelectedToggle() == btnCorreios && ("Alimento".equals(cbDesejaDoar.getValue()) || "Bebida".equals(cbDesejaDoar.getValue()))) {
-                gerarSeloCorreios();
-            } else if (pagamentoGroup.getSelectedToggle() == btnCC || pagamentoGroup.getSelectedToggle() == btnPayPal) {
-                alerta("Doação cadastrada com sucesso via "
-                        + ((ToggleButton) pagamentoGroup.getSelectedToggle()).getText() + "!");
-                qrCodeBox.setVisible(false);
-                correiosBox.setVisible(false);
+            if(insertDonate.get("status").equals("success") && insertDonate.get("code").equals(201)) {
+                Message.showMessage(Alert.AlertType.CONFIRMATION, "Confirmação", "Doação realizada" + " via " + ((ToggleButton) pagamento.getSelectedToggle()).getText() + "!", insertDonate.get("message").toString());
+
+                if (pagamento.getSelectedToggle() == btnPix && "Dinheiro".equals(categoria.getValue())) {
+                    gerarPix();
+                } else if (pagamento.getSelectedToggle() == btnCorreios && ("Alimento".equals(categoria.getValue()) || "Bebida".equals(categoria.getValue()))) {
+                    gerarSeloCorreios();
+                }
+
+                btnConfirmar.setDisable(true);
+                return true;
+            }
+            else {
+                Message.showMessage(Alert.AlertType.ERROR, "Atenção", "Erro no Servidor do Banco de dados", "Erro ao executar a operação no banco de dados. Entre com contato com o suporte da Grão Brasileiro.");
+                return false;
             }
         }
     }
 
     private void gerarPix() {
-        String valor = tfValor.getText().isEmpty() ? "0,00" : tfValor.getText();
+        String valor = value.getText().isEmpty() ? "0,00" : value.getText();
         String codigoPixAtual = "00020126580014BR.GOV.BCB.PIX0136GRAO-"
                 + System.currentTimeMillis() + "5204000053039865802BR6009SAOPAULO";
 
@@ -250,15 +261,14 @@ public class PaymentController extends Components {
             fw.flush();
             alerta("Selo salvo em:\n" + arquivo.getAbsolutePath());
         } catch (IOException e) {
-            e.printStackTrace();
             alerta("Erro ao salvar o arquivo:\n" + e.getMessage());
         }
     }
 
     private String montarConteudoSelo() {
-        String tipo = cbDesejaDoar.getValue();
-        String suprimento = cbSuprimento.getValue();
-        String qtd = tfQuantidade.getText().isEmpty() ? "—" : tfQuantidade.getText();
+        String tipo = categoria.getValue();
+        String suprimento = sub_categoria.getValue();
+        String qtd = quantidade.getText().isEmpty() ? "—" : quantidade.getText();
 
         return "============================================\n"
                 + "       SELO DE POSTAGEM - CORREIOS         \n"
@@ -281,6 +291,6 @@ public class PaymentController extends Components {
     }
 
     private void alerta(String msg) {
-        new Alert(Alert.AlertType.INFORMATION, msg).showAndWait();
+        new Alert(Alert.AlertType.CONFIRMATION, msg).showAndWait();
     }
 }

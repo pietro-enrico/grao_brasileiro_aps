@@ -1,8 +1,11 @@
 package payment;
 
+import javafx.scene.control.Toggle;
+import javafx.scene.control.ToggleButton;
+
 public class PaymentDTO {
-    private Float value;
-    private String categoria, sub_categoria, quantity, payment_type;
+    private float valor;
+    private String categoria, sub_categoria, quantidade, tipo_pagamento;
     private static StringBuilder errors = new StringBuilder();
 
     public String getCategoria(){
@@ -10,59 +13,65 @@ public class PaymentDTO {
     }
 
     public void setCategoria(String categoria) {
-        if (categoria.isEmpty()){
-            errors.append("\n - O campo categoria é obrigatório o preenchimento!" );
+        if (categoria == null){
+            errors.append("\n - O Campo categoria é obrigatório!" );
         } else {
-            this.categoria = categoria;
+            this.categoria = categoria.trim();
         }
     }
 
-    public String getSub_categoria() {
+    public String getSubCategoria() {
         return sub_categoria;
     }
 
-    public void setSub_categoria(String sub_categoria){
-        if (!categoria.equals("Dinheiro") && sub_categoria.isEmpty()) {
-            errors.append("\n - O campo subcategoria é obrigatório o preenchimento!");
-        }
-        else {
-            this.sub_categoria = sub_categoria;
-        }
-    }
+    public void setSubCategoria(String sub_categoria) {
+        if(categoria != null && categoria.equals("Dinheiro")) return;
 
-    public String getQuantity(){
-        return quantity;
-    }
-
-    public void setQuantity(String quantity){
-        if (quantity.isEmpty()){
-            errors.append("\n - O campo quantidade é obrigatório o preenchimento!");
-        }else{
-            this.quantity = quantity;
-        }
-    }
-
-    public float getValue(){
-        return value;
-    }
-
-    public void setValue(Float value){
-        if (value.isNaN()){
-            errors.append("\n - O campo valor é obrigatório o preenchimento!");
+        if (sub_categoria == null) {
+            errors.append("\n - O Campo subcategoria é obrigatório!");
         } else {
-            this.value = value;
+            this.sub_categoria = sub_categoria.trim();
         }
     }
 
-    public String getPayment_type() {
-        return payment_type;
+    public String getQuantidade(){
+        return quantidade;
     }
 
-    public void setPayment_type(String payment_type){
-        if (payment_type.isEmpty()){
-            errors.append("\n - O campo tipo de pagamento é obrigatório o preenchimento");
-        } else{
-            this.payment_type = payment_type;
+    public void setQuantidade(String quantidade){
+        if(categoria != null && categoria.equals("Dinheiro")) return;
+
+        if (quantidade.isEmpty() || quantidade.isBlank() || quantidade == null){
+            errors.append("\n - Campo quantidade é obrigatório!");
+        } else {
+            this.quantidade = quantidade;
+        }
+    }
+
+    public float getValor(){
+        return valor;
+    }
+
+    public void setValor(String valor){
+        if(categoria != null && !categoria.equals("Dinheiro")) return;
+
+        if (valor.isEmpty() || valor.isBlank() || valor == null){
+            errors.append("\n - Campo valor é obrigatório!");
+        } else {
+            this.valor = Float.parseFloat(valor);
+        }
+    }
+
+    public String getTipoPagamento() {
+        return tipo_pagamento;
+    }
+
+    public void setTipoPagamento(Toggle tipo_pagamento){
+        if (tipo_pagamento == null){
+            errors.append("\n - Por favor, selecione uma opção de pagamento, antes de confirmar a doação!");
+        } else {
+            String texto = ((ToggleButton) tipo_pagamento).getText();
+            this.tipo_pagamento = texto.trim();
         }
     }
 

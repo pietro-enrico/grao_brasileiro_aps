@@ -1,182 +1,288 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0"
+      prefWidth="1280.0" style="-fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/25"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="about.AboutController">
+    <children>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="about.AboutController">
-   <children>
+        <!-- ===== NAVBAR ===== -->
+        <Label layoutX="172.0" layoutY="61.0" style="-fx-font-family: 'georgia';" text="Grão Brasileiro"
+               textFill="#1a3a23">
+            <font>
+                <Font size="40.0"/>
+            </font>
+        </Label>
+        <ImageView fitHeight="97.0" fitWidth="77.0" layoutX="95.0" layoutY="32.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../assets/coffee-beans.png"/>
+            </image>
+        </ImageView>
+        <Label fx:id="id_home" layoutX="580.0" layoutY="72.0" onMouseClicked="#redirectToApp"
+               style="-fx-font-family: 'Georgia';" text="Home" textFill="#1a3a23">
+            <font>
+                <Font size="25.0"/>
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </Label>
+        <Label fx:id="id_donate" layoutX="689.0" layoutY="72.0" onMouseClicked="#redirectToDonate"
+               style="-fx-font-family: 'Georgia';" text="Doação" textFill="#1a3a23">
+            <font>
+                <Font size="25.0"/>
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </Label>
+        <Label fx:id="id_collaborators" layoutX="814.0" layoutY="72.0" onMouseClicked="#redirectToCollaborators"
+               style="-fx-font-family: 'Georgia';" text="Colaboradores" textFill="#1a3a23">
+            <font>
+                <Font size="25.0"/>
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </Label>
+        <Label fx:id="id_my_donate" layoutX="1012.0" layoutY="72.0" onMouseClicked="#redirectToMyDonates"
+               style="-fx-font-family: 'Georgia';" text="Minhas Doações" textFill="#1a3a23">
+            <font>
+                <Font size="25.0"/>
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND"/>
+            </cursor>
+        </Label>
 
-      <!-- ===== NAVBAR ===== -->
-      <Label layoutX="172.0" layoutY="61.0" style="-fx-font-family: 'georgia';" text="Grão Brasileiro" textFill="#1a3a23">
-         <font><Font size="40.0" /></font>
-      </Label>
-      <ImageView fitHeight="97.0" fitWidth="77.0" layoutX="95.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
-         <image><Image url="@../assets/coffee-beans.png" /></image>
-      </ImageView>
-      <Label fx:id="id_home" layoutX="580.0" layoutY="72.0" onMouseClicked="#redirectToApp" style="-fx-font-family: 'Georgia';" text="Home" textFill="#1a3a23">
-         <font><Font size="25.0" /></font>
-         <cursor><Cursor fx:constant="HAND" /></cursor>
-      </Label>
-      <Label fx:id="id_donate" layoutX="689.0" layoutY="72.0" onMouseClicked="#redirectToDonate" style="-fx-font-family: 'Georgia';" text="Doação" textFill="#1a3a23">
-         <font><Font size="25.0" /></font>
-         <cursor><Cursor fx:constant="HAND" /></cursor>
-      </Label>
-      <Label fx:id="id_collaborators" layoutX="814.0" layoutY="72.0" onMouseClicked="#redirectToCollaborators" style="-fx-font-family: 'Georgia';" text="Colaboradores" textFill="#1a3a23">
-         <font><Font size="25.0" /></font>
-         <cursor><Cursor fx:constant="HAND" /></cursor>
-      </Label>
-      <Label fx:id="id_my_donate" layoutX="1012.0" layoutY="72.0" onMouseClicked="#redirectToMyDonates" style="-fx-font-family: 'Georgia';" text="Minhas Doações" textFill="#1a3a23">
-         <font>
-            <Font size="25.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Label>
+        <!-- ===== BANNER VERDE ===== -->
+        <Rectangle fill="#2C5031" height="82.0" layoutX="-11.0" layoutY="148.0" width="1292.0"/>
 
-      <!-- ===== BANNER VERDE ===== -->
-      <Rectangle fill="#2C5031" height="82.0" layoutX="-11.0" layoutY="148.0" width="1292.0" />
+        <!-- título banner -->
+        <Label layoutX="92.0" layoutY="162.0" text="Sobre a Grão Brasileiro" textFill="#F5DEB8">
+            <font>
+                <Font name="System Bold" size="24.0"/>
+            </font>
+        </Label>
+        <Label layoutX="92.0" layoutY="195.0"
+               text="Uma história de solidariedade que começou com uma panela e hoje alimenta milhares."
+               textFill="#A8C8A0">
+            <font>
+                <Font size="13.0"/>
+            </font>
+        </Label>
 
-      <!-- título banner -->
-      <Label layoutX="92.0" layoutY="162.0" text="Sobre a Grão Brasileiro" textFill="#F5DEB8">
-         <font><Font name="System Bold" size="24.0" /></font>
-      </Label>
-      <Label layoutX="92.0" layoutY="195.0" text="Uma história de solidariedade que começou com uma panela e hoje alimenta milhares." textFill="#A8C8A0">
-         <font><Font size="13.0" /></font>
-      </Label>
+        <!-- stats banner -->
+        <Label layoutX="731.0" layoutY="165.0" text="2019" textFill="#F5DEB8">
+            <font>
+                <Font name="System Bold" size="22.0"/>
+            </font>
+        </Label>
+        <Label layoutX="731.0" layoutY="195.0" text="Fundação" textFill="#A8C8A0">
+            <font>
+                <Font size="12.0"/>
+            </font>
+        </Label>
 
-      <!-- stats banner -->
-      <Label layoutX="731.0" layoutY="165.0" text="2019" textFill="#F5DEB8">
-         <font><Font name="System Bold" size="22.0" /></font>
-      </Label>
-      <Label layoutX="731.0" layoutY="195.0" text="Fundação" textFill="#A8C8A0">
-         <font><Font size="12.0" /></font>
-      </Label>
+        <Label layoutX="869.0" layoutY="165.0" text="10k+" textFill="#F5DEB8">
+            <font>
+                <Font name="System Bold" size="22.0"/>
+            </font>
+        </Label>
+        <Label layoutX="847.0" layoutY="195.0" text="Famílias atendidas" textFill="#A8C8A0">
+            <font>
+                <Font size="12.0"/>
+            </font>
+        </Label>
 
-      <Label layoutX="869.0" layoutY="165.0" text="10k+" textFill="#F5DEB8">
-         <font><Font name="System Bold" size="22.0" /></font>
-      </Label>
-      <Label layoutX="847.0" layoutY="195.0" text="Famílias atendidas" textFill="#A8C8A0">
-         <font><Font size="12.0" /></font>
-      </Label>
+        <Label layoutX="1018.0" layoutY="166.0" text="2+" textFill="#F5DEB8">
+            <font>
+                <Font name="System Bold" size="22.0"/>
+            </font>
+        </Label>
+        <Label layoutX="1005.0" layoutY="195.0" text="Parceiros" textFill="#A8C8A0">
+            <font>
+                <Font size="12.0"/>
+            </font>
+        </Label>
 
-      <Label layoutX="1018.0" layoutY="166.0" text="2+" textFill="#F5DEB8">
-         <font><Font name="System Bold" size="22.0" /></font>
-      </Label>
-      <Label layoutX="1005.0" layoutY="195.0" text="Parceiros" textFill="#A8C8A0">
-         <font><Font size="12.0" /></font>
-      </Label>
+        <Label layoutX="1112.0" layoutY="165.0" text="100%" textFill="#F5DEB8">
+            <font>
+                <Font name="System Bold" size="22.0"/>
+            </font>
+        </Label>
+        <Label layoutX="1109.0" layoutY="195.0" text="Dedicação" textFill="#A8C8A0">
+            <font>
+                <Font size="12.0"/>
+            </font>
+        </Label>
 
-      <Label layoutX="1112.0" layoutY="165.0" text="100%" textFill="#F5DEB8">
-         <font><Font name="System Bold" size="22.0" /></font>
-      </Label>
-      <Label layoutX="1109.0" layoutY="195.0" text="Dedicação" textFill="#A8C8A0">
-         <font><Font size="12.0" /></font>
-      </Label>
+        <!-- ===== CARD PRINCIPAL (história + trajetória) ===== -->
+        <Rectangle arcHeight="14" arcWidth="14" fill="#FDF6EC" height="430.0" layoutX="90.0" layoutY="252.0"
+                   width="1100.0"/>
+        <Rectangle arcHeight="14" arcWidth="14" fill="transparent" height="430.0" layoutX="90.0" layoutY="252.0"
+                   stroke="#D4B896" strokeWidth="1.0" width="1100.0"/>
 
-      <!-- ===== CARD PRINCIPAL (história + trajetória) ===== -->
-      <Rectangle arcHeight="14" arcWidth="14" fill="#FDF6EC" height="430.0" layoutX="90.0" layoutY="252.0" width="1100.0" />
-      <Rectangle arcHeight="14" arcWidth="14" fill="transparent" height="430.0" layoutX="90.0" layoutY="252.0" stroke="#D4B896" strokeWidth="1.0" width="1100.0" />
+        <!-- divisor vertical central -->
+        <Rectangle fill="#D4B896" height="390.0" layoutX="638.0" layoutY="272.0" width="2.0"/>
 
-      <!-- divisor vertical central -->
-      <Rectangle fill="#D4B896" height="390.0" layoutX="638.0" layoutY="272.0" width="2.0" />
+        <!-- === LADO ESQUERDO: história === -->
+        <Label layoutX="116.0" layoutY="272.0" text="NOSSA HISTÓRIA" textFill="#7A5030">
+            <font>
+                <Font name="System Bold" size="11.0"/>
+            </font>
+        </Label>
+        <Label layoutX="114.0" layoutY="292.0" prefWidth="500.0" text="Do grão à mesa de quem mais precisa"
+               textFill="#1a3a23">
+            <font>
+                <Font name="System Bold" size="20.0"/>
+            </font>
+        </Label>
+        <Label layoutX="114.0" layoutY="328.0" prefHeight="140.0" prefWidth="500.0"
+               text="Em 2019, numa tarde chuvosa de São Paulo, Ana Beatriz — cozinheira e moradora da periferia — percebeu que vizinhos passavam fome enquanto supermercados descartavam toneladas de alimentos. Com uma panela grande, amigos e muita coragem, ela começou a distribuir quentinhas no bairro."
+               textFill="#4A3020" wrapText="true">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="114.0" layoutY="472.0" prefHeight="120.0" prefWidth="500.0"
+               text="O nome veio naturalmente: o grão de arroz, símbolo de fartura nas mesas brasileiras, seria o coração do projeto. Hoje conectamos doadores, parceiros estratégicos e comunidades vulneráveis — garantindo que nenhum prato fique vazio."
+               textFill="#4A3020" wrapText="true">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
 
-      <!-- === LADO ESQUERDO: história === -->
-      <Label layoutX="116.0" layoutY="272.0" text="NOSSA HISTÓRIA" textFill="#7A5030">
-         <font><Font name="System Bold" size="11.0" /></font>
-      </Label>
-      <Label layoutX="114.0" layoutY="292.0" prefWidth="500.0" text="Do grão à mesa de quem mais precisa" textFill="#1a3a23">
-         <font><Font name="System Bold" size="20.0" /></font>
-      </Label>
-      <Label layoutX="114.0" layoutY="328.0" prefHeight="140.0" prefWidth="500.0" text="Em 2019, numa tarde chuvosa de São Paulo, Ana Beatriz — cozinheira e moradora da periferia — percebeu que vizinhos passavam fome enquanto supermercados descartavam toneladas de alimentos. Com uma panela grande, amigos e muita coragem, ela começou a distribuir quentinhas no bairro." textFill="#4A3020" wrapText="true">
-         <font><Font size="14.0" /></font>
-      </Label>
-      <Label layoutX="114.0" layoutY="472.0" prefHeight="120.0" prefWidth="500.0" text="O nome veio naturalmente: o grão de arroz, símbolo de fartura nas mesas brasileiras, seria o coração do projeto. Hoje conectamos doadores, parceiros estratégicos e comunidades vulneráveis — garantindo que nenhum prato fique vazio." textFill="#4A3020" wrapText="true">
-         <font><Font size="14.0" /></font>
-      </Label>
+        <!-- imagem ilustrativa lado esquerdo -->
+        <Pane layoutX="114.0" layoutY="596.0" prefHeight="70.0" prefWidth="500.0"
+              style="-fx-background-color: #EAD9C0; -fx-background-radius: 8;">
+            <children>
+                <ImageView fitHeight="60.0" fitWidth="90.0" layoutX="10.0" layoutY="5.0" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/mundo-nas-maos.jpg"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="60.0" fitWidth="90.0" layoutX="110.0" layoutY="5.0" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/fome-zero.jpg"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="60.0" fitWidth="90.0" layoutX="210.0" layoutY="5.0" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/pessoas-reunidas.jpeg"/>
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="60.0" fitWidth="90.0" layoutX="310.0" layoutY="5.0" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/soliedariedade.jpg"/>
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
 
-      <!-- imagem ilustrativa lado esquerdo -->
-      <Pane layoutX="114.0" layoutY="596.0" prefHeight="70.0" prefWidth="500.0" style="-fx-background-color: #EAD9C0; -fx-background-radius: 8;">
-         <children>
-            <ImageView fitHeight="60.0" fitWidth="90.0" layoutX="10.0" layoutY="5.0" preserveRatio="true">
-               <image><Image url="@../assets/mundo-nas-maos.jpg" /></image>
-            </ImageView>
-            <ImageView fitHeight="60.0" fitWidth="90.0" layoutX="110.0" layoutY="5.0" preserveRatio="true">
-               <image><Image url="@../assets/fome-zero.jpg" /></image>
-            </ImageView>
-            <ImageView fitHeight="60.0" fitWidth="90.0" layoutX="210.0" layoutY="5.0" preserveRatio="true">
-               <image><Image url="@../assets/pessoas-reunidas.jpeg" /></image>
-            </ImageView>
-            <ImageView fitHeight="60.0" fitWidth="90.0" layoutX="310.0" layoutY="5.0" preserveRatio="true">
-               <image><Image url="@../assets/soliedariedade.jpg" /></image>
-            </ImageView>
-         </children>
-      </Pane>
+        <!-- === LADO DIREITO: trajetória === -->
+        <Label layoutX="662.0" layoutY="272.0" text="NOSSA TRAJETÓRIA" textFill="#7A5030">
+            <font>
+                <Font name="System Bold" size="11.0"/>
+            </font>
+        </Label>
 
-      <!-- === LADO DIREITO: trajetória === -->
-      <Label layoutX="662.0" layoutY="272.0" text="NOSSA TRAJETÓRIA" textFill="#7A5030">
-         <font><Font name="System Bold" size="11.0" /></font>
-      </Label>
+        <!-- item 2019 -->
+        <Rectangle arcHeight="36" arcWidth="36" fill="#2C5031" height="36.0" layoutX="662.0" layoutY="296.0"
+                   width="36.0"/>
+        <Label layoutX="668.0" layoutY="306.0" text="2019" textFill="#A8C8A0">
+            <font>
+                <Font name="System Bold" size="10.0"/>
+            </font>
+        </Label>
+        <Label layoutX="710.0" layoutY="296.0" text="Fundação" textFill="#1a3a23">
+            <font>
+                <Font name="System Bold" size="13.0"/>
+            </font>
+        </Label>
+        <Label layoutX="710.0" layoutY="314.0" prefWidth="450.0"
+               text="Ana Beatriz inicia distribuição de quentinhas na periferia de São Paulo com recursos próprios."
+               textFill="#6B4020" wrapText="true">
+            <font>
+                <Font size="12.0"/>
+            </font>
+        </Label>
 
-      <!-- item 2019 -->
-      <Rectangle arcHeight="36" arcWidth="36" fill="#2C5031" height="36.0" layoutX="662.0" layoutY="296.0" width="36.0" />
-      <Label layoutX="668.0" layoutY="306.0" text="2019" textFill="#A8C8A0">
-         <font><Font name="System Bold" size="10.0" /></font>
-      </Label>
-      <Label layoutX="710.0" layoutY="296.0" text="Fundação" textFill="#1a3a23">
-         <font><Font name="System Bold" size="13.0" /></font>
-      </Label>
-      <Label layoutX="710.0" layoutY="314.0" prefWidth="450.0" text="Ana Beatriz inicia distribuição de quentinhas na periferia de São Paulo com recursos próprios." textFill="#6B4020" wrapText="true">
-         <font><Font size="12.0" /></font>
-      </Label>
+        <!-- linha conectora -->
+        <Rectangle fill="#D4B896" height="28.0" layoutX="679.0" layoutY="332.0" width="2.0"/>
 
-      <!-- linha conectora -->
-      <Rectangle fill="#D4B896" height="28.0" layoutX="679.0" layoutY="332.0" width="2.0" />
+        <!-- item 2021 -->
+        <Rectangle arcHeight="36" arcWidth="36" fill="#2C5031" height="36.0" layoutX="662.0" layoutY="360.0"
+                   width="36.0"/>
+        <Label layoutX="668.0" layoutY="370.0" text="2021" textFill="#A8C8A0">
+            <font>
+                <Font name="System Bold" size="10.0"/>
+            </font>
+        </Label>
+        <Label layoutX="710.0" layoutY="360.0" text="Primeiro parceiro" textFill="#1a3a23">
+            <font>
+                <Font name="System Bold" size="13.0"/>
+            </font>
+        </Label>
+        <Label layoutX="710.0" layoutY="378.0" prefWidth="450.0"
+               text="A Ambev se junta ao projeto pelo Programa VOA, profissionalizando a logística das doações."
+               textFill="#6B4020" wrapText="true">
+            <font>
+                <Font size="12.0"/>
+            </font>
+        </Label>
 
-      <!-- item 2021 -->
-      <Rectangle arcHeight="36" arcWidth="36" fill="#2C5031" height="36.0" layoutX="662.0" layoutY="360.0" width="36.0" />
-      <Label layoutX="668.0" layoutY="370.0" text="2021" textFill="#A8C8A0">
-         <font><Font name="System Bold" size="10.0" /></font>
-      </Label>
-      <Label layoutX="710.0" layoutY="360.0" text="Primeiro parceiro" textFill="#1a3a23">
-         <font><Font name="System Bold" size="13.0" /></font>
-      </Label>
-      <Label layoutX="710.0" layoutY="378.0" prefWidth="450.0" text="A Ambev se junta ao projeto pelo Programa VOA, profissionalizando a logística das doações." textFill="#6B4020" wrapText="true">
-         <font><Font size="12.0" /></font>
-      </Label>
+        <Rectangle fill="#D4B896" height="28.0" layoutX="679.0" layoutY="396.0" width="2.0"/>
 
-      <Rectangle fill="#D4B896" height="28.0" layoutX="679.0" layoutY="396.0" width="2.0" />
+        <!-- item 2023 -->
+        <Rectangle arcHeight="36" arcWidth="36" fill="#2C5031" height="36.0" layoutX="662.0" layoutY="424.0"
+                   width="36.0"/>
+        <Label layoutX="668.0" layoutY="434.0" text="2023" textFill="#A8C8A0">
+            <font>
+                <Font name="System Bold" size="10.0"/>
+            </font>
+        </Label>
+        <Label layoutX="710.0" layoutY="424.0" text="Expansão" textFill="#1a3a23">
+            <font>
+                <Font name="System Bold" size="13.0"/>
+            </font>
+        </Label>
+        <Label layoutX="710.0" layoutY="442.0" prefWidth="450.0"
+               text="Atacadão passa a fornecer alimentos em grande volume, ampliando o alcance para 10 mil famílias."
+               textFill="#6B4020" wrapText="true">
+            <font>
+                <Font size="12.0"/>
+            </font>
+        </Label>
 
-      <!-- item 2023 -->
-      <Rectangle arcHeight="36" arcWidth="36" fill="#2C5031" height="36.0" layoutX="662.0" layoutY="424.0" width="36.0" />
-      <Label layoutX="668.0" layoutY="434.0" text="2023" textFill="#A8C8A0">
-         <font><Font name="System Bold" size="10.0" /></font>
-      </Label>
-      <Label layoutX="710.0" layoutY="424.0" text="Expansão" textFill="#1a3a23">
-         <font><Font name="System Bold" size="13.0" /></font>
-      </Label>
-      <Label layoutX="710.0" layoutY="442.0" prefWidth="450.0" text="Atacadão passa a fornecer alimentos em grande volume, ampliando o alcance para 10 mil famílias." textFill="#6B4020" wrapText="true">
-         <font><Font size="12.0" /></font>
-      </Label>
+        <Rectangle fill="#D4B896" height="28.0" layoutX="679.0" layoutY="460.0" width="2.0"/>
 
-      <Rectangle fill="#D4B896" height="28.0" layoutX="679.0" layoutY="460.0" width="2.0" />
+        <!-- item Hoje -->
+        <Rectangle arcHeight="36" arcWidth="36" fill="#2C5031" height="36.0" layoutX="662.0" layoutY="488.0"
+                   width="36.0"/>
+        <Label layoutX="669.0" layoutY="498.0" text="Hoje" textFill="#A8C8A0">
+            <font>
+                <Font name="System Bold" size="10.0"/>
+            </font>
+        </Label>
+        <Label layoutX="710.0" layoutY="488.0" text="Crescendo" textFill="#1a3a23">
+            <font>
+                <Font name="System Bold" size="13.0"/>
+            </font>
+        </Label>
+        <Label layoutX="710.0" layoutY="506.0" prefWidth="450.0"
+               text="Buscamos novos parceiros para levar alimentos essenciais a cada vez mais comunidades."
+               textFill="#6B4020" wrapText="true">
+            <font>
+                <Font size="12.0"/>
+            </font>
+        </Label>
 
-      <!-- item Hoje -->
-      <Rectangle arcHeight="36" arcWidth="36" fill="#2C5031" height="36.0" layoutX="662.0" layoutY="488.0" width="36.0" />
-      <Label layoutX="669.0" layoutY="498.0" text="Hoje" textFill="#A8C8A0">
-         <font><Font name="System Bold" size="10.0" /></font>
-      </Label>
-      <Label layoutX="710.0" layoutY="488.0" text="Crescendo" textFill="#1a3a23">
-         <font><Font name="System Bold" size="13.0" /></font>
-      </Label>
-      <Label layoutX="710.0" layoutY="506.0" prefWidth="450.0" text="Buscamos novos parceiros para levar alimentos essenciais a cada vez mais comunidades." textFill="#6B4020" wrapText="true">
-         <font><Font size="12.0" /></font>
-      </Label>
-
-   </children>
+    </children>
 </Pane>
