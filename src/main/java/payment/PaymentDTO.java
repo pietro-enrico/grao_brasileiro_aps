@@ -4,17 +4,21 @@ import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleButton;
 
 public class PaymentDTO {
-    private float valor;
-    private String categoria, sub_categoria, quantidade, tipo_pagamento;
+    private float quantidade, valor;
+    private String categoria;
+    private String sub_categoria;
+    private String tipo_pagamento;
+
+    private String unidade;
     private static StringBuilder errors = new StringBuilder();
 
-    public String getCategoria(){
+    public String getCategoria() {
         return categoria;
     }
 
     public void setCategoria(String categoria) {
-        if (categoria == null){
-            errors.append("\n - O Campo categoria é obrigatório!" );
+        if (categoria == null) {
+            errors.append("\n - O Campo categoria é obrigatório!");
         } else {
             this.categoria = categoria.trim();
         }
@@ -25,7 +29,7 @@ public class PaymentDTO {
     }
 
     public void setSubCategoria(String sub_categoria) {
-        if(categoria != null && categoria.equals("Dinheiro")) return;
+        if (categoria != null && categoria.equals("Dinheiro")) return;
 
         if (sub_categoria == null) {
             errors.append("\n - O Campo subcategoria é obrigatório!");
@@ -34,32 +38,36 @@ public class PaymentDTO {
         }
     }
 
-    public String getQuantidade(){
+    public float getQuantidade() {
         return quantidade;
     }
 
-    public void setQuantidade(String quantidade){
-        if(categoria != null && categoria.equals("Dinheiro")) return;
+    public void setQuantidade(String quantidade) {
+        if (categoria != null && categoria.equals("Dinheiro")) return;
 
-        if (quantidade.isEmpty() || quantidade.isBlank() || quantidade == null){
+        if (quantidade.isEmpty() || quantidade.isBlank() || quantidade == null) {
             errors.append("\n - Campo quantidade é obrigatório!");
-        } else {
-            this.quantidade = quantidade;
+        }
+        else if (!quantidade.matches("\\d+(\\.\\d*)?")) {
+            errors.append("\n - Quantidade inválida. Insira apenas números inteiros e reais!");
+        }
+        else {
+            this.quantidade = Float.parseFloat(quantidade);
         }
     }
 
-    public float getValor(){
+    public float getValor() {
         return valor;
     }
 
-    public void setValor(String valor){
-        if(categoria != null && !categoria.equals("Dinheiro")) return;
+    public void setValor(String valor) {
+        if (categoria != null && !categoria.equals("Dinheiro")) return;
 
-        if (valor.isEmpty() || valor.isBlank() || valor == null){
+        if (valor.isEmpty() || valor.isBlank() || valor == null) {
             errors.append("\n - Campo valor é obrigatório!");
         }
-        else if(!valor.matches("\\d+(\\.\\d*)?")) {
-            errors.append("\n - Valor inválido. Insira apenas números inteiros else reais!");
+        else if (!valor.matches("\\d+(\\.\\d*)?")) {
+            errors.append("\n - Valor inválido. Insira apenas números inteiros e reais!");
         }
         else {
             this.valor = Float.parseFloat(valor);
@@ -70,8 +78,8 @@ public class PaymentDTO {
         return tipo_pagamento;
     }
 
-    public void setTipoPagamento(Toggle tipo_pagamento){
-        if (tipo_pagamento == null){
+    public void setTipoPagamento(Toggle tipo_pagamento) {
+        if (tipo_pagamento == null) {
             errors.append("\n - Por favor, selecione uma opção de pagamento, antes de confirmar a doação!");
         } else {
             String texto = ((ToggleButton) tipo_pagamento).getText();
@@ -79,7 +87,31 @@ public class PaymentDTO {
         }
     }
 
-    public static StringBuilder getErrors() { return errors; }
+    public String getUnidade() {
+        return unidade;
+    }
+
+    public void setUnidade() {
+        if (categoria == null) return;
+
+        switch (categoria) {
+            case "Dinheiro":
+                this.unidade = "R$";
+                break;
+            case "Alimento":
+                this.unidade = "Kg";
+                break;
+            case "Bebida":
+                this.unidade = "L";
+                break;
+            default:
+                this.unidade = null;
+        }
+    }
+
+    public static StringBuilder getErrors() {
+        return errors;
+    }
 
     public static void setErrors(String errors) {
         PaymentDTO.errors = new StringBuilder(errors);
