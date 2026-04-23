@@ -13,7 +13,7 @@ public class PaymentService {
     static PreparedStatement stmt = null;
 
     public static Map<String, Object> insertDonate(PaymentDTO donate) {
-        String sql = "INSERT INTO Donate (category, sub_category, quantity, value_payment, method_value_payment, date_donation, fk_id_user) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO Donate (category, sub_category, quantity, unity, value_payment, method_value_payment, date_donation, fk_id_user) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
         try(PreparedStatement stmt = connection.prepareStatement(sql)) {
             LocalDateTime now = LocalDateTime.now();
@@ -21,11 +21,12 @@ public class PaymentService {
 
             stmt.setString(1, donate.getCategoria());
             stmt.setString(2, donate.getSubCategoria());
-            stmt.setString(3, donate.getQuantidade());
-            stmt.setFloat(4, donate.getValor());
-            stmt.setString(5, donate.getTipoPagamento());
-            stmt.setObject(6, now);
-            stmt.setInt(7, id_user);
+            stmt.setFloat(3, donate.getQuantidade());
+            stmt.setString(4, donate.getUnidade());
+            stmt.setFloat(5, donate.getValor());
+            stmt.setString(6, donate.getTipoPagamento());
+            stmt.setObject(7, now);
+            stmt.setInt(8, id_user);
             int executed_success = stmt.executeUpdate();
 
             if(executed_success > 0) {

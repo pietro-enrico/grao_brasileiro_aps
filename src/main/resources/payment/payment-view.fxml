@@ -57,10 +57,10 @@
       </cursor></ComboBox>
 
     <Label fx:id="lblQuantidade" layoutX="150.0" layoutY="400.0" style="-fx-font-size:17px; -fx-font-weight:bold; -fx-text-fill:#333;" text="Quantidade?" visible="false" />
-    <TextField fx:id="quantidade" layoutX="150.0" layoutY="430.0" prefHeight="35.0" prefWidth="330.0" promptText="Escreva a quantidade" style="-fx-background-color:#D9E8D4; -fx-background-radius:4;" visible="false" />
+    <TextField fx:id="quantidade" layoutX="150.0" layoutY="430.0" prefHeight="35.0" prefWidth="330.0" promptText="Escreva a quantidade com número apenas (sem Kg ou L)" style="-fx-background-color:#D9E8D4; -fx-background-radius:4;" visible="false" />
 
     <Label fx:id="lblValor" layoutX="150.0" layoutY="300.0" style="-fx-font-size:17px; -fx-font-weight:bold; -fx-text-fill:#333;" text="Valor:" visible="false" />
-    <TextField fx:id="value" layoutX="150.0" layoutY="330.0" prefHeight="35.0" prefWidth="330.0" promptText="0,00" style="-fx-background-color:#D9E8D4; -fx-background-radius:4;" visible="false" />
+    <TextField fx:id="value" layoutX="150.0" layoutY="330.0" prefHeight="35.0" prefWidth="330.0" promptText="R$ 0,00" style="-fx-background-color:#D9E8D4; -fx-background-radius:4;" visible="false" />
 
     <!-- COLUNA DIREITA -->
     <Label layoutX="650.0" layoutY="220.0" style="-fx-font-size:17px; -fx-font-weight:bold; -fx-text-fill:#333;" text="Selecione a Forma de Pagamento:" />

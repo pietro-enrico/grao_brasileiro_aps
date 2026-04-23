@@ -176,6 +176,7 @@ public class PaymentController extends Components {
         dto.setValor(value.getText());
         dto.setQuantidade(quantidade.getText());
         dto.setTipoPagamento(pagamento.getSelectedToggle());
+        dto.setUnidade();
 
         if (!PaymentDTO.getErrors().isEmpty()) {
             Message.showMessage(Alert.AlertType.INFORMATION, "Atenção", "Corrija os seguintes erros:", PaymentDTO.getErrors().toString());
