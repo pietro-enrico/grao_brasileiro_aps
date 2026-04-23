@@ -159,14 +159,14 @@
          <Cursor fx:constant="HAND" />
       </cursor>
    </Button>
-   <Text fill="#1a3a23" layoutX="545.0" layoutY="499.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Não possui Login?" textOrigin="CENTER" wrappingWidth="130.0">
+   <Text fill="#1a3a23" layoutX="548.0" layoutY="498.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Não possui Login?" textOrigin="CENTER" wrappingWidth="118.27343749999989">
       <font>
-         <Font name="Cambria" size="16.0" />
+         <Font name="Cambria" size="15.0" />
       </font>
    </Text>
-   <Text fill="#1a3a23" layoutX="675.0" layoutY="499.0" onMouseClicked="#clickToRegister" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastre-se" textOrigin="CENTER" underline="true" wrappingWidth="85.2734375">
+   <Text fill="#1a3a23" layoutX="667.0" layoutY="498.0" onMouseClicked="#clickToRegister" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastre-se" textOrigin="CENTER" underline="true" wrappingWidth="84.2734375">
       <font>
-         <Font name="Cambria" size="16.0" />
+         <Font name="Cambria Bold" size="15.0" />
       </font>
       <cursor>
          <Cursor fx:constant="HAND" />

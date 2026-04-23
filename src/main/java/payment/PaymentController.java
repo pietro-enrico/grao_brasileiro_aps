@@ -192,7 +192,10 @@ public class PaymentController extends Components {
                     gerarSeloCorreios();
                 }
 
+                value.setText("");
+                quantidade.setText("");
                 btnConfirmar.setDisable(true);
+                btnConfirmar.setDisable(false);
                 return true;
             }
             else {
