@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.XYChart;
-import javafx.scene.control.Label;
+import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
 import java.awt.*;
@@ -32,6 +32,9 @@ public class DonateController extends Components implements Initializable {
 
     // Largura total da barra de progresso no FXML
     private static final double PROGRESS_MAX_WIDTH = 500.0;
+
+    @FXML
+    private Button Bebida, Alimento, Dinheiro;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
