@@ -62,12 +62,12 @@
         </Label>
 
         <!-- botão DOE -->
-        <Button fx:id="btnDoe1" layoutX="108.0" layoutY="268.0" onMouseClicked="#redirectToPayment" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: none;" text="DOE AGORA">
+        <Button fx:id="Bebida" layoutX="108.0" layoutY="268.0" onMouseClicked="#redirectToPayment" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: none;" text="DOE AGORA">
             <cursor><Cursor fx:constant="HAND" /></cursor>
         </Button>
 
         <!-- label gráfico -->
-        <Label layoutX="680.0" layoutY="60.0" text="UNIDADES ARRECADADAS" textFill="#7A5030">
+        <Label layoutX="680.0" layoutY="60.0" text="LITROS ARRECADADOS" textFill="#7A5030">
             <font><Font name="System Bold" size="11.0" /></font>
         </Label>
 
@@ -85,7 +85,7 @@
         <Label layoutX="660.0" layoutY="430.0" text="Meta da campanha" textFill="#7A5030">
             <font><Font name="System Bold" size="12.0" /></font>
         </Label>
-        <Label layoutX="990.0" layoutY="430.0" text="168 / 250 un." textFill="#7A5030">
+        <Label layoutX="990.0" layoutY="430.0" text="168 / 250 litros." textFill="#7A5030">
             <font><Font name="System Bold" size="12.0" /></font>
         </Label>
         <Rectangle arcHeight="12" arcWidth="12" fill="#EAD9C0" height="12.0" layoutX="660.0" layoutY="452.0" width="500.0" />
@@ -113,11 +113,11 @@
             <font><Font size="16.0" /></font>
         </Label>
 
-        <Button fx:id="btnDoe2" layoutX="108.0" layoutY="268.0" onMouseClicked="#redirectToPayment" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: none;" text="DOE AGORA">
+        <Button fx:id="Alimento" layoutX="108.0" layoutY="268.0" onMouseClicked="#redirectToPayment" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: none;" text="DOE AGORA">
             <cursor><Cursor fx:constant="HAND" /></cursor>
         </Button>
 
-        <Label layoutX="680.0" layoutY="60.0" text="UNIDADES ARRECADADAS" textFill="#7A5030">
+        <Label layoutX="680.0" layoutY="60.0" text="KG ARRECADADOS" textFill="#7A5030">
             <font><Font name="System Bold" size="11.0" /></font>
         </Label>
 
@@ -129,7 +129,7 @@
         <Label layoutX="660.0" layoutY="430.0" text="Meta da campanha" textFill="#7A5030">
             <font><Font name="System Bold" size="12.0" /></font>
         </Label>
-        <Label layoutX="990.0" layoutY="430.0" text="168 / 300 un." textFill="#7A5030">
+        <Label layoutX="990.0" layoutY="430.0" text="168 / 300 kg." textFill="#7A5030">
             <font><Font name="System Bold" size="12.0" /></font>
         </Label>
         <Rectangle arcHeight="12" arcWidth="12" fill="#EAD9C0" height="12.0" layoutX="660.0" layoutY="452.0" width="500.0" />
@@ -156,7 +156,7 @@
             <font><Font size="16.0" /></font>
         </Label>
 
-        <Button fx:id="btnDoe3" layoutX="108.0" layoutY="268.0" onMouseClicked="#redirectToPayment" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: none;" text="DOE AGORA">
+        <Button fx:id="Dinheiro" layoutX="108.0" layoutY="268.0" onMouseClicked="#redirectToPayment" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: none;" text="DOE AGORA">
             <cursor><Cursor fx:constant="HAND" /></cursor>
         </Button>
 

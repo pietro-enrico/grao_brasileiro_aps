@@ -17,6 +17,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.util.Duration;
 import message.Message;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -25,7 +26,7 @@ import java.util.Random;
 
 public class PaymentController extends Components {
     @FXML
-    private ComboBox<String> categoria;
+    protected ComboBox<String> categoria;
 
     @FXML
     private ComboBox<String> sub_categoria;
@@ -99,7 +100,6 @@ public class PaymentController extends Components {
         // Dropdown principal
         categoria.getItems().addAll("Dinheiro", "Alimento", "Bebida");
         categoria.setPromptText("Selecione o alimento");
-        categoria.setValue(null);
         categoria.valueProperty().addListener((obs, oldV, newV) -> atualizarCampos(newV));
 
         // Animação (glow) nos botões
@@ -184,7 +184,7 @@ public class PaymentController extends Components {
         } else {
             Map<String, Object> insertDonate = PaymentService.insertDonate(dto);
 
-            if(insertDonate.get("status").equals("success") && insertDonate.get("code").equals(201)) {
+            if (insertDonate.get("status").equals("success") && insertDonate.get("code").equals(201)) {
                 Message.showMessage(Alert.AlertType.CONFIRMATION, "Confirmação", "Doação realizada" + " via " + ((ToggleButton) pagamento.getSelectedToggle()).getText() + "!", insertDonate.get("message").toString());
 
                 if (pagamento.getSelectedToggle() == btnPix && "Dinheiro".equals(categoria.getValue())) {
@@ -198,8 +198,7 @@ public class PaymentController extends Components {
                 btnConfirmar.setDisable(true);
                 btnConfirmar.setDisable(false);
                 return true;
-            }
-            else {
+            } else {
                 Message.showMessage(Alert.AlertType.ERROR, "Atenção", "Erro no Servidor do Banco de dados", "Erro ao executar a operação no banco de dados. Entre com contato com o suporte da Grão Brasileiro.");
                 return false;
             }

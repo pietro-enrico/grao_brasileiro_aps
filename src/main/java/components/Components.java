@@ -59,7 +59,9 @@ public class Components {
 
     @FXML
     public  void redirectToPayment(MouseEvent event) throws IOException {
-        Payment payment= new Payment();
+        Node node = (Node) event.getSource();
+        Payment payment = new Payment();
+        payment.initialText = node.getId().equals("btnAjudar") ? null : node.getId();
         Stage stage = new Stage();
         payment.start(stage);
 
