@@ -3,7 +3,7 @@ package register;
 public class RegisterDTO {
     private String email, full_name, cpf, password, confirm_password, is_voluntary;
     private static StringBuilder errors = new StringBuilder();
-    private static final String EMAIL_REGEX = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
+    public static final String EMAIL_REGEX = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
 
     public String getFull_name() {
         return full_name;

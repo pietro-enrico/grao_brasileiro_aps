@@ -1,5 +1,7 @@
 package login;
 
+import register.RegisterDTO;
+
 public class LoginDTO {
     private String email, password;
     private static StringBuilder errors = new StringBuilder();
@@ -9,10 +11,13 @@ public class LoginDTO {
     }
 
     public void setEmail(String email) {
-        if(email.isEmpty()) {
+        if (email.isEmpty()) {
             errors.append("\n- Campo de e-mail é obrigátorio");
+        } else if (!email.matches(RegisterDTO.EMAIL_REGEX)) {
+            errors.append("\n- Email inválido");
+        } else {
+            this.email = email.trim().toLowerCase();
         }
-        this.email = email.trim().toLowerCase();
     }
 
     public String getPassword() {
@@ -20,13 +25,17 @@ public class LoginDTO {
     }
 
     public void setPassword(String password) {
-        if(password.isEmpty()) {
+        if (password.isEmpty()) {
             errors.append("\n- Campo de senha é obrigátorio");
+        } else {
+            this.password = password.trim();
         }
-        this.password = password.trim();
     }
 
-    public static StringBuilder getErrors() { return errors; }
+    public static StringBuilder getErrors() {
+        return errors;
+    }
+
     public static void setErrors(String errors) {
         LoginDTO.errors = new StringBuilder(errors);
     }
