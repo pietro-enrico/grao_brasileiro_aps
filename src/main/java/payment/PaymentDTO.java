@@ -4,12 +4,8 @@ import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleButton;
 
 public class PaymentDTO {
+    private String categoria, sub_categoria, tipo_pagamento, unidade;
     private float quantidade, valor;
-    private String categoria;
-    private String sub_categoria;
-    private String tipo_pagamento;
-
-    private String unidade;
     private static StringBuilder errors = new StringBuilder();
 
     public String getCategoria() {
@@ -47,11 +43,9 @@ public class PaymentDTO {
 
         if (quantidade.isEmpty() || quantidade.isBlank() || quantidade == null) {
             errors.append("\n - Campo quantidade é obrigatório!");
-        }
-        else if (!quantidade.matches("\\d+(\\.\\d*)?")) {
+        } else if (!quantidade.matches("\\d+(\\.\\d*)?")) {
             errors.append("\n - Quantidade inválida. Insira apenas números inteiros e reais!");
-        }
-        else {
+        } else {
             this.quantidade = Float.parseFloat(quantidade);
         }
     }
@@ -65,11 +59,9 @@ public class PaymentDTO {
 
         if (valor.isEmpty() || valor.isBlank() || valor == null) {
             errors.append("\n - Campo valor é obrigatório!");
-        }
-        else if (!valor.matches("\\d+(\\.\\d*)?")) {
+        } else if (!valor.matches("\\d+(\\.\\d*)?")) {
             errors.append("\n - Valor inválido. Insira apenas números inteiros e reais!");
-        }
-        else {
+        } else {
             this.valor = Float.parseFloat(valor);
         }
     }
