@@ -57,7 +57,11 @@ public class PaymentDTO {
 
         if (valor.isEmpty() || valor.isBlank() || valor == null){
             errors.append("\n - Campo valor é obrigatório!");
-        } else {
+        }
+        else if(!valor.matches("\\d+(\\.\\d*)?")) {
+            errors.append("\n - Valor inválido. Insira apenas números inteiros else reais!");
+        }
+        else {
             this.valor = Float.parseFloat(valor);
         }
     }
