@@ -27,10 +27,6 @@ public class DonateController extends Components implements Initializable {
     @FXML
     private Rectangle progress1, progress2, progress3;
 
-    // ===== NAVEGAÇÃO =====
-    @FXML
-    private Label navHome, navColab, navSobre;
-
     private java.util.List<Pane> slides;
     private int currentIndex = 0;
 
@@ -127,26 +123,4 @@ public class DonateController extends Components implements Initializable {
     private void voltar() {
         mostrarSlide((currentIndex + slides.size() - 1) % slides.size());
     }
-
-    // =============================================
-    // BOTÕES DOE — conecte à tela de pagamento
-    // =============================================
-    @FXML
-    private void onDoe1() {
-        // TODO: navegar para tela de pagamento com tipo = "bebidas"
-        System.out.println("Doação: Bebidas");
-    }
-
-    @FXML
-    private void onDoe2() {
-        // TODO: navegar para tela de pagamento com tipo = "alimentos"
-        System.out.println("Doação: Alimentos");
-    }
-
-    @FXML
-    private void onDoe3() {
-        // TODO: navegar para tela de pagamento com tipo = "dinheiro"
-        System.out.println("Doação: Dinheiro");
-    }
-
 }
