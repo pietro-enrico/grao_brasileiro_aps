@@ -87,7 +87,7 @@ public class PaymentController extends Components {
     private String codigoCorreiosAtual = "";
 
     private final ObservableList<String> listaAlimentos = FXCollections.observableArrayList("Arroz", "Feijão", "Macarrão", "Óleo", "Açúcar", "Farinha");
-    private final ObservableList<String> listaBebidas = FXCollections.observableArrayList("Leite", "Suco", "Água mineral", "Achocolatado", "Café");
+    private final ObservableList<String> listaBebidas = FXCollections.observableArrayList("Leite", "Suco", "Água mineral", "Achocolatado", "Café", "Chá");
 
     @FXML
     public void initialize() {
