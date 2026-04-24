@@ -48,14 +48,16 @@ public class DonateController extends Components implements Initializable {
     // Substitua os valores fixos pela chamada ao seu banco/serviço
     // =============================================
     private void carregarDados() {
+        System.out.println(DonateService.listDataCharts()); // Dados Backend
 
         // --- SLIDE 1: Bebidas ---
         XYChart.Series<String, Number> serie1 = new XYChart.Series<>();
         serie1.setName("Bebidas");
         // TODO: substituir pelos dados reais do banco
-        serie1.getData().add(new XYChart.Data<>("Água", 70));
+        serie1.getData().add(new XYChart.Data<>("Água Mineral", 70));
         serie1.getData().add(new XYChart.Data<>("Café", 40));
         serie1.getData().add(new XYChart.Data<>("Chá", 58));
+        serie1.getData().add(new XYChart.Data<>("Leite", 58));
         chart1.getData().add(serie1);
         chart1.setLegendVisible(false);
         estilizarGrafico(chart1);
