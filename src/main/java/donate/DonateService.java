@@ -1,6 +1,7 @@
 package donate;
 
 import config.database.DatabaseConnection;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,7 +15,9 @@ public class DonateService {
     public static Map<String, Object> listDataCharts() {
         String sqlDataCharts = """
                 SELECT
-                     SUM(CASE WHEN (category = 'Dinheiro' AND unity = 'R$' AND method_value_payment IS NOT NULL) THEN value_payment ELSE 0 END) AS chart_value_money,
+                     SUM(CASE WHEN (category = 'Dinheiro' AND unity = 'R$' AND method_value_payment IS NOT NULL) THEN value_payment ELSE 0 END) AS chart_value_money_general,
+                     SUM(CASE WHEN (category = 'Dinheiro' AND unity = 'R$' AND method_value_payment IS NOT NULL AND (date_donation >= date('now', 'start of month') AND date_donation < date('now', 'start of month', '+1 month'))) THEN value_payment ELSE 0 END) AS chart_value_money_per_week,
+                     SUM(CASE WHEN (category = 'Dinheiro' AND unity = 'R$' AND method_value_payment IS NOT NULL AND (date_donation >= date('now', '-7 days') AND date_donation < date('now', '+1 day'))) THEN value_payment ELSE 0 END) AS chart_value_money_per_month,
                      SUM(CASE WHEN (category = 'Alimento' AND unity = 'Kg' AND sub_category IS NOT NULL) THEN quantity ELSE 0 END) AS chart_value_food_general,
                      SUM(CASE WHEN (category = 'Bebida' AND unity = 'L' AND sub_category IS NOT NULL) THEN quantity ELSE 0 END) AS chart_value_drink_general,
                      SUM(CASE WHEN (category = 'Alimento' AND sub_category = 'Arroz' AND unity = 'Kg') THEN quantity ELSE 0 END) AS chart_value_food_rice,
@@ -33,7 +36,6 @@ public class DonateService {
                 """;
 
         try (PreparedStatement stmt = connection.prepareStatement(sqlDataCharts)) {
-            stmt.setFetchSize(1000);
             ResultSet resultSet = stmt.executeQuery();
 
             if (!resultSet.next()) {
@@ -41,7 +43,9 @@ public class DonateService {
             }
 
             return Map.ofEntries(
-                    Map.entry("chart_value_money", resultSet.getFloat("chart_value_money")),
+                    Map.entry("chart_value_money_general", resultSet.getFloat("chart_value_money_general")),
+                    Map.entry("chart_value_money_per_week", resultSet.getFloat("chart_value_money_per_week")),
+                    Map.entry("chart_value_money_per_month", resultSet.getFloat("chart_value_money_per_month")),
                     Map.entry("chart_value_food_general", resultSet.getFloat("chart_value_food_general")),
                     Map.entry("chart_value_drink_general", resultSet.getFloat("chart_value_drink_general")),
                     Map.entry("chart_value_food_rice", resultSet.getFloat("chart_value_food_rice")),
