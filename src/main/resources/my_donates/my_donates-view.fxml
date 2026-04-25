@@ -10,11 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-      prefHeight="720.0" prefWidth="1280.0"
-      style="-fx-background-color: #FFE1BF;"
-      xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="my_donates.MyDonatesController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="my_donates.MyDonatesController">
    <children>
 
       <!-- ===== NAVBAR ===== -->
@@ -24,53 +20,42 @@
       <Label layoutX="191.0" layoutY="38.0" style="-fx-font-family: 'georgia';" text="Grão Brasileiro" textFill="#1a3a23">
          <font><Font size="40.0" /></font>
       </Label>
-      <Label fx:id="id_home" layoutX="597.0" layoutY="52.0" onMouseClicked="#redirectToApp"
-             style="-fx-font-family: 'georgia';" text="Home" textFill="#1a3a23">
+      <Label fx:id="id_home" layoutX="597.0" layoutY="52.0" onMouseClicked="#redirectToApp" style="-fx-font-family: 'georgia';" text="Home" textFill="#1a3a23">
          <font><Font size="26.0" /></font>
          <cursor><Cursor fx:constant="HAND" /></cursor>
       </Label>
-      <Label fx:id="id_donate" layoutX="723.0" layoutY="52.0" onMouseClicked="#redirectToDonate"
-             style="-fx-font-family: 'georgia';" text="Doação" textFill="#1a3a23">
+      <Label fx:id="id_donate" layoutX="723.0" layoutY="52.0" onMouseClicked="#redirectToDonate" style="-fx-font-family: 'georgia';" text="Doação" textFill="#1a3a23">
          <font><Font size="26.0" /></font>
          <cursor><Cursor fx:constant="HAND" /></cursor>
       </Label>
-      <Label fx:id="id_collaborators" layoutX="866.0" layoutY="52.0" onMouseClicked="#redirectToCollaborators"
-             style="-fx-font-family: 'georgia';" text="Colaboradores" textFill="#1a3a23">
+      <Label fx:id="id_collaborators" layoutX="866.0" layoutY="52.0" onMouseClicked="#redirectToCollaborators" style="-fx-font-family: 'georgia';" text="Colaboradores" textFill="#1a3a23">
          <font><Font size="26.0" /></font>
          <cursor><Cursor fx:constant="HAND" /></cursor>
       </Label>
-      <Label fx:id="id_about" layoutX="1081.0" layoutY="52.0" onMouseClicked="#redirectToAbout"
-             style="-fx-font-family: 'georgia';" text="Sobre" textFill="#1a3a23">
+      <Label fx:id="id_about" layoutX="1081.0" layoutY="52.0" onMouseClicked="#redirectToAbout" style="-fx-font-family: 'georgia';" text="Sobre" textFill="#1a3a23">
          <font><Font size="26.0" /></font>
          <cursor><Cursor fx:constant="HAND" /></cursor>
       </Label>
 
       <!-- linha separadora -->
-      <Pane layoutX="0.0" layoutY="108.0" prefHeight="2.0" prefWidth="1280.0"
-            style="-fx-background-color: #D4B896;" />
+      <Pane layoutX="0.0" layoutY="108.0" prefHeight="2.0" prefWidth="1280.0" style="-fx-background-color: #FFFFFF;" />
 
       <!-- ===== TÍTULO ===== -->
       <Label layoutX="112.0" layoutY="128.0" text="Minhas Doações" textFill="#1a3a23">
          <font><Font name="System Bold" size="28.0" /></font>
       </Label>
       <!-- label que aparece quando não há doações -->
-      <Label fx:id="lblVazio" layoutX="112.0" layoutY="175.0"
-             text="Você ainda não realizou nenhuma doação."
-             textFill="#7A5030" visible="false">
+      <Label fx:id="lblVazio" layoutX="112.0" layoutY="175.0" text="Você ainda não realizou nenhuma doação." textFill="#7A5030" visible="false">
          <font><Font size="16.0" /></font>
       </Label>
 
       <!-- ===== SCROLL COM CARDS DINÂMICOS ===== -->
-      <ScrollPane fx:id="scrollPane" layoutX="90.0" layoutY="170.0"
-                  prefHeight="520.0" prefWidth="1100.0"
-                  fitToWidth="true"
-                  style="-fx-background: transparent; -fx-background-color: transparent; -fx-border-color: transparent;">
+      <ScrollPane fx:id="scrollPane" fitToWidth="true" layoutX="90.0" layoutY="170.0" prefHeight="520.0" prefWidth="1100.0" style="-fx-background: transparent; -fx-background-color: transparent; -fx-border-color: transparent;">
          <content>
             <!-- VBox preenchido pelo controller -->
-            <VBox fx:id="cardsContainer" spacing="16.0"
-                  style="-fx-background-color: transparent;">
+            <VBox fx:id="cardsContainer" spacing="16.0" style="-fx-background-color: transparent;">
                <padding>
-                  <Insets top="8.0" right="8.0" bottom="8.0" left="8.0" />
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
                </padding>
             </VBox>
          </content>
