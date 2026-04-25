@@ -85,7 +85,7 @@
         <Label layoutX="660.0" layoutY="430.0" text="Meta da campanha" textFill="#7A5030">
             <font><Font name="System Bold" size="12.0" /></font>
         </Label>
-        <Label layoutX="990.0" layoutY="430.0" text="168 / 250 litros." textFill="#7A5030">
+        <Label layoutX="990.0" layoutY="430.0" textFill="#7A5030" fx:id="meta_bebida">
             <font><Font name="System Bold" size="12.0" /></font>
         </Label>
         <Rectangle arcHeight="12" arcWidth="12" fill="#EAD9C0" height="12.0" layoutX="660.0" layoutY="452.0" width="500.0" />
@@ -129,7 +129,7 @@
         <Label layoutX="660.0" layoutY="430.0" text="Meta da campanha" textFill="#7A5030">
             <font><Font name="System Bold" size="12.0" /></font>
         </Label>
-        <Label layoutX="990.0" layoutY="430.0" text="168 / 300 kg." textFill="#7A5030">
+        <Label layoutX="990.0" layoutY="430.0" textFill="#7A5030" fx:id="meta_alimento">
             <font><Font name="System Bold" size="12.0" /></font>
         </Label>
         <Rectangle arcHeight="12" arcWidth="12" fill="#EAD9C0" height="12.0" layoutX="660.0" layoutY="452.0" width="500.0" />
@@ -172,7 +172,7 @@
         <Label layoutX="660.0" layoutY="430.0" text="Meta da campanha" textFill="#7A5030">
             <font><Font name="System Bold" size="12.0" /></font>
         </Label>
-        <Label layoutX="970.0" layoutY="430.0" text="R$500 / R$1.000" textFill="#7A5030">
+        <Label layoutX="970.0" layoutY="430.0" textFill="#7A5030" fx:id="meta_dinheiro">
             <font><Font name="System Bold" size="12.0" /></font>
         </Label>
         <Rectangle arcHeight="12" arcWidth="12" fill="#EAD9C0" height="12.0" layoutX="660.0" layoutY="452.0" width="500.0" />
