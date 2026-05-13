@@ -13,12 +13,9 @@
    <children>
 
       <!-- ===== NAVBAR ===== -->
-      <ImageView fitHeight="69.0" fitWidth="67.0" layoutX="127.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
-         <image><Image url="@../assets/coffee-beans.png" /></image>
+      <ImageView fitHeight="219.0" fitWidth="436.0" layoutX="87.0" layoutY="-29.0" pickOnBounds="true" preserveRatio="true">
+         <image><Image url="@../assets/logo.png" /></image>
       </ImageView>
-      <Label layoutX="194.0" layoutY="55.0" style="-fx-font-family: 'Georgia';" text="Grão Brasileiro" textFill="#1a3a23">
-         <font><Font size="40.0" /></font>
-      </Label>
       <Label fx:id="id_donate" layoutX="630.0" layoutY="65.0" onMouseClicked="#redirectToDonate" style="-fx-font-family: 'Georgia';" text="Doação" textFill="#1a3a23">
          <font><Font size="25.0" /></font>
          <cursor><Cursor fx:constant="HAND" /></cursor>

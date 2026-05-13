@@ -16,12 +16,9 @@
 <children>
 
     <!-- ===== NAVBAR ===== -->
-    <ImageView fitHeight="65.0" fitWidth="74.0" layoutX="108.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
-        <image><Image url="@../assets/coffee-beans.png" /></image>
+    <ImageView fitHeight="224.0" fitWidth="257.0" layoutX="84.0" layoutY="-42.0" pickOnBounds="true" preserveRatio="true">
+        <image><Image url="@../assets/logo.png" /></image>
     </ImageView>
-    <Label layoutX="171.0" layoutY="48.0" prefHeight="50.0" prefWidth="250.0" style="-fx-font-family: 'georgia';" text="Grão Brasileiro" textFill="#1a3a23">
-        <font><Font size="36.0" /></font>
-    </Label>
     <Label fx:id="Home" layoutX="572.0" layoutY="62.0" onMouseClicked="#redirectToApp" style="-fx-font-family: 'georgia';" text="Home" textFill="#1a3a23">
         <font><Font size="25.0" /></font>
         <cursor><Cursor fx:constant="HAND" /></cursor>
