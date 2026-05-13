@@ -125,7 +125,7 @@
          <Font name="Cambria Bold" size="40.0" />
       </font>
    </Text>
-   <Text fill="#1a3a23" layoutX="524.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastre-se e doe agora mesmo!" textOrigin="CENTER" wrappingWidth="254.0">
+   <Text fill="#1a3a23" layoutX="528.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Faça login e doe agora mesmo!" textOrigin="CENTER" wrappingWidth="254.0">
       <font>
          <Font name="Cambria" size="18.0" />
       </font>

@@ -6,11 +6,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
-import java.awt.*;
 import java.net.URL;
 import java.util.List;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 public class DonateController extends Components implements Initializable {
@@ -36,6 +37,9 @@ public class DonateController extends Components implements Initializable {
     @FXML
     private Button Bebida, Alimento, Dinheiro;
 
+    @FXML
+    private Label meta_alimento, meta_bebida, meta_dinheiro;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         slides = List.of(slide1, slide2, slide3);
@@ -48,44 +52,47 @@ public class DonateController extends Components implements Initializable {
     // Substitua os valores fixos pela chamada ao seu banco/serviço
     // =============================================
     private void carregarDados() {
-        System.out.println(DonateService.listDataCharts()); // Dados Backend
+        Map<String, Object> chartDataDonates = DonateService.listDataCharts();
+        if (chartDataDonates.isEmpty()) return;
 
         // --- SLIDE 1: Bebidas ---
         XYChart.Series<String, Number> serie1 = new XYChart.Series<>();
         serie1.setName("Bebidas");
-        // TODO: substituir pelos dados reais do banco
-        serie1.getData().add(new XYChart.Data<>("Água Mineral", 70));
-        serie1.getData().add(new XYChart.Data<>("Café", 40));
-        serie1.getData().add(new XYChart.Data<>("Chá", 58));
-        serie1.getData().add(new XYChart.Data<>("Leite", 58));
+        serie1.getData().add(new XYChart.Data<>("Leite", transformarParaFloat(chartDataDonates.get("chart_value_drink_milk"))));
+        serie1.getData().add(new XYChart.Data<>("Suco", transformarParaFloat(chartDataDonates.get("chart_value_drink_juice"))));
+        serie1.getData().add(new XYChart.Data<>("Água mineral", transformarParaFloat(chartDataDonates.get("chart_value_drink_water"))));
+        serie1.getData().add(new XYChart.Data<>("Achocolatado", transformarParaFloat(chartDataDonates.get("chart_value_drink_chocolate_milk"))));
+        serie1.getData().add(new XYChart.Data<>("Café", transformarParaFloat(chartDataDonates.get("chart_value_drink_coffee"))));
+        serie1.getData().add(new XYChart.Data<>("Chá", transformarParaFloat(chartDataDonates.get("chart_value_drink_tea"))));
         chart1.getData().add(serie1);
         chart1.setLegendVisible(false);
         estilizarGrafico(chart1);
-        atualizarProgresso(progress1, 168, 250);
+        atualizarProgresso(progress1, meta_bebida, "litros", transformarParaFloat(chartDataDonates.get("chart_value_drink_general")), 2500);
 
         // --- SLIDE 2: Alimentos ---
         XYChart.Series<String, Number> serie2 = new XYChart.Series<>();
         serie2.setName("Alimentos");
-        // TODO: substituir pelos dados reais do banco
-        serie2.getData().add(new XYChart.Data<>("Arroz", 70));
-        serie2.getData().add(new XYChart.Data<>("Macarrão", 40));
-        serie2.getData().add(new XYChart.Data<>("Feijão", 58));
+        serie2.getData().add(new XYChart.Data<>("Arroz", transformarParaFloat(chartDataDonates.get("chart_value_food_rice"))));
+        serie2.getData().add(new XYChart.Data<>("Feijão", transformarParaFloat(chartDataDonates.get("chart_value_food_bean"))));
+        serie2.getData().add(new XYChart.Data<>("Macarrão", transformarParaFloat(chartDataDonates.get("chart_value_food_pasta"))));
+        serie2.getData().add(new XYChart.Data<>("Óleo", transformarParaFloat(chartDataDonates.get("chart_value_food_oil"))));
+        serie2.getData().add(new XYChart.Data<>("Açúcar", transformarParaFloat(chartDataDonates.get("chart_value_food_sugar"))));
+        serie2.getData().add(new XYChart.Data<>("Farinha", transformarParaFloat(chartDataDonates.get("chart_value_food_flour"))));
         chart2.getData().add(serie2);
         chart2.setLegendVisible(false);
         estilizarGrafico(chart2);
-        atualizarProgresso(progress2, 168, 300);
+        atualizarProgresso(progress2, meta_alimento, "Kg", transformarParaFloat(chartDataDonates.get("chart_value_food_general")), 5000);
 
         // --- SLIDE 3: Dinheiro ---
         XYChart.Series<String, Number> serie3 = new XYChart.Series<>();
         serie3.setName("Dinheiro");
-        // TODO: substituir pelos dados reais do banco
-        serie3.getData().add(new XYChart.Data<>("Total", 500));
-        serie3.getData().add(new XYChart.Data<>("Este mês", 320));
-        serie3.getData().add(new XYChart.Data<>("Esta semana", 195));
+        serie3.getData().add(new XYChart.Data<>("Total", transformarParaFloat(chartDataDonates.get("chart_value_money_general"))));
+        serie3.getData().add(new XYChart.Data<>("Este mês", transformarParaFloat(chartDataDonates.get("chart_value_money_per_week"))));
+        serie3.getData().add(new XYChart.Data<>("Esta semana", transformarParaFloat(chartDataDonates.get("chart_value_money_per_month"))));
         chart3.getData().add(serie3);
         chart3.setLegendVisible(false);
         estilizarGrafico(chart3);
-        atualizarProgresso(progress3, 500, 1000);
+        atualizarProgresso(progress3, meta_dinheiro, "R$", transformarParaFloat(chartDataDonates.get("chart_value_money_general")), 10000);
     }
 
     // Aplica a cor #3A2A1A nas barras
@@ -105,9 +112,10 @@ public class DonateController extends Components implements Initializable {
     }
 
     // Atualiza a largura da barra de progresso com base em atual/meta
-    private void atualizarProgresso(Rectangle barra, double atual, double meta) {
+    private void atualizarProgresso(Rectangle barra, Label txtLabelMeta, String unity, double atual, double meta) {
         double pct = Math.min(atual / meta, 1.0);
         barra.setWidth(PROGRESS_MAX_WIDTH * pct);
+        txtLabelMeta.setText(String.format("%.2f / %.2f %s", atual, meta, unity));
     }
 
     // =============================================
@@ -117,6 +125,14 @@ public class DonateController extends Components implements Initializable {
         currentIndex = index;
         slides.forEach(p -> p.setVisible(false));
         slides.get(currentIndex).setVisible(true);
+    }
+
+    private static float transformarParaFloat(Object fieldValue) {
+        try {
+            return Float.parseFloat(fieldValue.toString());
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
+        }
     }
 
     @FXML
