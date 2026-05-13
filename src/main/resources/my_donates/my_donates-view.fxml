@@ -1,65 +1,166 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="my_donates.MyDonatesController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.AppController">
    <children>
 
       <!-- ===== NAVBAR ===== -->
-      <ImageView fitWidth="77.0" layoutX="112.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
-         <image><Image url="@../assets/coffee-beans.png" /></image>
+      <ImageView fitHeight="219.0" fitWidth="436.0" layoutX="87.0" layoutY="-29.0" pickOnBounds="true" preserveRatio="true">
+         <image><Image url="@../assets/logo.png" /></image>
       </ImageView>
-      <Label layoutX="191.0" layoutY="38.0" style="-fx-font-family: 'georgia';" text="Grão Brasileiro" textFill="#1a3a23">
-         <font><Font size="40.0" /></font>
-      </Label>
-      <Label fx:id="id_home" layoutX="597.0" layoutY="52.0" onMouseClicked="#redirectToApp" style="-fx-font-family: 'georgia';" text="Home" textFill="#1a3a23">
-         <font><Font size="26.0" /></font>
+      <Label fx:id="id_donate" layoutX="630.0" layoutY="65.0" onMouseClicked="#redirectToDonate" style="-fx-font-family: 'Georgia';" text="Doação" textFill="#1a3a23">
+         <font><Font size="25.0" /></font>
          <cursor><Cursor fx:constant="HAND" /></cursor>
       </Label>
-      <Label fx:id="id_donate" layoutX="723.0" layoutY="52.0" onMouseClicked="#redirectToDonate" style="-fx-font-family: 'georgia';" text="Doação" textFill="#1a3a23">
-         <font><Font size="26.0" /></font>
+      <Label fx:id="id_sobre" layoutX="740.0" layoutY="65.0" onMouseClicked="#redirectToAbout" style="-fx-font-family: 'Georgia';" text="Sobre" textFill="#1a3a23">
+         <font><Font size="25.0" /></font>
          <cursor><Cursor fx:constant="HAND" /></cursor>
       </Label>
-      <Label fx:id="id_collaborators" layoutX="866.0" layoutY="52.0" onMouseClicked="#redirectToCollaborators" style="-fx-font-family: 'georgia';" text="Colaboradores" textFill="#1a3a23">
-         <font><Font size="26.0" /></font>
+      <Label fx:id="id_colaboradores" layoutX="836.0" layoutY="65.0" onMouseClicked="#redirectToCollaborators" style="-fx-font-family: 'Georgia';" text="Colaboradores" textFill="#1a3a23">
+         <font><Font size="25.0" /></font>
          <cursor><Cursor fx:constant="HAND" /></cursor>
       </Label>
-      <Label fx:id="id_about" layoutX="1081.0" layoutY="52.0" onMouseClicked="#redirectToAbout" style="-fx-font-family: 'georgia';" text="Sobre" textFill="#1a3a23">
-         <font><Font size="26.0" /></font>
+      <Label fx:id="id_my_donate" layoutX="1025.0" layoutY="65.0" onMouseClicked="#redirectToMyDonates" style="-fx-font-family: 'Georgia';" text="Minhas Doações" textFill="#1a3a23">
+         <font><Font size="25.0" /></font>
          <cursor><Cursor fx:constant="HAND" /></cursor>
       </Label>
 
-      <!-- linha separadora -->
-      <Pane layoutX="0.0" layoutY="108.0" prefHeight="2.0" prefWidth="1280.0" style="-fx-background-color: #FFFFFF;" />
+      <!-- ===== HERO - LADO ESQUERDO ===== -->
 
-      <!-- ===== TÍTULO ===== -->
-      <Label layoutX="112.0" layoutY="128.0" text="Minhas Doações" textFill="#1a3a23">
-         <font><Font name="System Bold" size="28.0" /></font>
-      </Label>
-      <!-- label que aparece quando não há doações -->
-      <Label fx:id="lblVazio" layoutX="112.0" layoutY="175.0" text="Você ainda não realizou nenhuma doação." textFill="#7A5030" visible="false">
-         <font><Font size="16.0" /></font>
+      <!-- tag ONG -->
+      <Rectangle arcHeight="24" arcWidth="24" fill="#2C5031" height="24.0" layoutX="121.0" layoutY="138.0" width="130.0" />
+      <Label layoutX="133.0" layoutY="141.0" text="ONG Solidária" textFill="#A8C8A0">
+         <font><Font name="System Bold" size="11.0" /></font>
       </Label>
 
-      <!-- ===== SCROLL COM CARDS DINÂMICOS ===== -->
-      <ScrollPane fx:id="scrollPane" fitToWidth="true" layoutX="90.0" layoutY="170.0" prefHeight="520.0" prefWidth="1100.0" style="-fx-background: transparent; -fx-background-color: transparent; -fx-border-color: transparent;">
-         <content>
-            <!-- VBox preenchido pelo controller -->
-            <VBox fx:id="cardsContainer" spacing="16.0" style="-fx-background-color: transparent;">
-               <padding>
-                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
-               </padding>
-            </VBox>
-         </content>
-      </ScrollPane>
+      <!-- título principal -->
+      <Label layoutX="121.0" layoutY="170.0" prefWidth="560.0" text="Cultivando Dignidade," textFill="#1a3a23">
+         <font><Font name="System Bold" size="40.0" /></font>
+      </Label>
+      <Label layoutX="121.0" layoutY="218.0" prefWidth="560.0" text="Colhendo Frutos" textFill="#1a3a23">
+         <font><Font name="System Bold" size="40.0" /></font>
+      </Label>
+
+      <!-- subtítulo -->
+      <Label layoutX="121.0" layoutY="274.0" prefHeight="80.0" prefWidth="520.0" text="Na Grão Brasileiro, trabalhamos diariamente para transformar a realidade de pessoas com necessidades básicas. Junte-se a nós e faça parte desta mudança." textFill="#4A3020" wrapText="true">
+         <font><Font size="15.0" /></font>
+      </Label>
+
+      <!-- botão Quero Ajudar -->
+      <Button fx:id="btnAjudar" layoutX="121.0" layoutY="368.0" onMouseClicked="#redirectToPayment" prefHeight="44.0" prefWidth="180.0" style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-font-size: 15px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: none; -fx-cursor: hand;" text="Quero Ajudar">
+         <cursor><Cursor fx:constant="HAND" /></cursor>
+      </Button>
+
+      <!-- botão Saiba Mais -->
+      <Button fx:id="btnSaibaMais" layoutX="318.0" layoutY="368.0" onMouseClicked="#redirectToAbout" prefHeight="44.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-text-fill: #2C5031; -fx-font-size: 15px; -fx-font-weight: bold; -fx-background-radius: 8; -fx-border-color: #2C5031; -fx-border-width: 2; -fx-border-radius: 8; -fx-cursor: hand;" text="Saiba Mais">
+         <cursor><Cursor fx:constant="HAND" /></cursor>
+      </Button>
+
+      <!-- ===== STATS (abaixo dos botões) ===== -->
+      <Rectangle arcHeight="12" arcWidth="12" fill="#2C5031" height="80.0" layoutX="121.0" layoutY="432.0" width="530.0" />
+
+      <Label layoutX="167.0" layoutY="442.0" text="10k+" textFill="#F5DEB8">
+         <font><Font name="System Bold" size="26.0" /></font>
+      </Label>
+      <Label layoutX="156.0" layoutY="468.0" text="Famílias" textFill="#A8C8A0">
+         <font><Font size="22.0" /></font>
+      </Label>
+
+      <Label layoutX="288.0" layoutY="442.0" text="5 anos" textFill="#F5DEB8">
+         <font><Font name="System Bold" size="26.0" /></font>
+      </Label>
+      <Label layoutX="272.0" layoutY="468.0" text="De impacto" textFill="#A8C8A0">
+         <font><Font size="22.0" /></font>
+      </Label>
+
+      <Label layoutX="433.0" layoutY="442.0" text="2+" textFill="#F5DEB8">
+         <font><Font name="System Bold" size="26.0" /></font>
+      </Label>
+      <Label layoutX="406.0" layoutY="468.0" text="Parceiros" textFill="#A8C8A0">
+         <font><Font size="22.0" /></font>
+      </Label>
+
+      <Label layoutX="535.0" layoutY="442.0" text="100%" textFill="#F5DEB8">
+         <font><Font name="System Bold" size="26.0" /></font>
+      </Label>
+      <Label layoutX="519.0" layoutY="468.0" text="Dedicação" textFill="#A8C8A0">
+         <font><Font size="22.0" /></font>
+      </Label>
+
+      <!-- ===== COMO PARTICIPAR (3 cards na base) ===== -->
+      <Label layoutX="121.0" layoutY="536.0" text="COMO PARTICIPAR" textFill="#7A5030">
+         <font><Font name="System Bold" size="11.0" /></font>
+      </Label>
+
+      <!-- card 1 - Doação -->
+      <Rectangle arcHeight="12" arcWidth="12" fill="#FDF6EC" height="130.0" layoutX="121.0" layoutY="558.0" width="150.0" />
+      <Rectangle arcHeight="12" arcWidth="12" fill="transparent" height="130.0" layoutX="121.0" layoutY="558.0" stroke="#D4B896" strokeWidth="1.0" width="150.0" />
+      <Rectangle arcHeight="28" arcWidth="28" fill="#2C5031" height="28.0" layoutX="138.0" layoutY="572.0" width="28.0" />
+      <Label layoutX="148.0" layoutY="578.0" text="1" textFill="#A8C8A0">
+         <font><Font name="System Bold" size="13.0" /></font>
+      </Label>
+      <Label layoutX="138.0" layoutY="608.0" text="Faça uma" textFill="#1a3a23">
+         <font><Font name="System Bold" size="13.0" /></font>
+      </Label>
+      <Label layoutX="138.0" layoutY="626.0" text="doação" textFill="#1a3a23">
+         <font><Font name="System Bold" size="13.0" /></font>
+      </Label>
+      <Label layoutX="138.0" layoutY="648.0" prefHeight="36.0" prefWidth="120.0" text="Contribua para famílias vulneráveis." textFill="#4A3020" wrapText="true">
+         <font><Font size="11.0" /></font>
+      </Label>
+
+      <!-- card 2 - Voluntário -->
+      <Rectangle arcHeight="12" arcWidth="12" fill="#FDF6EC" height="130.0" layoutX="290.0" layoutY="558.0" width="150.0" />
+      <Rectangle arcHeight="12" arcWidth="12" fill="transparent" height="130.0" layoutX="290.0" layoutY="558.0" stroke="#D4B896" strokeWidth="1.0" width="150.0" />
+      <Rectangle arcHeight="28" arcWidth="28" fill="#2C5031" height="28.0" layoutX="307.0" layoutY="572.0" width="28.0" />
+      <Label layoutX="317.0" layoutY="578.0" text="2" textFill="#A8C8A0">
+         <font><Font name="System Bold" size="13.0" /></font>
+      </Label>
+      <Label layoutX="307.0" layoutY="608.0" text="Seja um" textFill="#1a3a23">
+         <font><Font name="System Bold" size="13.0" /></font>
+      </Label>
+      <Label layoutX="307.0" layoutY="626.0" text="voluntário" textFill="#1a3a23">
+         <font><Font name="System Bold" size="13.0" /></font>
+      </Label>
+      <Label layoutX="307.0" layoutY="648.0" prefHeight="36.0" prefWidth="120.0" text="Seu tempo transforma vidas no bairro." textFill="#4A3020" wrapText="true">
+         <font><Font size="11.0" /></font>
+      </Label>
+
+      <!-- card 3 - Parceiros -->
+      <Rectangle arcHeight="12" arcWidth="12" fill="#FDF6EC" height="130.0" layoutX="459.0" layoutY="558.0" width="150.0" />
+      <Rectangle arcHeight="12" arcWidth="12" fill="transparent" height="130.0" layoutX="459.0" layoutY="558.0" stroke="#D4B896" strokeWidth="1.0" width="150.0" />
+      <Rectangle arcHeight="28" arcWidth="28" fill="#2C5031" height="28.0" layoutX="476.0" layoutY="572.0" width="28.0" />
+      <Label layoutX="486.0" layoutY="578.0" text="3" textFill="#A8C8A0">
+         <font><Font name="System Bold" size="13.0" /></font>
+      </Label>
+      <Label layoutX="476.0" layoutY="608.0" text="Indique um" textFill="#1a3a23">
+         <font><Font name="System Bold" size="13.0" /></font>
+      </Label>
+      <Label layoutX="476.0" layoutY="626.0" text="parceiro" textFill="#1a3a23">
+         <font><Font name="System Bold" size="13.0" /></font>
+      </Label>
+      <Label layoutX="476.0" layoutY="648.0" prefHeight="36.0" prefWidth="120.0" text="Conecte empresas que podem apoiar." textFill="#4A3020" wrapText="true">
+         <font><Font size="11.0" /></font>
+      </Label>
+
+      <!-- ===== IMAGEM HERO - LADO DIREITO ===== -->
+      <Pane layoutX="681.0" layoutY="232.0" prefHeight="361.0" prefWidth="520.0" style="-fx-background-color: #D4B896; -fx-background-radius: 16;">
+         <children>
+            <ImageView fitHeight="322.0" fitWidth="485.0" layoutX="14.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/Volunteers.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
 
    </children>
 </Pane>
