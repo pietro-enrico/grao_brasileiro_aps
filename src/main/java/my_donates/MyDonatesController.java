@@ -14,9 +14,12 @@ import java.util.Map;
 
 public class MyDonatesController extends Components {
 
-    @FXML private VBox cardsContainer;
-    @FXML private ScrollPane scrollPane;
-    @FXML private Label lblVazio;
+    @FXML
+    private VBox cardsContainer;
+    @FXML
+    private ScrollPane scrollPane;
+    @FXML
+    private Label lblVazio;
 
     // Formatador de data — ajuste o padrão conforme o que vem do banco
     private static final DateTimeFormatter FORMATTER =
