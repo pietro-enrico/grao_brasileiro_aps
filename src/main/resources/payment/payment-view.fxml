@@ -12,145 +12,128 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #FFFFFFFF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="payment.PaymentController">
+<Pane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #FFFFFFFF;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="payment.PaymentController">
 
     <!-- ===== NAVBAR ===== -->
-    <ImageView fitHeight="197.0" fitWidth="301.0" layoutX="67.0" layoutY="-46.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fitHeight="219.0" fitWidth="436.0" layoutX="87.0" layoutY="-43.0" pickOnBounds="true" preserveRatio="true">
         <image><Image url="@../assets/logo.png" /></image>
     </ImageView>
 
-    <Label fx:id="id_donate" layoutX="580.0" layoutY="52.0" onMouseClicked="#redirectToDonate" text="Doação" textFill="#1a3a23">
-        <font><Font name="Georgia" size="18.0" /></font>
-        <cursor><Cursor fx:constant="HAND" /></cursor>
-    </Label>
-    <Label fx:id="id_about" layoutX="700.0" layoutY="52.0" onMouseClicked="#redirectToAbout" text="Sobre" textFill="#1a3a23">
-        <font><Font name="Georgia" size="18.0" /></font>
-        <cursor><Cursor fx:constant="HAND" /></cursor>
-    </Label>
-    <Label fx:id="id_collaborators" layoutX="800.0" layoutY="52.0" onMouseClicked="#redirectToCollaborators" text="Colaboradores" textFill="#1a3a23">
-        <font><Font name="Georgia" size="18.0" /></font>
-        <cursor><Cursor fx:constant="HAND" /></cursor>
-    </Label>
-    <Label fx:id="id_my_donates" layoutX="980.0" layoutY="52.0" onMouseClicked="#redirectToMyDonates" text="Minhas Doações" textFill="#1a3a23">
-        <font><Font name="Georgia" size="18.0" /></font>
-        <cursor><Cursor fx:constant="HAND" /></cursor>
-    </Label>
-
     <!-- linha separadora -->
-    <Rectangle fill="#D4B896" height="1.5" layoutX="0.0" layoutY="98.0" width="1280.0" />
+    <Rectangle fill="#D4B896" height="1.5" layoutY="118.0" width="1280.0" />
 
     <!-- ===== BANNER VERDE ===== -->
-    <Rectangle fill="#2C5031" height="80.0" layoutX="0.0" layoutY="100.0" width="1280.0" />
+    <Rectangle fill="#2C5031" height="80.0" layoutY="120.0" width="1280.0" />
 
-    <Label layoutX="90.0" layoutY="112.0" text="Realizar Doação" textFill="#F5DEB8">
+    <Label layoutX="90.0" layoutY="132.0" text="Realizar Doação" textFill="#F5DEB8">
         <font><Font name="System Bold" size="22.0" /></font>
     </Label>
-    <Label layoutX="90.0" layoutY="144.0" text="Preencha os campos abaixo e escolha como deseja contribuir." textFill="#A8C8A0">
+    <Label layoutX="90.0" layoutY="164.0" text="Preencha os campos abaixo e escolha como deseja contribuir." textFill="#A8C8A0">
         <font><Font size="13.0" /></font>
     </Label>
 
     <!-- steps indicadores -->
     <!-- step 1 -->
-    <Rectangle arcHeight="26" arcWidth="26" fill="#F5DEB8" height="26.0" layoutX="820.0" layoutY="118.0" width="26.0" />
-    <Label layoutX="828.0" layoutY="122.0" text="1" textFill="#2C5031">
+    <Rectangle arcHeight="26" arcWidth="26" fill="#F5DEB8" height="26.0" layoutX="799.0" layoutY="147.0" width="26.0" />
+    <Label layoutX="808.0" layoutY="151.0" text="1" textFill="#2C5031">
         <font><Font name="System Bold" size="12.0" /></font>
     </Label>
-    <Label layoutX="852.0" layoutY="124.0" text="O que doar" textFill="#F5DEB8">
+    <Label layoutX="831.0" layoutY="153.0" text="O que doar" textFill="#F5DEB8">
         <font><Font name="System Bold" size="12.0" /></font>
     </Label>
 
-    <Rectangle fill="rgba(255,255,255,0.25)" height="2.0" layoutX="940.0" layoutY="130.0" width="40.0" />
+    <Rectangle fill="rgba(255,255,255,0.25)" height="2.0" layoutX="919.0" layoutY="159.0" width="40.0" />
 
     <!-- step 2 -->
-    <Rectangle arcHeight="26" arcWidth="26" fill="#F5DEB8" height="26.0" layoutX="986.0" layoutY="118.0" width="26.0" />
-    <Label layoutX="994.0" layoutY="122.0" text="2" textFill="#2C5031">
+    <Rectangle arcHeight="26" arcWidth="26" fill="#F5DEB8" height="26.0" layoutX="965.0" layoutY="147.0" width="26.0" />
+    <Label layoutX="975.0" layoutY="151.0" text="2" textFill="#2C5031">
         <font><Font name="System Bold" size="12.0" /></font>
     </Label>
-    <Label layoutX="1018.0" layoutY="124.0" text="Pagamento" textFill="#F5DEB8">
+    <Label layoutX="997.0" layoutY="153.0" text="Pagamento" textFill="#F5DEB8">
         <font><Font name="System Bold" size="12.0" /></font>
     </Label>
 
-    <Rectangle fill="rgba(255,255,255,0.25)" height="2.0" layoutX="1100.0" layoutY="130.0" width="40.0" />
+    <Rectangle fill="rgba(255,255,255,0.25)" height="2.0" layoutX="1079.0" layoutY="159.0" width="40.0" />
 
     <!-- step 3 -->
-    <Rectangle arcHeight="26" arcWidth="26" fill="rgba(255,255,255,0.18)" height="26.0" layoutX="1146.0" layoutY="118.0" width="26.0" />
-    <Label layoutX="1154.0" layoutY="122.0" text="3" textFill="#A8C8A0">
+    <Rectangle arcHeight="26" arcWidth="26" fill="rgba(255,255,255,0.18)" height="26.0" layoutX="1125.0" layoutY="147.0" width="26.0" />
+    <Label layoutX="1135.0" layoutY="151.0" text="3" textFill="#A8C8A0">
         <font><Font name="System Bold" size="12.0" /></font>
     </Label>
-    <Label layoutX="1178.0" layoutY="124.0" text="Confirmação" textFill="#A8C8A0">
+    <Label layoutX="1157.0" layoutY="153.0" text="Confirmação" textFill="#A8C8A0">
         <font><Font size="12.0" /></font>
     </Label>
 
     <!-- ===== CARD ESQUERDO — O QUE DOAR ===== -->
-    <Rectangle arcHeight="14" arcWidth="14" fill="#FDF6EC" height="460.0" layoutX="70.0" layoutY="200.0" width="520.0" />
-    <Rectangle arcHeight="14" arcWidth="14" fill="transparent" height="460.0" layoutX="70.0" layoutY="200.0" stroke="#D4B896" strokeWidth="1.0" width="520.0" />
+    <Rectangle arcHeight="14" arcWidth="14" fill="#FDF6EC" height="460.0" layoutX="70.0" layoutY="232.0" width="520.0" />
+    <Rectangle arcHeight="14" arcWidth="14" fill="transparent" height="460.0" layoutX="70.0" layoutY="232.0" stroke="#D4B896" strokeWidth="1.0" width="520.0" />
 
     <!-- título card -->
-    <Rectangle arcHeight="24" arcWidth="24" fill="#2C5031" height="24.0" layoutX="90.0" layoutY="218.0" width="24.0" />
-    <Label layoutX="97.0" layoutY="222.0" text="1" textFill="#A8C8A0">
+    <Rectangle arcHeight="24" arcWidth="24" fill="#2C5031" height="24.0" layoutX="90.0" layoutY="250.0" width="24.0" />
+    <Label layoutX="98.0" layoutY="254.0" text="1" textFill="#A8C8A0">
         <font><Font name="System Bold" size="11.0" /></font>
     </Label>
-    <Label layoutX="124.0" layoutY="220.0" text="O QUE DESEJA DOAR?" textFill="#7A5030">
+    <Label layoutX="124.0" layoutY="252.0" text="O QUE DESEJA DOAR?" textFill="#7A5030">
         <font><Font name="System Bold" size="11.0" /></font>
     </Label>
 
     <!-- categoria -->
-    <Label layoutX="90.0" layoutY="258.0" text="Categoria" textFill="#1a3a23">
+    <Label layoutX="90.0" layoutY="290.0" text="Categoria" textFill="#1a3a23">
         <font><Font name="System Bold" size="13.0" /></font>
     </Label>
-    <ComboBox fx:id="categoria" layoutX="90.0" layoutY="278.0" prefHeight="38.0" prefWidth="460.0" style="-fx-background-color: #ffffff; -fx-border-color: #D4B896; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-size: 13px;">
+    <ComboBox fx:id="categoria" layoutX="90.0" layoutY="310.0" prefHeight="38.0" prefWidth="460.0" style="-fx-background-color: #ffffff; -fx-border-color: #D4B896; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-size: 13px;">
         <cursor><Cursor fx:constant="HAND" /></cursor>
     </ComboBox>
 
     <!-- suprimento -->
-    <Label fx:id="lblSuprimento" layoutX="90.0" layoutY="334.0" text="Tipo de suprimento" textFill="#1a3a23" visible="false">
+    <Label fx:id="lblSuprimento" layoutX="90.0" layoutY="366.0" text="Tipo de suprimento" textFill="#1a3a23" visible="false">
         <font><Font name="System Bold" size="13.0" /></font>
     </Label>
-    <ComboBox fx:id="sub_categoria" layoutX="90.0" layoutY="354.0" prefHeight="38.0" prefWidth="460.0" style="-fx-background-color: #ffffff; -fx-border-color: #D4B896; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-size: 13px;" visible="false">
+    <ComboBox fx:id="sub_categoria" layoutX="90.0" layoutY="386.0" prefHeight="38.0" prefWidth="460.0" style="-fx-background-color: #ffffff; -fx-border-color: #D4B896; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-size: 13px;" visible="false">
         <cursor><Cursor fx:constant="HAND" /></cursor>
     </ComboBox>
 
     <!-- quantidade -->
-    <Label fx:id="lblQuantidade" layoutX="90.0" layoutY="410.0" text="Quantidade" textFill="#1a3a23" visible="false">
+    <Label fx:id="lblQuantidade" layoutX="90.0" layoutY="442.0" text="Quantidade" textFill="#1a3a23" visible="false">
         <font><Font name="System Bold" size="13.0" /></font>
     </Label>
-    <TextField fx:id="quantidade" layoutX="90.0" layoutY="430.0" prefHeight="38.0" prefWidth="460.0" promptText="Ex: 10 (apenas números)" style="-fx-background-color: #ffffff; -fx-border-color: #D4B896; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-size: 13px;" visible="false" />
+    <TextField fx:id="quantidade" layoutX="90.0" layoutY="462.0" prefHeight="38.0" prefWidth="460.0" promptText="Ex: 10 (apenas números)" style="-fx-background-color: #ffffff; -fx-border-color: #D4B896; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-size: 13px;" visible="false" />
 
     <!-- valor (dinheiro) -->
-    <Label fx:id="lblValor" layoutX="90.0" layoutY="334.0" text="Valor (R$)" textFill="#1a3a23" visible="false">
+    <Label fx:id="lblValor" layoutX="90.0" layoutY="366.0" text="Valor (R$)" textFill="#1a3a23" visible="false">
         <font><Font name="System Bold" size="13.0" /></font>
     </Label>
-    <TextField fx:id="value" layoutX="90.0" layoutY="354.0" prefHeight="38.0" prefWidth="460.0" promptText="R$ 0,00" style="-fx-background-color: #ffffff; -fx-border-color: #D4B896; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-size: 13px;" visible="false" />
+    <TextField fx:id="value" layoutX="90.0" layoutY="386.0" prefHeight="38.0" prefWidth="460.0" promptText="R$ 0,00" style="-fx-background-color: #ffffff; -fx-border-color: #D4B896; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-size: 13px;" visible="false" />
 
     <!-- ===== CARD DIREITO — PAGAMENTO ===== -->
-    <Rectangle arcHeight="14" arcWidth="14" fill="#FDF6EC" height="460.0" layoutX="620.0" layoutY="200.0" width="590.0" />
-    <Rectangle arcHeight="14" arcWidth="14" fill="transparent" height="460.0" layoutX="620.0" layoutY="200.0" stroke="#D4B896" strokeWidth="1.0" width="590.0" />
+    <Rectangle arcHeight="14" arcWidth="14" fill="#FDF6EC" height="460.0" layoutX="620.0" layoutY="232.0" width="590.0" />
+    <Rectangle arcHeight="14" arcWidth="14" fill="transparent" height="460.0" layoutX="620.0" layoutY="232.0" stroke="#D4B896" strokeWidth="1.0" width="590.0" />
 
     <!-- título card -->
-    <Rectangle arcHeight="24" arcWidth="24" fill="#2C5031" height="24.0" layoutX="640.0" layoutY="218.0" width="24.0" />
-    <Label layoutX="647.0" layoutY="222.0" text="2" textFill="#A8C8A0">
+    <Rectangle arcHeight="24" arcWidth="24" fill="#2C5031" height="24.0" layoutX="640.0" layoutY="250.0" width="24.0" />
+    <Label layoutX="649.0" layoutY="254.0" text="2" textFill="#A8C8A0">
         <font><Font name="System Bold" size="11.0" /></font>
     </Label>
-    <Label layoutX="674.0" layoutY="220.0" text="FORMA DE PAGAMENTO" textFill="#7A5030">
+    <Label layoutX="674.0" layoutY="252.0" text="FORMA DE PAGAMENTO" textFill="#7A5030">
         <font><Font name="System Bold" size="11.0" /></font>
     </Label>
 
     <!-- botões de pagamento -->
-    <ToggleButton fx:id="btnPix" layoutX="640.0" layoutY="258.0" prefHeight="42.0" prefWidth="170.0" style="-fx-background-color: #ffffff; -fx-text-fill: #1a3a23; -fx-background-radius: 8; -fx-border-color: #D4B896; -fx-border-radius: 8; -fx-border-width: 1.5; -fx-font-size: 14px; -fx-font-weight: bold;" text="🔲  Pix" visible="false">
+    <ToggleButton fx:id="btnPix" layoutX="640.0" layoutY="290.0" prefHeight="42.0" prefWidth="170.0" style="-fx-background-color: #ffffff; -fx-text-fill: #1a3a23; -fx-background-radius: 8; -fx-border-color: #D4B896; -fx-border-radius: 8; -fx-border-width: 1.5; -fx-font-size: 14px; -fx-font-weight: bold;" text="🔲  Pix" visible="false">
         <cursor><Cursor fx:constant="HAND" /></cursor>
     </ToggleButton>
-    <ToggleButton fx:id="btnCC" layoutX="826.0" layoutY="258.0" prefHeight="42.0" prefWidth="186.0" style="-fx-background-color: #ffffff; -fx-text-fill: #1a3a23; -fx-background-radius: 8; -fx-border-color: #D4B896; -fx-border-radius: 8; -fx-border-width: 1.5; -fx-font-size: 14px; -fx-font-weight: bold;" text="💳  Cartão de Crédito" visible="false">
+    <ToggleButton fx:id="btnCC" layoutX="826.0" layoutY="290.0" prefHeight="42.0" prefWidth="186.0" style="-fx-background-color: #ffffff; -fx-text-fill: #1a3a23; -fx-background-radius: 8; -fx-border-color: #D4B896; -fx-border-radius: 8; -fx-border-width: 1.5; -fx-font-size: 14px; -fx-font-weight: bold;" text="💳  Cartão de Crédito" visible="false">
         <cursor><Cursor fx:constant="HAND" /></cursor>
     </ToggleButton>
-    <ToggleButton fx:id="btnPayPal" layoutX="1028.0" layoutY="258.0" prefHeight="42.0" prefWidth="162.0" style="-fx-background-color: #ffffff; -fx-text-fill: #1a3a23; -fx-background-radius: 8; -fx-border-color: #D4B896; -fx-border-radius: 8; -fx-border-width: 1.5; -fx-font-size: 14px; -fx-font-weight: bold;" text="🅿️  PayPal" visible="false">
+    <ToggleButton fx:id="btnPayPal" layoutX="1028.0" layoutY="290.0" prefHeight="42.0" prefWidth="162.0" style="-fx-background-color: #ffffff; -fx-text-fill: #1a3a23; -fx-background-radius: 8; -fx-border-color: #D4B896; -fx-border-radius: 8; -fx-border-width: 1.5; -fx-font-size: 14px; -fx-font-weight: bold;" text="🅿️  PayPal" visible="false">
         <cursor><Cursor fx:constant="HAND" /></cursor>
     </ToggleButton>
-    <ToggleButton fx:id="btnCorreios" layoutX="640.0" layoutY="258.0" prefHeight="42.0" prefWidth="550.0" style="-fx-background-color: #FFF8E1; -fx-text-fill: #5D4037; -fx-background-radius: 8; -fx-border-color: #C8A830; -fx-border-radius: 8; -fx-border-width: 2; -fx-font-size: 14px; -fx-font-weight: bold;" text="📦  Enviar pelos Correios" visible="false">
+    <ToggleButton fx:id="btnCorreios" layoutX="640.0" layoutY="290.0" prefHeight="42.0" prefWidth="550.0" style="-fx-background-color: #FFF8E1; -fx-text-fill: #5D4037; -fx-background-radius: 8; -fx-border-color: #C8A830; -fx-border-radius: 8; -fx-border-width: 2; -fx-font-size: 14px; -fx-font-weight: bold;" text="📦  Enviar pelos Correios" visible="false">
         <cursor><Cursor fx:constant="HAND" /></cursor>
     </ToggleButton>
 
     <!-- botão confirmar -->
-    <Button fx:id="btnConfirmar" layoutX="640.0" layoutY="316.0" onAction="#confirmarDoacao" prefHeight="46.0" prefWidth="550.0" style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-background-radius: 8; -fx-border-color: none; -fx-font-size: 15px; -fx-font-weight: bold;" text="Confirmar Doação">
+    <Button fx:id="btnConfirmar" layoutX="640.0" layoutY="348.0" onAction="#confirmarDoacao" prefHeight="46.0" prefWidth="550.0" style="-fx-background-color: #2C5031; -fx-text-fill: #F5DEB8; -fx-background-radius: 8; -fx-border-color: none; -fx-font-size: 15px; -fx-font-weight: bold;" text="Confirmar Doação">
         <cursor><Cursor fx:constant="HAND" /></cursor>
     </Button>
 
@@ -172,5 +155,22 @@
             <cursor><Cursor fx:constant="HAND" /></cursor>
         </Button>
     </Pane>
+
+    <Label fx:id="id_donate" layoutX="580.0" layoutY="52.0" onMouseClicked="#redirectToDonate" text="Doação" textFill="#1a3a23">
+        <font><Font name="Georgia" size="18.0" /></font>
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+    <Label fx:id="id_about" layoutX="700.0" layoutY="52.0" onMouseClicked="#redirectToAbout" text="Sobre" textFill="#1a3a23">
+        <font><Font name="Georgia" size="18.0" /></font>
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+    <Label fx:id="id_collaborators" layoutX="800.0" layoutY="52.0" onMouseClicked="#redirectToCollaborators" text="Colaboradores" textFill="#1a3a23">
+        <font><Font name="Georgia" size="18.0" /></font>
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
+    <Label fx:id="id_my_donates" layoutX="980.0" layoutY="52.0" onMouseClicked="#redirectToMyDonates" text="Minhas Doações" textFill="#1a3a23">
+        <font><Font name="Georgia" size="18.0" /></font>
+        <cursor><Cursor fx:constant="HAND" /></cursor>
+    </Label>
 
 </Pane>
